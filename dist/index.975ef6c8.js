@@ -2942,14 +2942,21 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$20e5.prelude(module);
 
 try {
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/*#__PURE__*/ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _app = require("./App");
+(0, _jsxDevRuntime.jsxDEV)("script", {
+    src: "http://192.168.70.15:8097"
+}, void 0, false, {
+    fileName: "src/index.js",
+    lineNumber: 1,
+    columnNumber: 1
+}, undefined);
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 6,
+    lineNumber: 7,
     columnNumber: 13
 }, undefined));
 
@@ -27156,80 +27163,82 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _todo = require("./compunents/Todo");
 var _todoinput = require("./compunents/Todoinput");
 var _filter = require("./compunents/Filter");
-const todo_list = [
-    {
-        title: "item1",
-        status: "true"
-    },
-    {
-        title: "item2",
-        status: "true"
-    },
-    {
-        title: "item3",
-        status: "true"
-    }
-];
+var _s = $RefreshSig$();
+let todo_list = [];
 function App() {
+    _s();
+    const [List1, setList] = (0, _react.useState)(todo_list);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "form",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
+                        submitHandler: (value)=>{
+                            setList([
+                                ...List1,
+                                {
+                                    title: value,
+                                    status: false
+                                }
+                            ]);
+                        }
+                    }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 24,
+                        lineNumber: 16,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 25,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 25,
+                        lineNumber: 28,
                         columnNumber: 15
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 26,
+                        lineNumber: 29,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 23,
+                lineNumber: 14,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "list",
-                children: todo_list.map((todo)=>{
+                children: List1.map((todo, index)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todo.Todo), {
                         title: todo.title,
                         status: todo.status
-                    }, void 0, false, {
+                    }, index, false, {
                         fileName: "src/App.js",
-                        lineNumber: 30,
+                        lineNumber: 33,
                         columnNumber: 23
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 28,
+                lineNumber: 31,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 22,
+        lineNumber: 13,
         columnNumber: 5
     }, this);
 }
+_s(App, "ZJ6JXMuoYB4wc98WMF98OdFO9aw=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27239,7 +27248,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./compunents/Filter":"72jNn"}],"5AT9P":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5AT9P":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27250,7 +27259,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Todo", ()=>Todo);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Todo(props) {
+var _react = require("react");
+function Todo(prop) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "item",
         children: [
@@ -27258,32 +27268,37 @@ function Todo(props) {
                 type: "checkbox",
                 name: "",
                 id: "",
-                checked: props.status
+                defaultChecked: prop.status
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: props.title
+                children: prop.title
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 5,
+                lineNumber: 7,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: ()=>{
+                    List1.map((todo, index)=>{
+                        return todo.title != prop.title;
+                    });
+                },
                 id: "delet_btn",
                 className: "delet_btn",
                 children: "delet"
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 6,
+                lineNumber: 8,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todo.jsx",
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 9
     }, this);
 }
@@ -27296,7 +27311,7 @@ $RefreshReg$(_c, "Todo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27475,42 +27490,66 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Todoinput", ()=>Todoinput);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function onAADItem1() {
-    console.log("clicked");
-}
-function onType() {
-    console.log("keyup");
-}
-function Todoinput() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-        id: "todo_form",
+var _react = require("react");
+var _s = $RefreshSig$();
+const todo_list = [];
+function Todoinput(props) {
+    _s();
+    const my_string_react = (0, _react.useState)(todo_list);
+    const [my_string, update_string] = my_string_react;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                placeholder: "write to do item....",
-                id: "title",
-                onKeyUp: onType
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    "your todo title:",
+                    my_string
+                ]
+            }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 11,
+                lineNumber: 9,
                 columnNumber: 9
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                id: "saveBtn",
-                onClick: onAADItem1,
-                children: "save"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                id: "todo_form",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        value: my_string,
+                        onChange: (e)=>update_string(e.target.value),
+                        type: "text",
+                        placeholder: "write to do item....",
+                        id: "title"
+                    }, void 0, false, {
+                        fileName: "src/compunents/Todoinput.jsx",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: (event)=>{
+                            event.preventDefault();
+                            props.submitHandler(my_string);
+                            update_string("");
+                        },
+                        id: "saveBtn",
+                        children: "save"
+                    }, void 0, false, {
+                        fileName: "src/compunents/Todoinput.jsx",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 12,
+                lineNumber: 10,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todoinput.jsx",
-        lineNumber: 10,
+        lineNumber: 8,
         columnNumber: 9
     }, this);
 }
+_s(Todoinput, "sycahuyDzHbnXgyv73XLws4KvJU=");
 _c = Todoinput;
 var _c;
 $RefreshReg$(_c, "Todoinput");
@@ -27520,7 +27559,7 @@ $RefreshReg$(_c, "Todoinput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"72jNn":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"72jNn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9bf7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
