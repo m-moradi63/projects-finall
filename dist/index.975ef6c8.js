@@ -2942,21 +2942,21 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$20e5.prelude(module);
 
 try {
-/*#__PURE__*/ var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/* (https://reactjs.org/link/special-props) */ /*#__PURE__*/ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _app = require("./App");
 (0, _jsxDevRuntime.jsxDEV)("script", {
     src: "http://192.168.70.15:8097"
 }, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 1,
+    lineNumber: 2,
     columnNumber: 1
 }, undefined);
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 7,
+    lineNumber: 8,
     columnNumber: 13
 }, undefined));
 
@@ -27167,11 +27167,50 @@ var _react = require("react");
 var _todo = require("./compunents/Todo");
 var _todoinput = require("./compunents/Todoinput");
 var _filter = require("./compunents/Filter");
+var _reactUuid = require("react-uuid");
+var _reactUuidDefault = parcelHelpers.interopDefault(_reactUuid);
+var _process = require("process");
 var _s = $RefreshSig$();
-let todo_list = [];
 function App() {
     _s();
-    const [List1, setList] = (0, _react.useState)(todo_list);
+    const [List, setList] = (0, _react.useState)([]);
+    const [curentFilter, setCurentFilter] = (0, _react.useState)("all");
+    console.log("list:", List);
+    console.log(curentFilter);
+    const deleteTask = (val)=>{
+        const deletlist = List.filter((item)=>{
+            return item.title !== val;
+        });
+        setList(deletlist);
+    };
+    const toggleTask = (val)=>{
+        toggList = List.map((item)=>{
+            if (item.title === val) return {
+                title: val,
+                status: !item.status
+            };
+            return item;
+        });
+        setList(toggList);
+        console.log("toggList:", toggList);
+    };
+    const submitTask = (value)=>{
+        const newlst = [
+            ...List,
+            {
+                title: value,
+                status: false
+            }
+        ];
+        setList(newlst);
+    };
+    const filterList = List.filter((todo)=>{
+        console.log("curentFilter:", curentFilter);
+        if (curentFilter === "done") return todo.status === true;
+        else if (curentFilter === "todo") return todo.status === false;
+        else return true;
+    });
+    console.log("filterList:", filterList);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
         children: [
@@ -27179,66 +27218,63 @@ function App() {
                 className: "form",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
-                        submitHandler: (value)=>{
-                            setList([
-                                ...List1,
-                                {
-                                    title: value,
-                                    status: false
-                                }
-                            ]);
-                        }
+                        submitHandler: submitTask
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 16,
+                        lineNumber: 75,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 28,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 28,
+                        lineNumber: 76,
                         columnNumber: 15
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {
+                        curentFilter: curentFilter,
+                        setCurentFilter: setCurentFilter
+                    }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 29,
+                        lineNumber: 77,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 14,
+                lineNumber: 73,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "list",
-                children: List1.map((todo, index)=>{
+                children: filterList.map((todo)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todo.Todo), {
                         title: todo.title,
-                        status: todo.status
-                    }, index, false, {
+                        status: todo.status,
+                        toggleTask: toggleTask,
+                        deleteTask: deleteTask
+                    }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 33,
-                        columnNumber: 23
+                        lineNumber: 83,
+                        columnNumber: 16
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 31,
+                lineNumber: 80,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 13,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
-_s(App, "ZJ6JXMuoYB4wc98WMF98OdFO9aw=");
+_s(App, "tJv5V1PP1NmyS+ynz0s37Xx+fMg=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27248,7 +27284,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5AT9P":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-uuid":"eMaNs","process":"d5jf4"}],"5AT9P":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27259,46 +27295,47 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Todo", ()=>Todo);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-function Todo(prop) {
+function Todo(props) {
+    const handleDelet = ()=>{
+        props.deleteTask(props.title);
+    };
+    const handleToggle = ()=>{
+        props.toggleTask(props.title);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "item",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "checkbox",
                 name: "",
-                id: "",
-                defaultChecked: prop.status
+                defaultChecked: props.status,
+                onClick: handleToggle
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 6,
+                lineNumber: 12,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: prop.title
+                children: props.title
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 7,
+                lineNumber: 13,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>{
-                    List1.map((todo, index)=>{
-                        return todo.title != prop.title;
-                    });
-                },
                 id: "delet_btn",
                 className: "delet_btn",
+                onClick: handleDelet,
                 children: "delet"
             }, void 0, false, {
                 fileName: "src/compunents/Todo.jsx",
-                lineNumber: 8,
+                lineNumber: 14,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todo.jsx",
-        lineNumber: 5,
+        lineNumber: 11,
         columnNumber: 9
     }, this);
 }
@@ -27311,7 +27348,7 @@ $RefreshReg$(_c, "Todo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27514,7 +27551,9 @@ function Todoinput(props) {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         value: my_string,
-                        onChange: (e)=>update_string(e.target.value),
+                        onChange: (e)=>{
+                            update_string(e.target.value);
+                        },
                         type: "text",
                         placeholder: "write to do item....",
                         id: "title"
@@ -27533,7 +27572,7 @@ function Todoinput(props) {
                         children: "save"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 14,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, this)
                 ]
@@ -27570,19 +27609,41 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Filter", ()=>Filter);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Filter() {
+var _react = require("react");
+var _app = require("../App");
+function Filter(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: props.curentFilter
+            }, void 0, false, {
+                fileName: "src/compunents/Filter.jsx",
+                lineNumber: 7,
+                columnNumber: 9
+            }, this),
             "status:",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                value: props.curentFilter,
+                onChange: (e)=>{
+                    const value = e.target.value;
+                    props.setCurentFilter(value);
+                },
                 id: "filters",
                 children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                        value: "all",
+                        children: "All"
+                    }, void 0, false, {
+                        fileName: "src/compunents/Filter.jsx",
+                        lineNumber: 16,
+                        columnNumber: 13
+                    }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
                         value: "done",
                         children: "Done"
                     }, void 0, false, {
                         fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 6,
+                        lineNumber: 17,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -27590,27 +27651,19 @@ function Filter() {
                         children: "Todo"
                     }, void 0, false, {
                         fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 7,
-                        columnNumber: 13
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "all",
-                        children: "All"
-                    }, void 0, false, {
-                        fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 8,
+                        lineNumber: 18,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/compunents/Filter.jsx",
-                lineNumber: 5,
+                lineNumber: 9,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Filter.jsx",
-        lineNumber: 3,
+        lineNumber: 6,
         columnNumber: 8
     }, this);
 }
@@ -27623,6 +27676,37 @@ $RefreshReg$(_c, "Filter");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../App":"2kQhy","react":"21dqq"}],"eMaNs":[function(require,module,exports) {
+/**
+A function that returns a universally unique identifier (uuid).  
+example: 1b83fd69-abe7-468c-bea1-306a8aa1c81d
+@returns `string` : 32 character uuid (see example)
+*/ function uuid() {
+    const hashTable = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+    ];
+    let uuid = [];
+    for(let i = 0; i < 36; i++)if (i === 8 || i === 13 || i === 18 || i === 23) uuid[i] = "-";
+    else uuid[i] = hashTable[Math.ceil(Math.random() * hashTable.length - 1)];
+    return uuid.join("");
+}
+module.exports = uuid;
+
+},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
 
 //# sourceMappingURL=index.975ef6c8.js.map

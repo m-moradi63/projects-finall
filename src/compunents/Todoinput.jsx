@@ -7,8 +7,9 @@ export function Todoinput(props){
     return(
         <div>
         <h1>your todo title:{my_string}</h1>
-        <form id="todo_form"   >
-        <input value={my_string} onChange={(e)=> update_string(e.target.value)}
+        <form id="todo_form">
+        <input value={my_string} onChange={(e)=>{  
+        update_string(e.target.value)}}
 
        type="text" placeholder="write to do item...." id="title"  />
         <button onClick = {(event)=>{

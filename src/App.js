@@ -2,37 +2,92 @@ import { useState } from "react"
 import { Todo  } from "./compunents/Todo"
 import { Todoinput } from "./compunents/Todoinput"
 import { Filter } from "./compunents/Filter"
+import uuid from 'react-uuid';
+import { listenerCount } from "process";
 
 
 
-let todo_list = []
+
+
 export function App() {
+  const [List , setList] = useState([])
+  const [curentFilter , setCurentFilter]=useState("all") 
+
+  console.log("list:" , List)
   
-  const [List1 , setList] = useState(todo_list)
+
+  console.log(curentFilter)
+  const deleteTask = (val)=>{
+      
+   const  deletlist = List.filter((item) =>{
+  
+  return  item.title !== val 
+
+    })  
+      setList(deletlist)
+  }
+  
+  const  toggleTask = (val) =>{
+      toggList = List.map((item) => {
+        if(item.title===val){
+          return {
+            title:val,
+            status:!item.status,
+           
+           }
+        }
+     
+     return item
+     
+        
+        })
+        
+     setList(toggList);
+     console.log("toggList:" , toggList)
+    }
+  const submitTask = (value)=>{ 
+  const newlst=[...List ,
+    { 
+     title:value, 
+     status:false} ]
+   setList(newlst)
+   }
+ const filterList = List.filter((todo)=>{
+  console.log("curentFilter:" , curentFilter)
+ 
+  if(curentFilter==="done"){
+    return todo.status===true;
+  }
+  else if(curentFilter==="todo"){
+    return todo.status===false;
+  }
+  else{
+    return true;
+  }
+ })
+ console.log("filterList:" ,filterList)
+  
+  
     return (
     <div   className="container">
      <div className="form">
        
-       <Todoinput submitHandler={(value)=>
-         {
-          setList([
-            ...List1,
-            {
-              title : value,
-              status:false,
-             
-            }
-          ])
-         }
-      }/>
+       <Todoinput submitHandler = {submitTask}/>
         <br /><br />
-       <Filter/>
+       <Filter curentFilter={curentFilter} setCurentFilter={setCurentFilter} />
      </div>
+     
      <div className="list">
-            {List1.map((todo, index)=>{
-               return <Todo key={index} title={todo.title} status={todo.status} />;
+            {filterList.map((todo)=>{
+               return (
+               <Todo   
+               title={todo.title} 
+               status={todo.status} 
+               toggleTask={toggleTask} 
+               deleteTask={deleteTask}/>
+                );
             })}
-            
+           
      </div>
 </div>
      )
