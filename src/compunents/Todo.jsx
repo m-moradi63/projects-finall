@@ -1,10 +1,10 @@
 
 export function Todo(props){
     const handleDelet = ()=>{
-        props.deleteTask(props.title)
+        props.deleteTask(props.id)
     }
     const handleToggle = ()=>{
-        props.toggleTask(props.title)
+        props.toggleTask(props.id)
     }
 
     return ( 

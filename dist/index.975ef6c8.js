@@ -27175,42 +27175,49 @@ function App() {
     _s();
     const [List, setList] = (0, _react.useState)([]);
     const [curentFilter, setCurentFilter] = (0, _react.useState)("all");
-    console.log("list:", List);
-    console.log(curentFilter);
     const deleteTask = (val)=>{
         const deletlist = List.filter((item)=>{
-            return item.title !== val;
+            return item.id !== val;
         });
         setList(deletlist);
     };
     const toggleTask = (val)=>{
         toggList = List.map((item)=>{
-            if (item.title === val) return {
-                title: val,
+            if (item.id === val) return {
+                id: item.id,
+                title: item.title,
                 status: !item.status
             };
             return item;
         });
         setList(toggList);
-        console.log("toggList:", toggList);
     };
     const submitTask = (value)=>{
         const newlst = [
             ...List,
             {
+                id: (0, _reactUuidDefault.default)(),
                 title: value,
                 status: false
             }
         ];
         setList(newlst);
     };
+    const submitLoadTask = (value)=>{
+        const nwList = [
+            {
+                id: value.id,
+                title: value.title,
+                status: value.status
+            }
+        ];
+        setList(nwList);
+    };
     const filterList = List.filter((todo)=>{
-        console.log("curentFilter:", curentFilter);
         if (curentFilter === "done") return todo.status === true;
         else if (curentFilter === "todo") return todo.status === false;
         else return true;
     });
-    console.log("filterList:", filterList);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
         children: [
@@ -27218,20 +27225,24 @@ function App() {
                 className: "form",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
-                        submitHandler: submitTask
+                        submitHandler: submitTask,
+                        list: List,
+                        setList: setList,
+                        submitTask: submitTask,
+                        submitLoadTask: submitLoadTask
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 75,
+                        lineNumber: 77,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 76,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 76,
+                        lineNumber: 78,
                         columnNumber: 15
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {
@@ -27239,38 +27250,39 @@ function App() {
                         setCurentFilter: setCurentFilter
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 77,
+                        lineNumber: 79,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "list",
                 children: filterList.map((todo)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todo.Todo), {
+                        id: todo.id,
                         title: todo.title,
                         status: todo.status,
                         toggleTask: toggleTask,
                         deleteTask: deleteTask
-                    }, void 0, false, {
+                    }, todo.id, false, {
                         fileName: "src/App.js",
-                        lineNumber: 83,
+                        lineNumber: 85,
                         columnNumber: 16
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 80,
+                lineNumber: 82,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 72,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 }
@@ -27284,7 +27296,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-uuid":"eMaNs","process":"d5jf4"}],"5AT9P":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","react-uuid":"eMaNs","process":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5AT9P":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27297,10 +27309,10 @@ parcelHelpers.export(exports, "Todo", ()=>Todo);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function Todo(props) {
     const handleDelet = ()=>{
-        props.deleteTask(props.title);
+        props.deleteTask(props.id);
     };
     const handleToggle = ()=>{
-        props.toggleTask(props.title);
+        props.toggleTask(props.id);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "item",
@@ -27525,25 +27537,39 @@ $parcel$ReactRefreshHelpers$fe45.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Todoinput", ()=>Todoinput);
+/* const init = [{
+    id:uuid(),
+    title : "item1",
+    status : false
+
+
+}] */ parcelHelpers.export(exports, "Todoinput", ()=>Todoinput);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactUuid = require("react-uuid");
+var _reactUuidDefault = parcelHelpers.interopDefault(_reactUuid);
+var _app = require("../App");
 var _react = require("react");
 var _s = $RefreshSig$();
-const todo_list = [];
 function Todoinput(props) {
     _s();
-    const my_string_react = (0, _react.useState)(todo_list);
+    const my_string_react = (0, _react.useState)([]);
     const [my_string, update_string] = my_string_react;
+    (0, _react.useEffect)(()=>{
+        const items = JSON.parse(localStorage.getItem("items"));
+        if (items) update_string(my_string);
+    }, []);
+    (0, _react.useEffect)(()=>{
+        localStorage.setItem("items", JSON.stringify(my_string));
+    }, [
+        my_string
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    "your todo title:",
-                    my_string
-                ]
-            }, void 0, true, {
+                children: "your todo title:"
+            }, void 0, false, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 9,
+                lineNumber: 31,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27559,7 +27585,7 @@ function Todoinput(props) {
                         id: "title"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 11,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27572,23 +27598,23 @@ function Todoinput(props) {
                         children: "save"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 15,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 10,
+                lineNumber: 32,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todoinput.jsx",
-        lineNumber: 8,
+        lineNumber: 30,
         columnNumber: 9
     }, this);
 }
-_s(Todoinput, "sycahuyDzHbnXgyv73XLws4KvJU=");
+_s(Todoinput, "EMY3jUaFtcWwT8ndkhCQCZBdW8U=");
 _c = Todoinput;
 var _c;
 $RefreshReg$(_c, "Todoinput");
@@ -27598,7 +27624,38 @@ $RefreshReg$(_c, "Todoinput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"72jNn":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../App":"2kQhy","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-uuid":"eMaNs"}],"eMaNs":[function(require,module,exports) {
+/**
+A function that returns a universally unique identifier (uuid).  
+example: 1b83fd69-abe7-468c-bea1-306a8aa1c81d
+@returns `string` : 32 character uuid (see example)
+*/ function uuid() {
+    const hashTable = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+    ];
+    let uuid = [];
+    for(let i = 0; i < 36; i++)if (i === 8 || i === 13 || i === 18 || i === 23) uuid[i] = "-";
+    else uuid[i] = hashTable[Math.ceil(Math.random() * hashTable.length - 1)];
+    return uuid.join("");
+}
+module.exports = uuid;
+
+},{}],"72jNn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9bf7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27676,37 +27733,6 @@ $RefreshReg$(_c, "Filter");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../App":"2kQhy","react":"21dqq"}],"eMaNs":[function(require,module,exports) {
-/**
-A function that returns a universally unique identifier (uuid).  
-example: 1b83fd69-abe7-468c-bea1-306a8aa1c81d
-@returns `string` : 32 character uuid (see example)
-*/ function uuid() {
-    const hashTable = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9"
-    ];
-    let uuid = [];
-    for(let i = 0; i < 36; i++)if (i === 8 || i === 13 || i === 18 || i === 23) uuid[i] = "-";
-    else uuid[i] = hashTable[Math.ceil(Math.random() * hashTable.length - 1)];
-    return uuid.join("");
-}
-module.exports = uuid;
-
-},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
 
 //# sourceMappingURL=index.975ef6c8.js.map
