@@ -12,15 +12,14 @@ export function Todoinput(props){
     
     const my_string_react = useState([])
     const [my_string , update_string] = my_string_react
-    useEffect(()=>{
-        const items = JSON.parse(localStorage.getItem('items'));
-        if(items){
-            update_string(my_string)
-        }
-       
-    },[])
+   useEffect(() => {
+    const tmp = JSON.parse(localStorage.getItem('items'))
+    props.reload(tmp)
+    
+   },[])
     useEffect(() => {
-        localStorage.setItem('items', JSON.stringify(my_string));
+        if(!!props.List){
+        localStorage.setItem('items', JSON.stringify(props.List));}
       }, [my_string]);
     
     
@@ -28,7 +27,7 @@ export function Todoinput(props){
 
     return(
         <div>
-        <h1>your todo title:{/* {my_string} */}</h1>
+        <h1>your todo title:{my_string}</h1>
         <form id="todo_form">
         <input value={my_string} onChange={(e)=>{  
         update_string(e.target.value)}}

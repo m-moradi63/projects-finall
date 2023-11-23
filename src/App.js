@@ -12,6 +12,14 @@ import { listenerCount, title } from "process";
 export function App() {
   const [List , setList] = useState([])
   const [curentFilter , setCurentFilter]=useState("all") 
+  
+  const reload =(val)=>{
+    tmp = [...val]
+    console.log("tmp of :" , tmp)
+    
+    setList('tmp')
+  }
+  
   const deleteTask = (val)=>{
       
    const  deletlist = List.filter((item) =>{
@@ -55,6 +63,7 @@ export function App() {
        status:value.status}]
      setList(nwList)
      }
+    
  const filterList = List.filter((todo)=>{
   
   if(curentFilter==="done"){
@@ -68,13 +77,15 @@ export function App() {
   }
  })
  
+
+ 
   
   
     return (
     <div   className="container">
      <div className="form">
        
-       <Todoinput submitHandler = {submitTask} list= {List} setList={setList} submitTask={submitTask} submitLoadTask={submitLoadTask} />
+       <Todoinput reload={reload} submitHandler = {submitTask} List= {List} setList={setList} submitTask={submitTask} submitLoadTask={submitLoadTask} />
         <br /><br />
        <Filter curentFilter={curentFilter} setCurentFilter={setCurentFilter} />
      </div>

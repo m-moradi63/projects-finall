@@ -27175,6 +27175,13 @@ function App() {
     _s();
     const [List, setList] = (0, _react.useState)([]);
     const [curentFilter, setCurentFilter] = (0, _react.useState)("all");
+    const reload = (val)=>{
+        tmp = [
+            ...val
+        ];
+        console.log("tmp of :", tmp);
+        setList("tmp");
+    };
     const deleteTask = (val)=>{
         const deletlist = List.filter((item)=>{
             return item.id !== val;
@@ -27225,24 +27232,25 @@ function App() {
                 className: "form",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
+                        reload: reload,
                         submitHandler: submitTask,
-                        list: List,
+                        List: List,
                         setList: setList,
                         submitTask: submitTask,
                         submitLoadTask: submitLoadTask
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 77,
+                        lineNumber: 88,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 78,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 78,
+                        lineNumber: 89,
                         columnNumber: 15
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {
@@ -27250,13 +27258,13 @@ function App() {
                         setCurentFilter: setCurentFilter
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 79,
+                        lineNumber: 90,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 75,
+                lineNumber: 86,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27270,19 +27278,19 @@ function App() {
                         deleteTask: deleteTask
                     }, todo.id, false, {
                         fileName: "src/App.js",
-                        lineNumber: 85,
+                        lineNumber: 96,
                         columnNumber: 16
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 82,
+                lineNumber: 93,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 74,
+        lineNumber: 85,
         columnNumber: 5
     }, this);
 }
@@ -27555,21 +27563,24 @@ function Todoinput(props) {
     const my_string_react = (0, _react.useState)([]);
     const [my_string, update_string] = my_string_react;
     (0, _react.useEffect)(()=>{
-        const items = JSON.parse(localStorage.getItem("items"));
-        if (items) update_string(my_string);
+        const tmp = JSON.parse(localStorage.getItem("items"));
+        props.reload(tmp);
     }, []);
     (0, _react.useEffect)(()=>{
-        localStorage.setItem("items", JSON.stringify(my_string));
+        if (!!props.List) localStorage.setItem("items", JSON.stringify(props.List));
     }, [
         my_string
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "your todo title:"
-            }, void 0, false, {
+                children: [
+                    "your todo title:",
+                    my_string
+                ]
+            }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 31,
+                lineNumber: 30,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27585,7 +27596,7 @@ function Todoinput(props) {
                         id: "title"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 33,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27598,19 +27609,19 @@ function Todoinput(props) {
                         children: "save"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 37,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 32,
+                lineNumber: 31,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todoinput.jsx",
-        lineNumber: 30,
+        lineNumber: 29,
         columnNumber: 9
     }, this);
 }
@@ -27624,7 +27635,7 @@ $RefreshReg$(_c, "Todoinput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../App":"2kQhy","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-uuid":"eMaNs"}],"eMaNs":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-uuid":"eMaNs","../App":"2kQhy","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eMaNs":[function(require,module,exports) {
 /**
 A function that returns a universally unique identifier (uuid).  
 example: 1b83fd69-abe7-468c-bea1-306a8aa1c81d
