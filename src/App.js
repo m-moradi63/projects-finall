@@ -3,22 +3,19 @@ import { Todo  } from "./compunents/Todo"
 import { Todoinput } from "./compunents/Todoinput"
 import { Filter } from "./compunents/Filter"
 import uuid from 'react-uuid';
-import { listenerCount, title } from "process";
-
-
-
-
 
 export function App() {
+  
   const [List , setList] = useState([])
   const [curentFilter , setCurentFilter]=useState("all") 
   
+  /* 
   const reload =(val)=>{
     tmp = [...val]
     console.log("tmp of :" , tmp)
-    
-    setList('tmp')
-  }
+    setList(List)
+    setList(tmp)
+  } */
   
   const deleteTask = (val)=>{
       
@@ -49,7 +46,8 @@ export function App() {
      setList(toggList);
     }
   const submitTask = (value)=>{ 
-  const newlst=[...List ,
+  console.log("valueof" , value)
+    const newlst=[...List ,
     { 
      id:uuid(),
      title:value, 
@@ -62,9 +60,12 @@ export function App() {
        title:value.title, 
        status:value.status}]
      setList(nwList)
+     localStorage.setItem("items", List)
      }
     
- const filterList = List.filter((todo)=>{
+ const filterList = ()=>{
+  if(List !== []){
+  List.filter((todo)=>{
   
   if(curentFilter==="done"){
     return todo.status===true;
@@ -75,7 +76,8 @@ export function App() {
   else{
     return true;
   }
- })
+
+ })}}
  
 
  
@@ -85,7 +87,7 @@ export function App() {
     <div   className="container">
      <div className="form">
        
-       <Todoinput reload={reload} submitHandler = {submitTask} List= {List} setList={setList} submitTask={submitTask} submitLoadTask={submitLoadTask} />
+       <Todoinput  List = {List} setList= {setList} submitTask={submitTask} submitLoadTask={submitLoadTask} />
         <br /><br />
        <Filter curentFilter={curentFilter} setCurentFilter={setCurentFilter} />
      </div>

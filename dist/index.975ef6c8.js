@@ -27169,20 +27169,18 @@ var _todoinput = require("./compunents/Todoinput");
 var _filter = require("./compunents/Filter");
 var _reactUuid = require("react-uuid");
 var _reactUuidDefault = parcelHelpers.interopDefault(_reactUuid);
-var _process = require("process");
 var _s = $RefreshSig$();
 function App() {
     _s();
     const [List, setList] = (0, _react.useState)([]);
     const [curentFilter, setCurentFilter] = (0, _react.useState)("all");
-    const reload = (val)=>{
-        tmp = [
-            ...val
-        ];
-        console.log("tmp of :", tmp);
-        setList("tmp");
-    };
-    const deleteTask = (val)=>{
+    /* 
+  const reload =(val)=>{
+    tmp = [...val]
+    console.log("tmp of :" , tmp)
+    setList(List)
+    setList(tmp)
+  } */ const deleteTask = (val)=>{
         const deletlist = List.filter((item)=>{
             return item.id !== val;
         });
@@ -27200,6 +27198,7 @@ function App() {
         setList(toggList);
     };
     const submitTask = (value)=>{
+        console.log("valueof", value);
         const newlst = [
             ...List,
             {
@@ -27219,12 +27218,15 @@ function App() {
             }
         ];
         setList(nwList);
+        localStorage.setItem("items", List);
     };
-    const filterList = List.filter((todo)=>{
-        if (curentFilter === "done") return todo.status === true;
-        else if (curentFilter === "todo") return todo.status === false;
-        else return true;
-    });
+    const filterList = ()=>{
+        if (List !== []) List.filter((todo)=>{
+            if (curentFilter === "done") return todo.status === true;
+            else if (curentFilter === "todo") return todo.status === false;
+            else return true;
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
         children: [
@@ -27232,25 +27234,23 @@ function App() {
                 className: "form",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
-                        reload: reload,
-                        submitHandler: submitTask,
                         List: List,
                         setList: setList,
                         submitTask: submitTask,
                         submitLoadTask: submitLoadTask
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 88,
+                        lineNumber: 90,
                         columnNumber: 8
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 89,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 89,
+                        lineNumber: 91,
                         columnNumber: 15
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {
@@ -27258,13 +27258,13 @@ function App() {
                         setCurentFilter: setCurentFilter
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 90,
+                        lineNumber: 92,
                         columnNumber: 8
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 86,
+                lineNumber: 88,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27278,19 +27278,19 @@ function App() {
                         deleteTask: deleteTask
                     }, todo.id, false, {
                         fileName: "src/App.js",
-                        lineNumber: 96,
+                        lineNumber: 98,
                         columnNumber: 16
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 93,
+                lineNumber: 95,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 85,
+        lineNumber: 87,
         columnNumber: 5
     }, this);
 }
@@ -27304,7 +27304,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","react-uuid":"eMaNs","process":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5AT9P":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","react-uuid":"eMaNs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5AT9P":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27381,7 +27381,7 @@ exports.defineInteropFlag = function(a) {
 };
 exports.exportAll = function(source, dest) {
     Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
         Object.defineProperty(dest, key, {
             enumerable: true,
             get: function() {
@@ -27562,12 +27562,16 @@ function Todoinput(props) {
     _s();
     const my_string_react = (0, _react.useState)([]);
     const [my_string, update_string] = my_string_react;
+    const items = {
+        my_string
+    };
     (0, _react.useEffect)(()=>{
-        const tmp = JSON.parse(localStorage.getItem("items"));
-        props.reload(tmp);
+        const items = localStorage.getItem("items");
+        update_string(items);
+        props.setList(items);
     }, []);
     (0, _react.useEffect)(()=>{
-        if (!!props.List) localStorage.setItem("items", JSON.stringify(props.List));
+        localStorage.setItem("items", my_string);
     }, [
         my_string
     ]);
@@ -27580,48 +27584,50 @@ function Todoinput(props) {
                 ]
             }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
                 id: "todo_form",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        id: "mainInput",
                         value: my_string,
-                        onChange: (e)=>{
-                            update_string(e.target.value);
+                        onKeyUp: (ev)=>{
+                            ev.preventDefault();
+                            const char = ev.key;
+                            const nw = char + my_string;
+                            update_string(nw);
                         },
                         type: "text",
-                        placeholder: "write to do item....",
-                        id: "title"
+                        placeholder: "write to do item...."
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         onClick: (event)=>{
                             event.preventDefault();
-                            props.submitHandler(my_string);
-                            update_string("");
+                            props.submitTask(my_string);
                         },
                         id: "saveBtn",
                         children: "save"
                     }, void 0, false, {
                         fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 36,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/Todoinput.jsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 9
     }, this);
 }

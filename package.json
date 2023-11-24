@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
-    "parcel": "^2.10.2",
+    "parcel": "^2.10.3",
     "process": "^0.11.10",
     "style-loader": "^3.3.3"
   }
