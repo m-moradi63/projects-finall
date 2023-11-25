@@ -2942,21 +2942,14 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$20e5.prelude(module);
 
 try {
-/* (https://reactjs.org/link/special-props) */ /*#__PURE__*/ var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _app = require("./App");
-(0, _jsxDevRuntime.jsxDEV)("script", {
-    src: "http://192.168.70.15:8097"
-}, void 0, false, {
-    fileName: "src/index.js",
-    lineNumber: 2,
-    columnNumber: 1
-}, undefined);
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 8,
+    lineNumber: 7,
     columnNumber: 13
 }, undefined));
 
@@ -27164,137 +27157,204 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _todo = require("./compunents/Todo");
-var _todoinput = require("./compunents/Todoinput");
-var _filter = require("./compunents/Filter");
-var _reactUuid = require("react-uuid");
-var _reactUuidDefault = parcelHelpers.interopDefault(_reactUuid);
-var _s = $RefreshSig$();
+var _profile = require("./compunents/profile");
 function App() {
-    _s();
-    const [List, setList] = (0, _react.useState)([]);
-    const [curentFilter, setCurentFilter] = (0, _react.useState)("all");
-    /* 
-  const reload =(val)=>{
-    tmp = [...val]
-    console.log("tmp of :" , tmp)
-    setList(List)
-    setList(tmp)
-  } */ const deleteTask = (val)=>{
-        const deletlist = List.filter((item)=>{
-            return item.id !== val;
-        });
-        setList(deletlist);
-    };
-    const toggleTask = (val)=>{
-        toggList = List.map((item)=>{
-            if (item.id === val) return {
-                id: item.id,
-                title: item.title,
-                status: !item.status
-            };
-            return item;
-        });
-        setList(toggList);
-    };
-    const submitTask = (value)=>{
-        console.log("valueof", value);
-        const newlst = [
-            ...List,
-            {
-                id: (0, _reactUuidDefault.default)(),
-                title: value,
-                status: false
-            }
-        ];
-        setList(newlst);
-    };
-    const submitLoadTask = (value)=>{
-        const nwList = [
-            {
-                id: value.id,
-                title: value.title,
-                status: value.status
-            }
-        ];
-        setList(nwList);
-        localStorage.setItem("items", List);
-    };
-    const filterList = ()=>{
-        if (List !== []) List.filter((todo)=>{
-            if (curentFilter === "done") return todo.status === true;
-            else if (curentFilter === "todo") return todo.status === false;
-            else return true;
-        });
-    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "form",
+                class: "flex justify-around mx-16 ",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todoinput.Todoinput), {
-                        List: List,
-                        setList: setList,
-                        submitTask: submitTask,
-                        submitLoadTask: submitLoadTask
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "inline-block w-2/4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                class: "fa-solid fa-bars fa-2xl  border-solid  border-2 border-indigo-600  mr-3"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 18,
+                                columnNumber: 17
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                class: "fa-brands fa-github fa-2xl"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 19,
+                                columnNumber: 18
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/App.js",
-                        lineNumber: 90,
-                        columnNumber: 8
+                        lineNumber: 17,
+                        columnNumber: 12
                     }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "inline-block w-2/4 flex",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "inline-block w-80 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-solid fa-magnifying-glass"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 25,
+                                        columnNumber: 19
+                                    }, this),
+                                    "type",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "border-solid border-2 border-indigo-600 rounded-md border-inherit",
+                                        children: "/"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 26,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        class: "inline-block ",
+                                        children: "to search"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 27,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        class: "inline-block pl-40",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                children: "|"
+                                            }, void 0, false, {
+                                                fileName: "src/App.js",
+                                                lineNumber: 29,
+                                                columnNumber: 22
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                class: "fa-solid fa-arrow-right",
+                                                children: "-"
+                                            }, void 0, false, {
+                                                fileName: "src/App.js",
+                                                lineNumber: 30,
+                                                columnNumber: 22
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 28,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/App.js",
+                                lineNumber: 24,
+                                columnNumber: 16
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                class: "inline-block ml-4",
+                                children: "|"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 34,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "inline-block w-10 ml-4 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
+                                children: [
+                                    "+ ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-sharp fa-solid fa-caret-down"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 35,
+                                        columnNumber: 133
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/App.js",
+                                lineNumber: 35,
+                                columnNumber: 15
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "flex justify-around  inline-block ml-4",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "  fa-regular fa-circle-dot"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 38,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "  fa-regular fa-circle-dot"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 39,
+                                        columnNumber: 19
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "  fa-regular fa-circle-dot"
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 40,
+                                        columnNumber: 19
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/App.js",
+                                lineNumber: 37,
+                                columnNumber: 17
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/App.js",
-                        lineNumber: 91,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 91,
-                        columnNumber: 15
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _filter.Filter), {
-                        curentFilter: curentFilter,
-                        setCurentFilter: setCurentFilter
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 92,
-                        columnNumber: 8
+                        lineNumber: 23,
+                        columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 88,
-                columnNumber: 6
+                lineNumber: 15,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("profile", {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 47,
+                columnNumber: 8
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "list",
-                children: filterList.map((todo)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _todo.Todo), {
-                        id: todo.id,
-                        title: todo.title,
-                        status: todo.status,
-                        toggleTask: toggleTask,
-                        deleteTask: deleteTask
-                    }, todo.id, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 98,
-                        columnNumber: 16
-                    }, this);
-                })
+                class: "flex items-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                            children: "Andrew Alfred"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 51,
+                            columnNumber: 12
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            children: "Technical advisor"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 52,
+                            columnNumber: 12
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/App.js",
+                    lineNumber: 50,
+                    columnNumber: 12
+                }, this)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 95,
-                columnNumber: 6
+                lineNumber: 48,
+                columnNumber: 8
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 87,
-        columnNumber: 5
+        lineNumber: 13,
+        columnNumber: 6
     }, this);
 }
-_s(App, "tJv5V1PP1NmyS+ynz0s37Xx+fMg=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27304,71 +27364,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Todo":"5AT9P","./compunents/Todoinput":"eTHOk","./compunents/Filter":"72jNn","react-uuid":"eMaNs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5AT9P":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0319 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0319.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Todo", ()=>Todo);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Todo(props) {
-    const handleDelet = ()=>{
-        props.deleteTask(props.id);
-    };
-    const handleToggle = ()=>{
-        props.toggleTask(props.id);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "item",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "checkbox",
-                name: "",
-                defaultChecked: props.status,
-                onClick: handleToggle
-            }, void 0, false, {
-                fileName: "src/compunents/Todo.jsx",
-                lineNumber: 12,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                children: props.title
-            }, void 0, false, {
-                fileName: "src/compunents/Todo.jsx",
-                lineNumber: 13,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                id: "delet_btn",
-                className: "delet_btn",
-                onClick: handleDelet,
-                children: "delet"
-            }, void 0, false, {
-                fileName: "src/compunents/Todo.jsx",
-                lineNumber: 14,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/compunents/Todo.jsx",
-        lineNumber: 11,
-        columnNumber: 9
-    }, this);
-}
-_c = Todo;
-var _c;
-$RefreshReg$(_c, "Todo");
-
-  $parcel$ReactRefreshHelpers$0319.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./compunents/profile":"3oZnq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27536,220 +27532,18 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"eTHOk":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fe45 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fe45.prelude(module);
+},{"7422ead32dcc1e6b":"786KC"}],"3oZnq":[function(require,module,exports) {
+/* import { useEffect } from "react"
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/* const init = [{
-    id:uuid(),
-    title : "item1",
-    status : false
+useEffect(() => {  
 
-
-}] */ parcelHelpers.export(exports, "Todoinput", ()=>Todoinput);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactUuid = require("react-uuid");
-var _reactUuidDefault = parcelHelpers.interopDefault(_reactUuid);
-var _app = require("../App");
-var _react = require("react");
-var _s = $RefreshSig$();
-function Todoinput(props) {
-    _s();
-    const my_string_react = (0, _react.useState)([]);
-    const [my_string, update_string] = my_string_react;
-    const items = {
-        my_string
-    };
-    (0, _react.useEffect)(()=>{
-        const items = localStorage.getItem("items");
-        update_string(items);
-        props.setList(items);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        localStorage.setItem("items", my_string);
-    }, [
-        my_string
-    ]);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    "your todo title:",
-                    my_string
-                ]
-            }, void 0, true, {
-                fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 31,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                id: "todo_form",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        id: "mainInput",
-                        value: my_string,
-                        onKeyUp: (ev)=>{
-                            ev.preventDefault();
-                            const char = ev.key;
-                            const nw = char + my_string;
-                            update_string(nw);
-                        },
-                        type: "text",
-                        placeholder: "write to do item...."
-                    }, void 0, false, {
-                        fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        onClick: (event)=>{
-                            event.preventDefault();
-                            props.submitTask(my_string);
-                        },
-                        id: "saveBtn",
-                        children: "save"
-                    }, void 0, false, {
-                        fileName: "src/compunents/Todoinput.jsx",
-                        lineNumber: 44,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/compunents/Todoinput.jsx",
-                lineNumber: 32,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/compunents/Todoinput.jsx",
-        lineNumber: 30,
-        columnNumber: 9
-    }, this);
-}
-_s(Todoinput, "EMY3jUaFtcWwT8ndkhCQCZBdW8U=");
-_c = Todoinput;
-var _c;
-$RefreshReg$(_c, "Todoinput");
-
-  $parcel$ReactRefreshHelpers$fe45.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-uuid":"eMaNs","../App":"2kQhy","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"eMaNs":[function(require,module,exports) {
-/**
-A function that returns a universally unique identifier (uuid).  
-example: 1b83fd69-abe7-468c-bea1-306a8aa1c81d
-@returns `string` : 32 character uuid (see example)
-*/ function uuid() {
-    const hashTable = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9"
-    ];
-    let uuid = [];
-    for(let i = 0; i < 36; i++)if (i === 8 || i === 13 || i === 18 || i === 23) uuid[i] = "-";
-    else uuid[i] = hashTable[Math.ceil(Math.random() * hashTable.length - 1)];
-    return uuid.join("");
-}
-module.exports = uuid;
-
-},{}],"72jNn":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9bf7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9bf7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Filter", ()=>Filter);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _app = require("../App");
-function Filter(props) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: props.curentFilter
-            }, void 0, false, {
-                fileName: "src/compunents/Filter.jsx",
-                lineNumber: 7,
-                columnNumber: 9
-            }, this),
-            "status:",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
-                value: props.curentFilter,
-                onChange: (e)=>{
-                    const value = e.target.value;
-                    props.setCurentFilter(value);
-                },
-                id: "filters",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "all",
-                        children: "All"
-                    }, void 0, false, {
-                        fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 16,
-                        columnNumber: 13
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "done",
-                        children: "Done"
-                    }, void 0, false, {
-                        fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 17,
-                        columnNumber: 13
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
-                        value: "todo",
-                        children: "Todo"
-                    }, void 0, false, {
-                        fileName: "src/compunents/Filter.jsx",
-                        lineNumber: 18,
-                        columnNumber: 13
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/compunents/Filter.jsx",
-                lineNumber: 9,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/compunents/Filter.jsx",
-        lineNumber: 6,
-        columnNumber: 8
-    }, this);
-}
-_c = Filter;
-var _c;
-$RefreshReg$(_c, "Filter");
-
-  $parcel$ReactRefreshHelpers$9bf7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
+})
+    export function prof() {
+  return 
+  (
+    <img src="" alt="" />
+  )  
+} */ 
+},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
 
 //# sourceMappingURL=index.975ef6c8.js.map
