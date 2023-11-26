@@ -2945,11 +2945,12 @@ try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _app = require("./App");
+var _react = require("react");
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
     fileName: "src/index.js",
-    lineNumber: 7,
+    lineNumber: 8,
     columnNumber: 13
 }, undefined));
 
@@ -2958,7 +2959,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, 
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"2kQhy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"2kQhy","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27157,202 +27158,227 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _profile = require("./compunents/profile");
+var _profileJsx = require("./compunents/Profile.jsx");
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "flex justify-around mx-16 ",
+                className: "flex justify-around mx-16 mt-8 ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "inline-block w-2/4",
+                        className: "inline-block w-2/4",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                class: "fa-solid fa-bars fa-2xl  border-solid  border-2 border-indigo-600  mr-3"
+                                className: "fa-solid fa-bars fa-2xl  mr-3"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 18,
-                                columnNumber: 17
+                                lineNumber: 14,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                class: "fa-brands fa-github fa-2xl"
+                                className: "fa-brands fa-github fa-2xl"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 19,
-                                columnNumber: 18
+                                lineNumber: 15,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.js",
-                        lineNumber: 17,
-                        columnNumber: 12
+                        lineNumber: 13,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "inline-block w-2/4 flex",
+                        className: "inline-block w-2/4 flex",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "inline-block w-80 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
+                                className: "inline-block w-80 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-solid fa-magnifying-glass"
+                                        className: "fa-solid fa-magnifying-glass"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 25,
-                                        columnNumber: 19
+                                        lineNumber: 21,
+                                        columnNumber: 13
                                     }, this),
                                     "type",
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "border-solid border-2 border-indigo-600 rounded-md border-inherit",
+                                        className: "border-solid border-2 border-indigo-600 rounded-md border-inherit",
                                         children: "/"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 26,
-                                        columnNumber: 19
+                                        lineNumber: 22,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        class: "inline-block ",
+                                        className: "inline-block ",
                                         children: "to search"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 27,
-                                        columnNumber: 19
+                                        lineNumber: 23,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        class: "inline-block pl-40",
+                                        className: "inline-block pl-40",
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                                                 children: "|"
                                             }, void 0, false, {
                                                 fileName: "src/App.js",
-                                                lineNumber: 29,
-                                                columnNumber: 22
+                                                lineNumber: 25,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                                class: "fa-solid fa-arrow-right",
+                                                className: "fa-solid fa-arrow-right",
                                                 children: "-"
                                             }, void 0, false, {
                                                 fileName: "src/App.js",
-                                                lineNumber: 30,
-                                                columnNumber: 22
+                                                lineNumber: 26,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/App.js",
-                                        lineNumber: 28,
-                                        columnNumber: 19
+                                        lineNumber: 24,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/App.js",
-                                lineNumber: 24,
-                                columnNumber: 16
+                                lineNumber: 20,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                class: "inline-block ml-4",
+                                className: "inline-block ml-4",
                                 children: "|"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 34,
-                                columnNumber: 15
+                                lineNumber: 30,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "inline-block w-10 ml-4 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
+                                className: "inline-block w-10 ml-4 border-solid border-2 border-inherit rounded border-indigo-600 ... inline-block",
                                 children: [
                                     "+ ",
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-sharp fa-solid fa-caret-down"
+                                        className: "fa-sharp fa-solid fa-caret-down"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 35,
+                                        lineNumber: 31,
                                         columnNumber: 133
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/App.js",
-                                lineNumber: 35,
-                                columnNumber: 15
+                                lineNumber: 31,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "flex justify-around  inline-block ml-4",
+                                className: "flex justify-around  inline-block ml-4",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "  fa-regular fa-circle-dot"
+                                        className: "  fa-regular fa-circle-dot"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 38,
-                                        columnNumber: 19
+                                        lineNumber: 34,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "  fa-regular fa-circle-dot"
+                                        className: "  fa-regular fa-circle-dot"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 39,
-                                        columnNumber: 19
+                                        lineNumber: 35,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "  fa-regular fa-circle-dot"
+                                        className: "  fa-regular fa-circle-dot"
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 40,
-                                        columnNumber: 19
+                                        lineNumber: 36,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/App.js",
-                                lineNumber: 37,
-                                columnNumber: 17
+                                lineNumber: 33,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.js",
-                        lineNumber: 23,
-                        columnNumber: 13
+                        lineNumber: 19,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 15,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("profile", {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 47,
-                columnNumber: 8
+                lineNumber: 11,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "flex items-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center mt-8 ml-16",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                            children: "Andrew Alfred"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "ml-4",
+                            children: "Overwiew"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 51,
-                            columnNumber: 12
+                            lineNumber: 46,
+                            columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            children: "Technical advisor"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "ml-4",
+                            children: "Repositories"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 52,
-                            columnNumber: 12
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "ml-4",
+                            children: "Projects"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 48,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "ml-4",
+                            children: "Packages"
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 49,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 50,
-                    columnNumber: 12
+                    lineNumber: 45,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 48,
-                columnNumber: 8
+                lineNumber: 43,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "mt-8 ml-16",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsx.Profile), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 54,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 53,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 13,
-        columnNumber: 6
+        lineNumber: 9,
+        columnNumber: 5
     }, this);
 }
 _c = App;
@@ -27364,7 +27390,54 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./compunents/profile":"3oZnq"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./compunents/Profile.jsx":"haiBr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"haiBr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$125c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$125c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Profile", ()=>Profile);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _app = require("../App");
+var _s = $RefreshSig$();
+function Profile() {
+    _s();
+    (0, _react.useEffect)(()=>{
+        const val = fetch("https://avatars.githubusercontent.com/u/3523430?v=4").then((response)=>{
+            console.log(val);
+        });
+    }, []);
+    console.log("azmayeshi");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            class: "rounded-full w-60",
+            src: "https://avatars.githubusercontent.com/u/3523430?v=4"
+        }, void 0, false, {
+            fileName: "src/compunents/Profile.jsx",
+            lineNumber: 16,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/compunents/Profile.jsx",
+        lineNumber: 15,
+        columnNumber: 5
+    }, this);
+}
+_s(Profile, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = Profile;
+var _c;
+$RefreshReg$(_c, "Profile");
+
+  $parcel$ReactRefreshHelpers$125c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","../App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27532,18 +27605,6 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"3oZnq":[function(require,module,exports) {
-/* import { useEffect } from "react"
-
-useEffect(() => {  
-
-})
-    export function prof() {
-  return 
-  (
-    <img src="" alt="" />
-  )  
-} */ 
-},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
+},{"7422ead32dcc1e6b":"786KC"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
 
 //# sourceMappingURL=index.975ef6c8.js.map
