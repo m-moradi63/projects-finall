@@ -27165,25 +27165,57 @@ function App() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headersJsx.Nav), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 11,
-                columnNumber: 5
+                lineNumber: 12,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "mt-8 ml-16",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileJsx.Profile), {}, void 0, false, {
+                className: "flex mt-8 columns-3 ",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "columns-12 ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "columns border-4 solid ",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "https://avatars.githubusercontent.com/u/3523430?v=4"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "border-4 solid",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "https://avatars.githubusercontent.com/u/3523430?v=4"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 16,
-                    columnNumber: 13
+                    lineNumber: 14,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 15,
-                columnNumber: 11
+                lineNumber: 13,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
@@ -39203,332 +39235,25 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _navTopJsx = require("../subcomponent/nav-top.jsx");
+var _navFooterJsx = require("../subcomponent/nav-footer.jsx");
 function Nav() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between ml-4 mt-4  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "mr-3 border-solid border-2 border-slate-200 border-gray-300 rounded-sm",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    "aria-hidden": "true",
-                                    height: "16",
-                                    viewBox: "0 0 16 16",
-                                    version: "1.1",
-                                    width: "16",
-                                    "data-view-component": "true",
-                                    class: "octicon octicon-three-bars Button-visual",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 8,
-                                        columnNumber: 29
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "src/compunents/headers.jsx",
-                                    lineNumber: 7,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 6,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                className: "fa-brands fa-github fa-2xl"
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 11,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 5,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex justify-between w-[30rem]",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "flex justify-between w-[18rem] inline-block  p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                                "aria-hidden": "true",
-                                                height: "16",
-                                                viewBox: "0 0 16 16",
-                                                version: "1.1",
-                                                width: "16",
-                                                "data-view-component": "true",
-                                                className: "inline-block octicon octicon-search",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                    d: "M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"
-                                                }, void 0, false, {
-                                                    fileName: "src/compunents/headers.jsx",
-                                                    lineNumber: 19,
-                                                    columnNumber: 33
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/compunents/headers.jsx",
-                                                lineNumber: 18,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                children: "Type / to search "
-                                            }, void 0, false, {
-                                                fileName: "src/compunents/headers.jsx",
-                                                lineNumber: 21,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 17,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        "aria-hidden": "true",
-                                        height: "16",
-                                        viewBox: "0 0 16 16",
-                                        version: "1.1",
-                                        width: "16",
-                                        "data-view-component": "true",
-                                        className: "inline-block octicon octicon-command-palette",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"
-                                        }, void 0, false, {
-                                            fileName: "src/compunents/headers.jsx",
-                                            lineNumber: 24,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 23,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 16,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "inline-block",
-                                children: "|"
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 28,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "flex items-center  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "+"
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 30,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        "aria-hidden": "true",
-                                        height: "16",
-                                        viewBox: "0 0 16 16",
-                                        version: "1.1",
-                                        width: "16",
-                                        "data-view-component": "true",
-                                        className: "inline-block octicon octicon-triangle-down",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
-                                        }, void 0, false, {
-                                            fileName: "src/compunents/headers.jsx",
-                                            lineNumber: 32,
-                                            columnNumber: 29
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 31,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 29,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border-solid border-2 border-slate-300 border-indigo-600... rounded",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    "aria-hidden": "true",
-                                    height: "16",
-                                    viewBox: "0 0 16 16",
-                                    version: "1.1",
-                                    width: "16",
-                                    "data-view-component": "true",
-                                    class: "octicon octicon-issue-opened Button-visual",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                                        }, void 0, false, {
-                                            fileName: "src/compunents/headers.jsx",
-                                            lineNumber: 37,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
-                                        }, void 0, false, {
-                                            fileName: "src/compunents/headers.jsx",
-                                            lineNumber: 37,
-                                            columnNumber: 90
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/compunents/headers.jsx",
-                                    lineNumber: 36,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 35,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border-solid border-2 border-slate-300 border-indigo-600... rounded",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    "aria-hidden": "true",
-                                    height: "16",
-                                    viewBox: "0 0 16 16",
-                                    version: "1.1",
-                                    width: "16",
-                                    "data-view-component": "true",
-                                    class: "octicon octicon-git-pull-request Button-visual",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 42,
-                                        columnNumber: 29
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "src/compunents/headers.jsx",
-                                    lineNumber: 41,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 40,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border-solid border-2 border-slate-300 border-indigo-600... rounded",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    "aria-hidden": "true",
-                                    height: "16",
-                                    viewBox: "0 0 16 16",
-                                    version: "1.1",
-                                    width: "16",
-                                    "data-view-component": "true",
-                                    class: "octicon octicon-inbox Button-visual",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
-                                    }, void 0, false, {
-                                        fileName: "src/compunents/headers.jsx",
-                                        lineNumber: 47,
-                                        columnNumber: 29
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "src/compunents/headers.jsx",
-                                    lineNumber: 46,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 45,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "border-solid border-2 border-slate-300 border-indigo-600... rounded",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: "https://avatars.githubusercontent.com/u/138288308?v=4",
-                                    alt: "",
-                                    size: "32",
-                                    height: "32",
-                                    width: "32",
-                                    "data-view-component": "true",
-                                    class: "avatar circle"
-                                }, void 0, false, {
-                                    fileName: "src/compunents/headers.jsx",
-                                    lineNumber: 51,
-                                    columnNumber: 25
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/compunents/headers.jsx",
-                                lineNumber: 50,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 15,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTopJsx.NavTop), {}, void 0, false, {
                 fileName: "src/compunents/headers.jsx",
-                lineNumber: 4,
-                columnNumber: 13
+                lineNumber: 6,
+                columnNumber: 16
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "mt-10",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "ml-4",
-                        children: "Overwiew"
-                    }, void 0, false, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 57,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "ml-4",
-                        children: "Repositories"
-                    }, void 0, false, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 58,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "ml-4",
-                        children: "Projects"
-                    }, void 0, false, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 59,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        className: "ml-4",
-                        children: "Packages"
-                    }, void 0, false, {
-                        fileName: "src/compunents/headers.jsx",
-                        lineNumber: 60,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navFooterJsx.NavFooter), {}, void 0, false, {
                 fileName: "src/compunents/headers.jsx",
-                lineNumber: 55,
-                columnNumber: 13
+                lineNumber: 7,
+                columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/headers.jsx",
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 9
     }, this);
 }
@@ -39537,6 +39262,500 @@ var _c;
 $RefreshReg$(_c, "Nav");
 
   $parcel$ReactRefreshHelpers$ff3e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../subcomponent/nav-top.jsx":"kAG2z","../subcomponent/nav-footer.jsx":"iueVT"}],"kAG2z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$61e0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$61e0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NavTop", ()=>NavTop);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function NavTop() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex justify-between ml-4 mt-4  ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between items-center ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: " box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            class: "octicon octicon-three-bars Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 7,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.jsx",
+                            lineNumber: 6,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 5,
+                        columnNumber: 22
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "ml-4 fa-brands fa-github fa-2xl"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 10,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-top.jsx",
+                lineNumber: 4,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between w-[32rem] mr-6 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                        "aria-hidden": "true",
+                                        height: "16",
+                                        viewBox: "0 0 16 16",
+                                        version: "1.1",
+                                        width: "16",
+                                        "data-view-component": "true",
+                                        className: "inline-block octicon octicon-search",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                            d: "M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/nav-top.jsx",
+                                            lineNumber: 18,
+                                            columnNumber: 33
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/nav-top.jsx",
+                                        lineNumber: 17,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "Type / to search "
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/nav-top.jsx",
+                                        lineNumber: 20,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 16,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "inline-block octicon octicon-command-palette",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.jsx",
+                                    lineNumber: 23,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 22,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 15,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "inline-block",
+                        children: "|"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 27,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "flex  items-center p-1  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "+"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 29,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "inline-block octicon octicon-triangle-down",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.jsx",
+                                    lineNumber: 31,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 30,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 28,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-2 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            class: "octicon octicon-issue-opened Button-visual",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.jsx",
+                                    lineNumber: 36,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.jsx",
+                                    lineNumber: 36,
+                                    columnNumber: 90
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/subcomponent/nav-top.jsx",
+                            lineNumber: 35,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 34,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            class: "octicon octicon-git-pull-request Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 41,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.jsx",
+                            lineNumber: 40,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 39,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            class: "octicon octicon-inbox Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.jsx",
+                                lineNumber: 46,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.jsx",
+                            lineNumber: 45,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 44,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "rounded-full border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "https://avatars.githubusercontent.com/u/138288308?v=4",
+                            alt: "",
+                            size: "32",
+                            height: "32",
+                            width: "32",
+                            "data-view-component": "true",
+                            class: "avatar circle"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.jsx",
+                            lineNumber: 50,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.jsx",
+                        lineNumber: 49,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-top.jsx",
+                lineNumber: 14,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/subcomponent/nav-top.jsx",
+        lineNumber: 3,
+        columnNumber: 9
+    }, this);
+}
+_c = NavTop;
+var _c;
+$RefreshReg$(_c, "NavTop");
+
+  $parcel$ReactRefreshHelpers$61e0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iueVT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$db21 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$db21.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NavFooter", ()=>NavFooter);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function NavFooter() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mt-10 flex",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.jsx",
+                            lineNumber: 5,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 4,
+                        columnNumber: 38
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Overwiew"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 6,
+                        columnNumber: 23
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.jsx",
+                lineNumber: 4,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-repo UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.jsx",
+                            lineNumber: 8,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 7,
+                        columnNumber: 37
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Repositories"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 9,
+                        columnNumber: 23
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.jsx",
+                lineNumber: 7,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-table UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.jsx",
+                            lineNumber: 11,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 10,
+                        columnNumber: 37
+                    }, this),
+                    "Projects"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.jsx",
+                lineNumber: 10,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-package UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.jsx",
+                            lineNumber: 14,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 13,
+                        columnNumber: 37
+                    }, this),
+                    "Packages"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.jsx",
+                lineNumber: 13,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-star UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.jsx",
+                            lineNumber: 17,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.jsx",
+                        lineNumber: 16,
+                        columnNumber: 37
+                    }, this),
+                    "Starts"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.jsx",
+                lineNumber: 16,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/subcomponent/nav-footer.jsx",
+        lineNumber: 3,
+        columnNumber: 9
+    }, this);
+}
+_c = NavFooter;
+var _c;
+$RefreshReg$(_c, "NavFooter");
+
+  $parcel$ReactRefreshHelpers$db21.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
