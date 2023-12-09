@@ -7,7 +7,7 @@ export function Main(){
     return  (
         <div className="flex justify-between">
             <Profile/>
-            <Activity/>
+            
         </div>
     )
 }

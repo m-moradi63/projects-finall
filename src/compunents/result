@@ -1,0 +1,161 @@
+allow_forking: true
+​​​
+archive_url: "https://api.github.com/repos/shahramardalan/blogpy/{archive_format}{/ref}"
+​​​
+archived: false
+​​​
+assignees_url: "https://api.github.com/repos/shahramardalan/blogpy/assignees{/user}"
+​​​
+blobs_url: "https://api.github.com/repos/shahramardalan/blogpy/git/blobs{/sha}"
+​​​
+branches_url: "https://api.github.com/repos/shahramardalan/blogpy/branches{/branch}"
+​​​
+clone_url: "https://github.com/shahramardalan/blogpy.git"
+​​​
+collaborators_url: "https://api.github.com/repos/shahramardalan/blogpy/collaborators{/collaborator}"
+​​​
+comments_url: "https://api.github.com/repos/shahramardalan/blogpy/comments{/number}"
+​​​
+commits_url: "https://api.github.com/repos/shahramardalan/blogpy/commits{/sha}"
+​​​
+compare_url: "https://api.github.com/repos/shahramardalan/blogpy/compare/{base}...{head}"
+​​​
+contents_url: "https://api.github.com/repos/shahramardalan/blogpy/contents/{+path}"
+​​​
+contributors_url: "https://api.github.com/repos/shahramardalan/blogpy/contributors"
+​​​
+created_at: "2020-05-23T10:05:05Z"
+​​​
+default_branch: "master"
+​​​
+deployments_url: "https://api.github.com/repos/shahramardalan/blogpy/deployments"
+​​​
+description: "Blogpy project based on Python 3.8 and Django 2.2"
+​​​
+disabled: false
+​​​
+downloads_url: "https://api.github.com/repos/shahramardalan/blogpy/downloads"
+​​​
+events_url: "https://api.github.com/repos/shahramardalan/blogpy/events"
+​​​
+fork: false
+​​​
+forks: 0
+​​​
+forks_count: 0
+​​​
+forks_url: "https://api.github.com/repos/shahramardalan/blogpy/forks"
+​​​
+full_name: "shahramardalan/blogpy"
+​​​
+git_commits_url: "https://api.github.com/repos/shahramardalan/blogpy/git/commits{/sha}"
+​​​
+git_refs_url: "https://api.github.com/repos/shahramardalan/blogpy/git/refs{/sha}"
+​​​
+git_tags_url: "https://api.github.com/repos/shahramardalan/blogpy/git/tags{/sha}"
+​​​
+git_url: "git://github.com/shahramardalan/blogpy.git"
+​​​
+has_discussions: false
+​​​
+has_downloads: true
+​​​
+has_issues: true
+​​​
+has_pages: false
+​​​
+has_projects: true
+​​​
+has_wiki: true
+​​​
+homepage: null
+​​​
+hooks_url: "https://api.github.com/repos/shahramardalan/blogpy/hooks"
+​​​
+html_url: "https://github.com/shahramardalan/blogpy"
+​​​
+id: 266309706
+​​​
+is_template: false
+​​​
+issue_comment_url: "https://api.github.com/repos/shahramardalan/blogpy/issues/comments{/number}"
+​​​
+issue_events_url: "https://api.github.com/repos/shahramardalan/blogpy/issues/events{/number}"
+​​​
+issues_url: "https://api.github.com/repos/shahramardalan/blogpy/issues{/number}"
+​​​
+keys_url: "https://api.github.com/repos/shahramardalan/blogpy/keys{/key_id}"
+​​​
+labels_url: "https://api.github.com/repos/shahramardalan/blogpy/labels{/name}"
+​​​
+language: "JavaScript"
+​​​
+languages_url: "https://api.github.com/repos/shahramardalan/blogpy/languages"
+​​​
+license: null
+​​​
+merges_url: "https://api.github.com/repos/shahramardalan/blogpy/merges"
+​​​
+milestones_url: "https://api.github.com/repos/shahramardalan/blogpy/milestones{/number}"
+​​​
+mirror_url: null
+​​​
+name: "blogpy"
+​​​
+node_id: "MDEwOlJlcG9zaXRvcnkyNjYzMDk3MDY="
+​​​
+notifications_url: "https://api.github.com/repos/shahramardalan/blogpy/notifications{?since,all,participating}"
+​​​
+open_issues: 2
+​​​
+open_issues_count: 2
+​​​
+owner: Object { login: "shahramardalan", id: 41269825, node_id: "MDQ6VXNlcjQxMjY5ODI1", … }
+​​​
+permissions: Object { admin: false, maintain: false, push: false, … }
+​​​
+private: false
+​​​
+pulls_url: "https://api.github.com/repos/shahramardalan/blogpy/pulls{/number}"
+​​​
+pushed_at: "2022-04-22T23:17:41Z"
+​​​
+releases_url: "https://api.github.com/repos/shahramardalan/blogpy/releases{/id}"
+​​​
+size: 7396
+​​​
+ssh_url: "git@github.com:shahramardalan/blogpy.git"
+​​​
+stargazers_count: 0
+​​​
+stargazers_url: "https://api.github.com/repos/shahramardalan/blogpy/stargazers"
+​​​
+statuses_url: "https://api.github.com/repos/shahramardalan/blogpy/statuses/{sha}"
+​​​
+subscribers_url: "https://api.github.com/repos/shahramardalan/blogpy/subscribers"
+​​​
+subscription_url: "https://api.github.com/repos/shahramardalan/blogpy/subscription"
+​​​
+svn_url: "https://github.com/shahramardalan/blogpy"
+​​​
+tags_url: "https://api.github.com/repos/shahramardalan/blogpy/tags"
+​​​
+teams_url: "https://api.github.com/repos/shahramardalan/blogpy/teams"
+​​​
+topics: Array []
+​​​
+trees_url: "https://api.github.com/repos/shahramardalan/blogpy/git/trees{/sha}"
+​​​
+updated_at: "2020-05-26T21:46:19Z"
+​​​
+url: "https://api.github.com/repos/shahramardalan/blogpy"
+​​​
+visibility: "public"
+​​​
+watchers: 0
+​​​
+watchers_count: 0
+​​​
+web_commit_signoff_required: false
+​​​
+<prototype>: Object { … }
