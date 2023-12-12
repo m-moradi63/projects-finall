@@ -1,39 +1,60 @@
-import { apiRequest , apiRepos } from "./getUser.js";
+import { apiRepos } from "./getUser.js";
 import { useEffect, useState } from "react";
 
-export function Activity(){
-  const [repository, setrepository] = useState();
+export function Activity(props) {
+  const [repository, setrepository] = useState([]);
   useEffect(() => {
-  apiRepos().then(function (data) {
-    setrepository(data);
-  }, [])
-});
- return (
-<div className="pl-4 w-[88%] h-[2re] bg-slate-100">
-Pinned
-<div className="border-2 solid w-[28rem] h-[8rem] rounded-md">
-  <svg
-    aria-hidden="true"
-    height="16"
-    viewBox="0 0 16 16"
-    version="1.1"
-    width="16"
-    data-view-component="true"
-    className="octicon octicon-repo mr-1 color-fg-muted inline-block"
-  >
-    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
-  </svg>
-  &nbsp;&nbsp;
-  <a href = "Document URL" className="color-blue" >mojtabast-blog</a> 
-  &nbsp;&nbsp;
-  <button className="border-2 solid w-[3.4rem] h-[1.8rem] rounded-xl ">
-    Public
-  </button>
-  <p>Mojtaba Espari Pour's Personal blog </p>
-  <div className=" solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block" ></div>
-  &nbsp;&nbsp;
-  <p className="inline-block">javascript</p>
-</div>
-</div>
-  )
-}
+    apiRepos().then(function (data) {
+      setrepository(data);
+    })
+
+  }, []);
+  /* function forks(props) {
+    if (!props) {    return null;  }
+    return (
+      <div>
+     
+      <span>Forked from </span> 
+      <a src= {repository.forks_url} href = "Document URL" className="color-blue" ></a>
+  </div>
+    );
+  } */
+  return (
+    <span>Popular repositories</span> +
+    <div className="w-[750px] bg-slate-100  text-xs flex flex-wrap">
+   
+    
+    {repository.map((item)=>{
+     return(
+     
+      <div className="border-2 solid w-[20rem]  h-[8rem] rounded-md">
+        <div className="flex justify-between">
+          <p>{item.name}</p>
+          <button className="border-2 solid w-[3.4rem] h-[1.8rem] rounded-xl ">
+            {repository.visibility}
+          </button>
+        </div>
+        &nbsp;&nbsp;
+
+        <div>{(item.fork) ? "forked from" + item.forks_url : ''}</div>
+
+        &nbsp;&nbsp;
+
+        <span>{item.description} </span>
+
+        &nbsp;&nbsp;
+        
+          <div className="inline-block">
+          {(repository.language) ?
+            <div className=" solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block" >
+              {item.language}
+          </div> : 'ffff' }
+    </div> 
+    </div> 
+   
+
+  
+    )})}
+     </div> 
+   
+  )}

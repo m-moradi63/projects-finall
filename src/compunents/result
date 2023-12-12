@@ -1,114 +1,114 @@
 allow_forking: true
 ​​​
-archive_url: "https://api.github.com/repos/shahramardalan/blogpy/{archive_format}{/ref}"
+archive_url: "https://api.github.com/repos/shahramardalan/strong-soap/{archive_format}{/ref}"
 ​​​
 archived: false
 ​​​
-assignees_url: "https://api.github.com/repos/shahramardalan/blogpy/assignees{/user}"
+assignees_url: "https://api.github.com/repos/shahramardalan/strong-soap/assignees{/user}"
 ​​​
-blobs_url: "https://api.github.com/repos/shahramardalan/blogpy/git/blobs{/sha}"
+blobs_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/blobs{/sha}"
 ​​​
-branches_url: "https://api.github.com/repos/shahramardalan/blogpy/branches{/branch}"
+branches_url: "https://api.github.com/repos/shahramardalan/strong-soap/branches{/branch}"
 ​​​
-clone_url: "https://github.com/shahramardalan/blogpy.git"
+clone_url: "https://github.com/shahramardalan/strong-soap.git"
 ​​​
-collaborators_url: "https://api.github.com/repos/shahramardalan/blogpy/collaborators{/collaborator}"
+collaborators_url: "https://api.github.com/repos/shahramardalan/strong-soap/collaborators{/collaborator}"
 ​​​
-comments_url: "https://api.github.com/repos/shahramardalan/blogpy/comments{/number}"
+comments_url: "https://api.github.com/repos/shahramardalan/strong-soap/comments{/number}"
 ​​​
-commits_url: "https://api.github.com/repos/shahramardalan/blogpy/commits{/sha}"
+commits_url: "https://api.github.com/repos/shahramardalan/strong-soap/commits{/sha}"
 ​​​
-compare_url: "https://api.github.com/repos/shahramardalan/blogpy/compare/{base}...{head}"
+compare_url: "https://api.github.com/repos/shahramardalan/strong-soap/compare/{base}...{head}"
 ​​​
-contents_url: "https://api.github.com/repos/shahramardalan/blogpy/contents/{+path}"
+contents_url: "https://api.github.com/repos/shahramardalan/strong-soap/contents/{+path}"
 ​​​
-contributors_url: "https://api.github.com/repos/shahramardalan/blogpy/contributors"
+contributors_url: "https://api.github.com/repos/shahramardalan/strong-soap/contributors"
 ​​​
-created_at: "2020-05-23T10:05:05Z"
+created_at: "2020-01-31T10:38:38Z"
 ​​​
 default_branch: "master"
 ​​​
-deployments_url: "https://api.github.com/repos/shahramardalan/blogpy/deployments"
+deployments_url: "https://api.github.com/repos/shahramardalan/strong-soap/deployments"
 ​​​
-description: "Blogpy project based on Python 3.8 and Django 2.2"
+description: "SOAP driver for Node.js (A complete rewrite of node-soap)"
 ​​​
 disabled: false
 ​​​
-downloads_url: "https://api.github.com/repos/shahramardalan/blogpy/downloads"
+downloads_url: "https://api.github.com/repos/shahramardalan/strong-soap/downloads"
 ​​​
-events_url: "https://api.github.com/repos/shahramardalan/blogpy/events"
+events_url: "https://api.github.com/repos/shahramardalan/strong-soap/events"
 ​​​
-fork: false
+fork: true
 ​​​
 forks: 0
 ​​​
 forks_count: 0
 ​​​
-forks_url: "https://api.github.com/repos/shahramardalan/blogpy/forks"
+forks_url: "https://api.github.com/repos/shahramardalan/strong-soap/forks"
 ​​​
-full_name: "shahramardalan/blogpy"
+full_name: "shahramardalan/strong-soap"
 ​​​
-git_commits_url: "https://api.github.com/repos/shahramardalan/blogpy/git/commits{/sha}"
+git_commits_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/commits{/sha}"
 ​​​
-git_refs_url: "https://api.github.com/repos/shahramardalan/blogpy/git/refs{/sha}"
+git_refs_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/refs{/sha}"
 ​​​
-git_tags_url: "https://api.github.com/repos/shahramardalan/blogpy/git/tags{/sha}"
+git_tags_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/tags{/sha}"
 ​​​
-git_url: "git://github.com/shahramardalan/blogpy.git"
+git_url: "git://github.com/shahramardalan/strong-soap.git"
 ​​​
 has_discussions: false
 ​​​
 has_downloads: true
 ​​​
-has_issues: true
+has_issues: false
 ​​​
 has_pages: false
 ​​​
 has_projects: true
 ​​​
-has_wiki: true
+has_wiki: false
 ​​​
-homepage: null
+homepage: ""
 ​​​
-hooks_url: "https://api.github.com/repos/shahramardalan/blogpy/hooks"
+hooks_url: "https://api.github.com/repos/shahramardalan/strong-soap/hooks"
 ​​​
-html_url: "https://github.com/shahramardalan/blogpy"
+html_url: "https://github.com/shahramardalan/strong-soap"
 ​​​
-id: 266309706
+id: 237409365
 ​​​
 is_template: false
 ​​​
-issue_comment_url: "https://api.github.com/repos/shahramardalan/blogpy/issues/comments{/number}"
+issue_comment_url: "https://api.github.com/repos/shahramardalan/strong-soap/issues/comments{/number}"
 ​​​
-issue_events_url: "https://api.github.com/repos/shahramardalan/blogpy/issues/events{/number}"
+issue_events_url: "https://api.github.com/repos/shahramardalan/strong-soap/issues/events{/number}"
 ​​​
-issues_url: "https://api.github.com/repos/shahramardalan/blogpy/issues{/number}"
+issues_url: "https://api.github.com/repos/shahramardalan/strong-soap/issues{/number}"
 ​​​
-keys_url: "https://api.github.com/repos/shahramardalan/blogpy/keys{/key_id}"
+keys_url: "https://api.github.com/repos/shahramardalan/strong-soap/keys{/key_id}"
 ​​​
-labels_url: "https://api.github.com/repos/shahramardalan/blogpy/labels{/name}"
+labels_url: "https://api.github.com/repos/shahramardalan/strong-soap/labels{/name}"
 ​​​
-language: "JavaScript"
+language: null
 ​​​
-languages_url: "https://api.github.com/repos/shahramardalan/blogpy/languages"
+languages_url: "https://api.github.com/repos/shahramardalan/strong-soap/languages"
 ​​​
-license: null
+license: Object { key: "other", name: "Other", spdx_id: "NOASSERTION", … }
 ​​​
-merges_url: "https://api.github.com/repos/shahramardalan/blogpy/merges"
+merges_url: "https://api.github.com/repos/shahramardalan/strong-soap/merges"
 ​​​
-milestones_url: "https://api.github.com/repos/shahramardalan/blogpy/milestones{/number}"
+milestones_url: "https://api.github.com/repos/shahramardalan/strong-soap/milestones{/number}"
 ​​​
 mirror_url: null
 ​​​
-name: "blogpy"
+name: "strong-soap"
 ​​​
-node_id: "MDEwOlJlcG9zaXRvcnkyNjYzMDk3MDY="
+node_id: "MDEwOlJlcG9zaXRvcnkyMzc0MDkzNjU="
 ​​​
-notifications_url: "https://api.github.com/repos/shahramardalan/blogpy/notifications{?since,all,participating}"
+notifications_url: "https://api.github.com/repos/shahramardalan/strong-soap/notifications{?since,all,participating}"
 ​​​
-open_issues: 2
+open_issues: 0
 ​​​
-open_issues_count: 2
+open_issues_count: 0
 ​​​
 owner: Object { login: "shahramardalan", id: 41269825, node_id: "MDQ6VXNlcjQxMjY5ODI1", … }
 ​​​
@@ -116,39 +116,39 @@ permissions: Object { admin: false, maintain: false, push: false, … }
 ​​​
 private: false
 ​​​
-pulls_url: "https://api.github.com/repos/shahramardalan/blogpy/pulls{/number}"
+pulls_url: "https://api.github.com/repos/shahramardalan/strong-soap/pulls{/number}"
 ​​​
-pushed_at: "2022-04-22T23:17:41Z"
+pushed_at: "2020-01-07T22:26:04Z"
 ​​​
-releases_url: "https://api.github.com/repos/shahramardalan/blogpy/releases{/id}"
+releases_url: "https://api.github.com/repos/shahramardalan/strong-soap/releases{/id}"
 ​​​
-size: 7396
+size: 3788
 ​​​
-ssh_url: "git@github.com:shahramardalan/blogpy.git"
+ssh_url: "git@github.com:shahramardalan/strong-soap.git"
 ​​​
 stargazers_count: 0
 ​​​
-stargazers_url: "https://api.github.com/repos/shahramardalan/blogpy/stargazers"
+stargazers_url: "https://api.github.com/repos/shahramardalan/strong-soap/stargazers"
 ​​​
-statuses_url: "https://api.github.com/repos/shahramardalan/blogpy/statuses/{sha}"
+statuses_url: "https://api.github.com/repos/shahramardalan/strong-soap/statuses/{sha}"
 ​​​
-subscribers_url: "https://api.github.com/repos/shahramardalan/blogpy/subscribers"
+subscribers_url: "https://api.github.com/repos/shahramardalan/strong-soap/subscribers"
 ​​​
-subscription_url: "https://api.github.com/repos/shahramardalan/blogpy/subscription"
+subscription_url: "https://api.github.com/repos/shahramardalan/strong-soap/subscription"
 ​​​
-svn_url: "https://github.com/shahramardalan/blogpy"
+svn_url: "https://github.com/shahramardalan/strong-soap"
 ​​​
-tags_url: "https://api.github.com/repos/shahramardalan/blogpy/tags"
+tags_url: "https://api.github.com/repos/shahramardalan/strong-soap/tags"
 ​​​
-teams_url: "https://api.github.com/repos/shahramardalan/blogpy/teams"
+teams_url: "https://api.github.com/repos/shahramardalan/strong-soap/teams"
 ​​​
 topics: Array []
 ​​​
-trees_url: "https://api.github.com/repos/shahramardalan/blogpy/git/trees{/sha}"
+trees_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/trees{/sha}"
 ​​​
-updated_at: "2020-05-26T21:46:19Z"
+updated_at: "2021-07-14T00:59:06Z"
 ​​​
-url: "https://api.github.com/repos/shahramardalan/blogpy"
+url: "https://api.github.com/repos/shahramardalan/strong-soap"
 ​​​
 visibility: "public"
 ​​​
