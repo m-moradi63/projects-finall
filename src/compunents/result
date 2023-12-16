@@ -5,7 +5,7 @@ archive_url: "https://api.github.com/repos/shahramardalan/strong-soap/{archive_f
 archived: false
 ​​​
 assignees_url: "https://api.github.com/repos/shahramardalan/strong-soap/assignees{/user}"
-​​​
+​​
 blobs_url: "https://api.github.com/repos/shahramardalan/strong-soap/git/blobs{/sha}"
 ​​​
 branches_url: "https://api.github.com/repos/shahramardalan/strong-soap/branches{/branch}"

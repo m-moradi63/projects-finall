@@ -12,10 +12,10 @@ export function Sidebar(props) {
     },[]);
 
 
-
+    
     return (
     
-        
+         
           <div className="w-[274px] h-[2rem]   ">
             <div className="px-[0.5rem] m-auto">
             <img className="rounded-full border-2 border-solid border-slate-300" src={Getuser.avatar_url} />
