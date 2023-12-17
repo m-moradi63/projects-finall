@@ -2,7 +2,7 @@ import { Octokit } from "octokit";
 async function apiRequest() {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -13,14 +13,14 @@ async function apiRequest() {
   }))
 
   
-  console.log("data is" , old.data)
+  console.log("data is" , old.data.login)
   return old.data
 
 }
 async function apiRepos() {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos", {
@@ -31,7 +31,7 @@ async function apiRepos() {
   }))
 
   
-  console.log("repo" , repo.data[13])
+  console.log("repo" , repo.data)
   return repo.data
 
 }

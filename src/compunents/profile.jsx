@@ -5,7 +5,6 @@ import { Sidebar } from "./sidebar.jsx";
 
 export function Profile(props) {
   const [Getuser, setGetuser] = useState({});
-  const [repository, setrepository] = useState();
   useEffect(() => {
     apiRequest().then(function (data) {
       setGetuser(data);

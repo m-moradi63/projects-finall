@@ -27214,7 +27214,6 @@ var _s = $RefreshSig$();
 function Profile(props) {
     _s();
     const [Getuser, setGetuser] = (0, _react.useState)({});
-    const [repository, setrepository] = (0, _react.useState)();
     (0, _react.useEffect)(()=>{
         (0, _getUserJs.apiRequest)().then(function(data) {
             setGetuser(data);
@@ -27225,22 +27224,22 @@ function Profile(props) {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarJsx.Sidebar), {}, void 0, false, {
                 fileName: "src/compunents/profile.jsx",
-                lineNumber: 19,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityJsx.Activity), {}, void 0, false, {
                 fileName: "src/compunents/profile.jsx",
-                lineNumber: 20,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/profile.jsx",
-        lineNumber: 18,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
-_s(Profile, "ez4AxOC+6GCVunsRNO7j/G6IuS4=");
+_s(Profile, "tey1iGpG5WSkNiJ0zDLa2ZBuEyQ=");
 _c = Profile;
 var _c;
 $RefreshReg$(_c, "Profile");
@@ -27257,7 +27256,7 @@ parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
 parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
 var _octokit = require("octokit");
 async function apiRequest() {
-    const token = "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";
+    const token = "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";
     const octokit = new (0, _octokit.Octokit)({
         auth: token
     });
@@ -27267,11 +27266,11 @@ async function apiRequest() {
             "X-GitHub-Api-Version": "2022-11-28"
         }
     });
-    console.log("data is", old.data);
+    console.log("data is", old.data.login);
     return old.data;
 }
 async function apiRepos() {
-    const token = "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";
+    const token = "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";
     const octokit = new (0, _octokit.Octokit)({
         auth: token
     });
@@ -27281,7 +27280,7 @@ async function apiRepos() {
             "X-GitHub-Api-Version": "2022-11-28"
         }
     });
-    console.log("repo", repo.data[13]);
+    console.log("repo", repo.data);
     return repo.data;
 }
 
@@ -39124,9 +39123,16 @@ var _s = $RefreshSig$();
 function Activity(props) {
     _s();
     const [repository, setrepository] = (0, _react.useState)([]);
+    const [contributions, setcontributions] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         (0, _getUserJs.apiRepos)().then(function(data) {
             setrepository(data);
+            console.log("contributions is :", repository);
+        });
+    }, []);
+    (0, _react.useEffect)(()=>{
+        (0, _getUserJs.apiRequest)().then(function(data) {
+            setcontributions(data);
         });
     }, []);
     /* function forks(props) {
@@ -39145,12 +39151,12 @@ function Activity(props) {
                 children: "Popular repositories"
             }, void 0, false, {
                 fileName: "src/compunents/activity.jsx",
-                lineNumber: 27,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap  ",
-                children: repository.map((item1, index)=>{
+                children: repository.map((item, index)=>{
                     if (index < 6) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "border-2 solid w-[21rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5",
                         children: [
@@ -39159,97 +39165,97 @@ function Activity(props) {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                         className: "text-blue-400",
-                                        children: item1.name
+                                        children: item.name
                                     }, void 0, false, {
                                         fileName: "src/compunents/activity.jsx",
-                                        lineNumber: 34,
+                                        lineNumber: 42,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         className: "border-2 solid w-[3.4rem] h-[1.2rem] rounded-xl ",
-                                        children: item1.visibility
+                                        children: item.visibility
                                     }, void 0, false, {
                                         fileName: "src/compunents/activity.jsx",
-                                        lineNumber: 35,
+                                        lineNumber: 43,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/compunents/activity.jsx",
-                                lineNumber: 33,
+                                lineNumber: 41,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "text-xl",
-                                children: item1.fork ? "forked from" + item1.forks_url : ""
+                                children: item.fork ? "forked from" + item.forks_url : ""
                             }, void 0, false, {
                                 fileName: "src/compunents/activity.jsx",
-                                lineNumber: 41,
+                                lineNumber: 49,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: [
-                                    item1.description,
+                                    item.description,
                                     " "
                                 ]
                             }, void 0, true, {
                                 fileName: "src/compunents/activity.jsx",
-                                lineNumber: 45,
+                                lineNumber: 53,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: item1.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: item.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "flex  ",
                                     children: [
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             className: " solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block"
                                         }, void 0, false, {
                                             fileName: "src/compunents/activity.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 60,
                                             columnNumber: 21
                                         }, this),
-                                        item1.language
+                                        item.language
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/compunents/activity.jsx",
-                                    lineNumber: 51,
+                                    lineNumber: 59,
                                     columnNumber: 19
                                 }, this) : ""
                             }, void 0, false, {
                                 fileName: "src/compunents/activity.jsx",
-                                lineNumber: 49,
+                                lineNumber: 57,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/compunents/activity.jsx",
-                        lineNumber: 32,
+                        lineNumber: 40,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/compunents/activity.jsx",
-                lineNumber: 28,
+                lineNumber: 36,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactGithubCalendarDefault.default), {
-                username: item.ownerlogin
+                username: contributions.login
             }, void 0, false, {
                 fileName: "src/compunents/activity.jsx",
-                lineNumber: 63,
+                lineNumber: 71,
                 columnNumber: 6
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/activity.jsx",
-        lineNumber: 25,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
-_s(Activity, "Sifd8MZ0n2ulDp2SNPSnUmdUm84=");
+_s(Activity, "/yXB/B5Zkb583IWc1NCfWBZnTvY=");
 _c = Activity;
 var _c;
 $RefreshReg$(_c, "Activity");
@@ -39383,20 +39389,21 @@ function _extends() {
 const NAMESPACE = "react-activity-calendar";
 const LABEL_MARGIN = 8; // px
 const DEFAULT_MONTH_LABELS = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
+    "\u0641\u0631\u0648\u0631\u062F\u06CC\u0646",
+    "\u0627\u0631\u062F\u06CC\u0628\u0647\u0634\u062A",
+    "\u062E\u0631\u062F\u0627\u062F",
+    "\u062A\u06CC\u0631",
+    "\u0645\u0631\u062F\u0627\u062F",
+    "\u0634\u0647\u0631\u0648\u06CC\u0631",
+    "\u0645\u0647\u0631",
+    "\u0622\u0628\u0627\u0646",
+    "\u0622\u0630\u0631",
+    "\u062F\u06CC",
+    "\u0628\u0647\u0645\u0646",
+    "\u0627\u0633\u0641\u0646\u062F"
 ];
 const DEFAULT_LABELS = {
+    totalCount: "{{count}} activities in {{year}}",
     months: DEFAULT_MONTH_LABELS,
     weekdays: [
         "Sun",
@@ -39407,10 +39414,9 @@ const DEFAULT_LABELS = {
         "Fri",
         "Sat"
     ],
-    totalCount: "{{count}} activities in {{year}}",
     legend: {
-        less: "Less",
-        more: "More"
+        less: "\u06A9\u0645",
+        more: "\u0632\u06CC\u0627\u062F"
     }
 };
 function useColorScheme() {

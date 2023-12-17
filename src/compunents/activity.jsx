@@ -1,12 +1,20 @@
-import { apiRepos } from "./getUser.js";
+import { apiRepos , apiRequest } from "./getUser.js";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
 
 export function Activity(props) {
   const [repository, setrepository] = useState([]);
+  const [ contributions , setcontributions ] = useState([]);
   useEffect(() => {
     apiRepos().then(function (data) {
-      setrepository(data);
+      setrepository(data  );
+      console.log( "contributions is :",  repository )
+    })
+
+  }, []);
+  useEffect(() => {
+    apiRequest().then(function (data) {
+      setcontributions(data)
     })
 
   }, []);
@@ -60,7 +68,7 @@ export function Activity(props) {
           )
       })}
       </div>
-     <GitHubCalendar username={item.ownerlogin}/>
+     <GitHubCalendar username={contributions.login}/>
       </div> 
    
   )}
