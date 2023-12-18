@@ -2,7 +2,7 @@ import { Octokit } from "octokit";
 async function apiRequest() {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -20,7 +20,7 @@ async function apiRequest() {
 async function apiRepos() {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos", {
