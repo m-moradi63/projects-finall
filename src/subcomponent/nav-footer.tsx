@@ -1,12 +1,4 @@
-/* import { apiRequest } from "../compunents/getUser.js"
-import { useEffect, useState } from "react";
-const [navuser, setnavuser] = useState({});
-useEffect(() => {
-    apiRequest().then(function (data) {
-      setnavuser(data)
-    })
 
-  }, []); */
 
 export function NavFooter(){
     return (

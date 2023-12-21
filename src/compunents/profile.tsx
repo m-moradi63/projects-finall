@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { apiRequest, apiRepos } from "./getUser.js";
-import { Activity } from "./activity.jsx";
-import { Sidebar } from "./sidebar.jsx";
+import { apiRequest, apiRepos } from "./getUser.ts";
+import { Activity } from "./activity.tsx";
+import { Sidebar } from "./sidebar.tsx";
 
 export function Profile(props) {
   const [Getuser, setGetuser] = useState({});

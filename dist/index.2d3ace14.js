@@ -142,13 +142,13 @@
       this[globalName] = mainExports;
     }
   }
-})({"icZzK":[function(require,module,exports) {
+})({"9p54t":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "4d94d0802d3ace14";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -2935,31 +2935,31 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"8lqZg":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$20e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"4aBH6":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2a8f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$20e5.prelude(module);
+$parcel$ReactRefreshHelpers$2a8f.prelude(module);
 
 try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
-var _app = require("./App");
 var _react = require("react");
+var _appTsx = require("./App.tsx");
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
-    fileName: "src/index.js",
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appTsx.App), {}, void 0, false, {
+    fileName: "src/index.tsx",
     lineNumber: 8,
     columnNumber: 13
 }, undefined));
 
-  $parcel$ReactRefreshHelpers$20e5.postlude(module);
+  $parcel$ReactRefreshHelpers$2a8f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"2kQhy","react":"21dqq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./App.tsx":"7F5Te","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27146,22 +27146,22 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"2kQhy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f00f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"7F5Te":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0342 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f00f.prelude(module);
+$parcel$ReactRefreshHelpers$0342.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _profileTsx = require("./compunents/profile.tsx");
 var _headersTsx = require("./compunents/headers.tsx");
-var _activityTsx = require("./compunents/activity.tsx");
 var _octokit = require("octokit");
 var _mainTsx = require("./compunents/Main.tsx");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 function App() {
     const token = "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";
     const octokit = new (0, _octokit.Octokit)({
@@ -27170,19 +27170,19 @@ function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headersTsx.Nav), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 19,
+                fileName: "src/App.tsx",
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainTsx.Main), {}, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 20,
+                fileName: "src/App.tsx",
+                lineNumber: 21,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "src/App.js",
-        lineNumber: 18,
+        fileName: "src/App.tsx",
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -27190,101 +27190,716 @@ _c = App;
 var _c;
 $RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$f00f.postlude(module);
+  $parcel$ReactRefreshHelpers$0342.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./compunents/profile.tsx":"fyKdz","./compunents/headers.tsx":"k52kz","./compunents/activity.tsx":"hRRWr","octokit":"7AEgE","./compunents/Main.tsx":"8rGQM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fyKdz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$e9b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","./compunents/headers.tsx":"k52kz","octokit":"7AEgE","./compunents/Main.tsx":"8rGQM","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k52kz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffe9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$e9b7.prelude(module);
+$parcel$ReactRefreshHelpers$ffe9.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Profile", ()=>Profile);
+parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _getUserTs = require("./getUser.ts");
-var _activityTsx = require("./activity.tsx");
-var _sidebarTsx = require("./sidebar.tsx");
-var _s = $RefreshSig$();
-function Profile(props) {
-    _s();
-    const [Getuser, setGetuser] = (0, _react.useState)({});
-    (0, _react.useEffect)(()=>{
-        (0, _getUserTs.apiRequest)().then(function(data) {
-            setGetuser(data);
-        });
-    }, []);
+var _navTopJs = require("../subcomponent/nav-top.js");
+var _navFooterJs = require("../subcomponent/nav-footer.js");
+function Nav() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex box-border w-[1024px]   ",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
-                fileName: "src/compunents/profile.tsx",
-                lineNumber: 18,
-                columnNumber: 7
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTopJs.NavTop), {}, void 0, false, {
+                fileName: "src/compunents/headers.tsx",
+                lineNumber: 6,
+                columnNumber: 16
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {}, void 0, false, {
-                fileName: "src/compunents/profile.tsx",
-                lineNumber: 19,
-                columnNumber: 7
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navFooterJs.NavFooter), {}, void 0, false, {
+                fileName: "src/compunents/headers.tsx",
+                lineNumber: 7,
+                columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
-        fileName: "src/compunents/profile.tsx",
-        lineNumber: 17,
-        columnNumber: 5
+        fileName: "src/compunents/headers.tsx",
+        lineNumber: 5,
+        columnNumber: 9
     }, this);
 }
-_s(Profile, "tey1iGpG5WSkNiJ0zDLa2ZBuEyQ=");
-_c = Profile;
+_c = Nav;
 var _c;
-$RefreshReg$(_c, "Profile");
+$RefreshReg$(_c, "Nav");
 
-  $parcel$ReactRefreshHelpers$e9b7.postlude(module);
+  $parcel$ReactRefreshHelpers$ffe9.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./getUser.ts":"7oTua","./activity.tsx":"hRRWr","./sidebar.tsx":"4sEXX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7oTua":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../subcomponent/nav-top.js":"6RH4Q","../subcomponent/nav-footer.js":"azbPD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6RH4Q":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5c38 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5c38.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
-parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
-var _octokit = require("octokit");
-async function apiRequest() {
-    const token = "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";
-    const octokit = new (0, _octokit.Octokit)({
-        auth: token
-    });
-    const old = await octokit.request("GET /users/{username}/", {
-        username: "shahramardalan",
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
-        }
-    });
-    console.log("data is", old.data.login);
-    return old.data;
+parcelHelpers.export(exports, "NavTop", ()=>NavTop);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function NavTop() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex justify-between ml-4 mt-4  ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between items-center ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: " box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            className: "octicon octicon-three-bars Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 7,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.tsx",
+                            lineNumber: 6,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 5,
+                        columnNumber: 22
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "ml-4 fa-brands fa-github fa-2xl"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 10,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-top.tsx",
+                lineNumber: 4,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between w-[32rem] mr-6 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                        "aria-hidden": "true",
+                                        height: "16",
+                                        viewBox: "0 0 16 16",
+                                        version: "1.1",
+                                        width: "16",
+                                        "data-view-component": "true",
+                                        className: "inline-block octicon octicon-search",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                            d: "M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/nav-top.tsx",
+                                            lineNumber: 18,
+                                            columnNumber: 33
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/nav-top.tsx",
+                                        lineNumber: 17,
+                                        columnNumber: 29
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: "Type / to search "
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/nav-top.tsx",
+                                        lineNumber: 20,
+                                        columnNumber: 29
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 16,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "inline-block octicon octicon-command-palette",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.tsx",
+                                    lineNumber: 23,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 22,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 15,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "inline-block",
+                        children: "|"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 27,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "flex  items-center p-1  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: "+"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 29,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "inline-block octicon octicon-triangle-down",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.tsx",
+                                    lineNumber: 31,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 30,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 28,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-2 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            className: "octicon octicon-issue-opened Button-visual",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/nav-top.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 90
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/subcomponent/nav-top.tsx",
+                            lineNumber: 35,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 34,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            className: "octicon octicon-git-pull-request Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 41,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.tsx",
+                            lineNumber: 40,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 39,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            height: "16",
+                            viewBox: "0 0 16 16",
+                            version: "1.1",
+                            width: "16",
+                            "data-view-component": "true",
+                            className: "octicon octicon-inbox Button-visual",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                d: "M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/nav-top.tsx",
+                                lineNumber: 46,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.tsx",
+                            lineNumber: 45,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 44,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "rounded-full border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "https://avatars.githubusercontent.com/u/138288308?v=4",
+                            alt: "",
+                            size: "32",
+                            height: "32",
+                            width: "32",
+                            "data-view-component": "true",
+                            className: "avatar circle"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-top.tsx",
+                            lineNumber: 50,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-top.tsx",
+                        lineNumber: 49,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-top.tsx",
+                lineNumber: 14,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/subcomponent/nav-top.tsx",
+        lineNumber: 3,
+        columnNumber: 9
+    }, this);
 }
-async function apiRepos() {
-    const token = "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";
-    const octokit = new (0, _octokit.Octokit)({
-        auth: token
+_c = NavTop;
+var _c;
+$RefreshReg$(_c, "NavTop");
+
+  $parcel$ReactRefreshHelpers$5c38.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
     });
-    const repo = await octokit.request("GET /users/{username}/repos", {
-        username: "shahramardalan",
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
+    }
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
         }
-    });
-    console.log("repo", repo.data);
-    return repo.data;
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
 }
 
-},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7AEgE":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"azbPD":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7153 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7153.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "NavFooter", ()=>NavFooter);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function NavFooter() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mt-10 flex",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.tsx",
+                            lineNumber: 7,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 6,
+                        columnNumber: 39
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Overwiew"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 8,
+                        columnNumber: 23
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.tsx",
+                lineNumber: 6,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-repo UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.tsx",
+                            lineNumber: 10,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 9,
+                        columnNumber: 37
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: "Repositories"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 11,
+                        columnNumber: 23
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.tsx",
+                lineNumber: 9,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-table UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.tsx",
+                            lineNumber: 13,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 12,
+                        columnNumber: 37
+                    }, this),
+                    "Projects"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.tsx",
+                lineNumber: 12,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-package UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.tsx",
+                            lineNumber: 16,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 15,
+                        columnNumber: 37
+                    }, this),
+                    "Packages"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.tsx",
+                lineNumber: 15,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                className: "ml-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        "aria-hidden": "true",
+                        height: "16",
+                        viewBox: "0 0 16 16",
+                        version: "1.1",
+                        width: "16",
+                        "data-view-component": "true",
+                        className: "mr-4 inline-block octicon octicon-star UnderlineNav-octicon",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/nav-footer.tsx",
+                            lineNumber: 19,
+                            columnNumber: 21
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/nav-footer.tsx",
+                        lineNumber: 18,
+                        columnNumber: 37
+                    }, this),
+                    "Starts"
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/nav-footer.tsx",
+                lineNumber: 18,
+                columnNumber: 17
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/subcomponent/nav-footer.tsx",
+        lineNumber: 5,
+        columnNumber: 9
+    }, this);
+}
+_c = NavFooter;
+var _c;
+$RefreshReg$(_c, "NavFooter");
+
+  $parcel$ReactRefreshHelpers$7153.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7AEgE":[function(require,module,exports) {
 // pkg/dist-src/octokit.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -27449,37 +28064,7 @@ function getUserAgent() {
     return "<environment undetectable>";
 }
 
-},{"a3de3a42561de379":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"3Jq8N":[function(require,module,exports) {
+},{"a3de3a42561de379":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Jq8N":[function(require,module,exports) {
 var register = require("7d660e818ba35493");
 var addHook = require("7b78faa2adbb30e7");
 var removeHook = require("121522f62075ae3");
@@ -39104,7 +39689,131 @@ async function verify(secret, eventPayload, signature) {
     return await crypto.subtle.verify("HMAC", await importKey(secret, algorithm), hexToUInt8Array(signature.replace(`${algorithm}=`, "")), enc.encode(eventPayload));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hRRWr":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8rGQM":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8ac4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8ac4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Main", ()=>Main);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _profile = require("./profile");
+function Main() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "max-w-[1024px] m-auto  mt-8 ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
+            fileName: "src/compunents/Main.tsx",
+            lineNumber: 9,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/compunents/Main.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+    }, this);
+}
+_c = Main;
+var _c;
+$RefreshReg$(_c, "Main");
+
+  $parcel$ReactRefreshHelpers$8ac4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fyKdz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e9b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e9b7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Profile", ()=>Profile);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _getUserTs = require("./getUser.ts");
+var _activityTsx = require("./activity.tsx");
+var _sidebarTsx = require("./sidebar.tsx");
+var _s = $RefreshSig$();
+function Profile(props) {
+    _s();
+    const [Getuser, setGetuser] = (0, _react.useState)({});
+    (0, _react.useEffect)(()=>{
+        (0, _getUserTs.apiRequest)().then(function(data) {
+            setGetuser(data);
+        });
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex box-border w-[1024px]   ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
+                fileName: "src/compunents/profile.tsx",
+                lineNumber: 18,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {}, void 0, false, {
+                fileName: "src/compunents/profile.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/compunents/profile.tsx",
+        lineNumber: 17,
+        columnNumber: 5
+    }, this);
+}
+_s(Profile, "tey1iGpG5WSkNiJ0zDLa2ZBuEyQ=");
+_c = Profile;
+var _c;
+$RefreshReg$(_c, "Profile");
+
+  $parcel$ReactRefreshHelpers$e9b7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./getUser.ts":"7oTua","./activity.tsx":"hRRWr","./sidebar.tsx":"4sEXX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7oTua":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
+parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
+var _octokit = require("octokit");
+async function apiRequest() {
+    const token = "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";
+    const octokit = new (0, _octokit.Octokit)({
+        auth: token
+    });
+    const old = await octokit.request("GET /users/{username}/", {
+        username: "shahramardalan",
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    console.log("data is", old.data.login);
+    return old.data;
+}
+async function apiRepos() {
+    const token = "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";
+    const octokit = new (0, _octokit.Octokit)({
+        auth: token
+    });
+    const repo = await octokit.request("GET /users/{username}/repos", {
+        username: "shahramardalan",
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    console.log("repo", repo.data);
+    return repo.data;
+}
+
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hRRWr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$62bc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39145,12 +39854,11 @@ parcelHelpers.export(exports, "Reposit", ()=>Reposit);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactProductionMin = require("react/cjs/react.production.min");
 var _getUser = require("../compunents/getUser");
 var _s = $RefreshSig$();
 function Reposit(props) {
     _s();
-    const [repositState, setrepositState] = (0, _reactProductionMin.useState)([]);
+    const [repositState, setrepositState] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         (0, _getUser.apiRepos)().then(function(data) {
             setrepositState(data);
@@ -39177,7 +39885,7 @@ function Reposit(props) {
                         placeholder: "Find a repository..."
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 29,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
@@ -39189,7 +39897,7 @@ function Reposit(props) {
                                 children: "Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 32,
+                                lineNumber: 31,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39198,7 +39906,7 @@ function Reposit(props) {
                                 children: "Select Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 33,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39206,7 +39914,7 @@ function Reposit(props) {
                                 children: "All"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 34,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39214,7 +39922,7 @@ function Reposit(props) {
                                 children: "Sources"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 35,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39222,7 +39930,7 @@ function Reposit(props) {
                                 children: "Forks"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 36,
+                                lineNumber: 35,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39230,7 +39938,7 @@ function Reposit(props) {
                                 children: "Archived"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 37,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39238,7 +39946,7 @@ function Reposit(props) {
                                 children: "Can be sponsored"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 38,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39246,7 +39954,7 @@ function Reposit(props) {
                                 children: "Mirrors"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 39,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -39254,13 +39962,13 @@ function Reposit(props) {
                                 children: "Templates"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 40,
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39270,7 +39978,7 @@ function Reposit(props) {
                                 children: "Language"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 51,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -39285,18 +39993,18 @@ function Reposit(props) {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 52,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 50,
+                        lineNumber: 49,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39306,7 +40014,7 @@ function Reposit(props) {
                                 children: "Sort"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 57,
+                                lineNumber: 56,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -39321,24 +40029,24 @@ function Reposit(props) {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 56,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 28,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -39360,7 +40068,7 @@ function Reposit(props) {
                                                     children: item.name
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Repositories.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 70,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39368,13 +40076,13 @@ function Reposit(props) {
                                                     children: item.visibility
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Repositories.tsx",
-                                                    lineNumber: 72,
+                                                    lineNumber: 71,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Repositories.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 69,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39395,25 +40103,25 @@ function Reposit(props) {
                                                                 d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Repositories.tsx",
-                                                                lineNumber: 79,
+                                                                lineNumber: 78,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Repositories.tsx",
-                                                            lineNumber: 78,
+                                                            lineNumber: 77,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                             children: "start"
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Repositories.tsx",
-                                                            lineNumber: 81,
+                                                            lineNumber: 80,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/subcomponent/Repositories.tsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 76,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -39430,29 +40138,29 @@ function Reposit(props) {
                                                             d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Repositories.tsx",
-                                                            lineNumber: 86,
+                                                            lineNumber: 85,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/Repositories.tsx",
-                                                        lineNumber: 85,
+                                                        lineNumber: 84,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Repositories.tsx",
-                                                    lineNumber: 83,
+                                                    lineNumber: 82,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Repositories.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 75,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 68,
                                     columnNumber: 15
                                 }, this),
                                 "\xa0\xa0",
@@ -39464,7 +40172,7 @@ function Reposit(props) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 97,
                                     columnNumber: 15
                                 }, this),
                                 "\xa0\xa0",
@@ -39476,42 +40184,42 @@ function Reposit(props) {
                                                 className: " solid w-[1rem] h-[1rem] bg-[#94a3b8] rounded-full inline-block"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Repositories.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 104,
                                                 columnNumber: 21
                                             }, this),
                                             item.language
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/subcomponent/Repositories.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 103,
                                         columnNumber: 19
                                     }, this) : ""
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 101,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/subcomponent/Repositories.tsx",
-                            lineNumber: 68,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 67,
+                        lineNumber: 66,
                         columnNumber: 11
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 64,
+                lineNumber: 63,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Repositories.tsx",
-        lineNumber: 27,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -39525,475 +40233,7 @@ $RefreshReg$(_c, "Reposit");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/cjs/react.production.min":"88SCs","react":"21dqq","../compunents/getUser":"7oTua"}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"88SCs":[function(require,module,exports) {
-/**
- * @license React
- * react.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-var l = Symbol.for("react.element"), n = Symbol.for("react.portal"), p = Symbol.for("react.fragment"), q = Symbol.for("react.strict_mode"), r = Symbol.for("react.profiler"), t = Symbol.for("react.provider"), u = Symbol.for("react.context"), v = Symbol.for("react.forward_ref"), w = Symbol.for("react.suspense"), x = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), z = Symbol.iterator;
-function A(a) {
-    if (null === a || "object" !== typeof a) return null;
-    a = z && a[z] || a["@@iterator"];
-    return "function" === typeof a ? a : null;
-}
-var B = {
-    isMounted: function() {
-        return !1;
-    },
-    enqueueForceUpdate: function() {},
-    enqueueReplaceState: function() {},
-    enqueueSetState: function() {}
-}, C = Object.assign, D = {};
-function E(a, b, e) {
-    this.props = a;
-    this.context = b;
-    this.refs = D;
-    this.updater = e || B;
-}
-E.prototype.isReactComponent = {};
-E.prototype.setState = function(a, b) {
-    if ("object" !== typeof a && "function" !== typeof a && null != a) throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
-    this.updater.enqueueSetState(this, a, b, "setState");
-};
-E.prototype.forceUpdate = function(a) {
-    this.updater.enqueueForceUpdate(this, a, "forceUpdate");
-};
-function F() {}
-F.prototype = E.prototype;
-function G(a, b, e) {
-    this.props = a;
-    this.context = b;
-    this.refs = D;
-    this.updater = e || B;
-}
-var H = G.prototype = new F;
-H.constructor = G;
-C(H, E.prototype);
-H.isPureReactComponent = !0;
-var I = Array.isArray, J = Object.prototype.hasOwnProperty, K = {
-    current: null
-}, L = {
-    key: !0,
-    ref: !0,
-    __self: !0,
-    __source: !0
-};
-function M(a, b, e) {
-    var d, c = {}, k = null, h = null;
-    if (null != b) for(d in void 0 !== b.ref && (h = b.ref), void 0 !== b.key && (k = "" + b.key), b)J.call(b, d) && !L.hasOwnProperty(d) && (c[d] = b[d]);
-    var g = arguments.length - 2;
-    if (1 === g) c.children = e;
-    else if (1 < g) {
-        for(var f = Array(g), m = 0; m < g; m++)f[m] = arguments[m + 2];
-        c.children = f;
-    }
-    if (a && a.defaultProps) for(d in g = a.defaultProps, g)void 0 === c[d] && (c[d] = g[d]);
-    return {
-        $$typeof: l,
-        type: a,
-        key: k,
-        ref: h,
-        props: c,
-        _owner: K.current
-    };
-}
-function N(a, b) {
-    return {
-        $$typeof: l,
-        type: a.type,
-        key: b,
-        ref: a.ref,
-        props: a.props,
-        _owner: a._owner
-    };
-}
-function O(a) {
-    return "object" === typeof a && null !== a && a.$$typeof === l;
-}
-function escape(a) {
-    var b = {
-        "=": "=0",
-        ":": "=2"
-    };
-    return "$" + a.replace(/[=:]/g, function(a) {
-        return b[a];
-    });
-}
-var P = /\/+/g;
-function Q(a, b) {
-    return "object" === typeof a && null !== a && null != a.key ? escape("" + a.key) : b.toString(36);
-}
-function R(a, b, e, d, c) {
-    var k = typeof a;
-    if ("undefined" === k || "boolean" === k) a = null;
-    var h = !1;
-    if (null === a) h = !0;
-    else switch(k){
-        case "string":
-        case "number":
-            h = !0;
-            break;
-        case "object":
-            switch(a.$$typeof){
-                case l:
-                case n:
-                    h = !0;
-            }
-    }
-    if (h) return h = a, c = c(h), a = "" === d ? "." + Q(h, 0) : d, I(c) ? (e = "", null != a && (e = a.replace(P, "$&/") + "/"), R(c, b, e, "", function(a) {
-        return a;
-    })) : null != c && (O(c) && (c = N(c, e + (!c.key || h && h.key === c.key ? "" : ("" + c.key).replace(P, "$&/") + "/") + a)), b.push(c)), 1;
-    h = 0;
-    d = "" === d ? "." : d + ":";
-    if (I(a)) for(var g = 0; g < a.length; g++){
-        k = a[g];
-        var f = d + Q(k, g);
-        h += R(k, b, e, f, c);
-    }
-    else if (f = A(a), "function" === typeof f) for(a = f.call(a), g = 0; !(k = a.next()).done;)k = k.value, f = d + Q(k, g++), h += R(k, b, e, f, c);
-    else if ("object" === k) throw b = String(a), Error("Objects are not valid as a React child (found: " + ("[object Object]" === b ? "object with keys {" + Object.keys(a).join(", ") + "}" : b) + "). If you meant to render a collection of children, use an array instead.");
-    return h;
-}
-function S(a, b, e) {
-    if (null == a) return a;
-    var d = [], c = 0;
-    R(a, d, "", "", function(a) {
-        return b.call(e, a, c++);
-    });
-    return d;
-}
-function T(a) {
-    if (-1 === a._status) {
-        var b = a._result;
-        b = b();
-        b.then(function(b) {
-            if (0 === a._status || -1 === a._status) a._status = 1, a._result = b;
-        }, function(b) {
-            if (0 === a._status || -1 === a._status) a._status = 2, a._result = b;
-        });
-        -1 === a._status && (a._status = 0, a._result = b);
-    }
-    if (1 === a._status) return a._result.default;
-    throw a._result;
-}
-var U = {
-    current: null
-}, V = {
-    transition: null
-}, W = {
-    ReactCurrentDispatcher: U,
-    ReactCurrentBatchConfig: V,
-    ReactCurrentOwner: K
-};
-exports.Children = {
-    map: S,
-    forEach: function(a, b, e) {
-        S(a, function() {
-            b.apply(this, arguments);
-        }, e);
-    },
-    count: function(a) {
-        var b = 0;
-        S(a, function() {
-            b++;
-        });
-        return b;
-    },
-    toArray: function(a) {
-        return S(a, function(a) {
-            return a;
-        }) || [];
-    },
-    only: function(a) {
-        if (!O(a)) throw Error("React.Children.only expected to receive a single React element child.");
-        return a;
-    }
-};
-exports.Component = E;
-exports.Fragment = p;
-exports.Profiler = r;
-exports.PureComponent = G;
-exports.StrictMode = q;
-exports.Suspense = w;
-exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = W;
-exports.cloneElement = function(a, b, e) {
-    if (null === a || void 0 === a) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + a + ".");
-    var d = C({}, a.props), c = a.key, k = a.ref, h = a._owner;
-    if (null != b) {
-        void 0 !== b.ref && (k = b.ref, h = K.current);
-        void 0 !== b.key && (c = "" + b.key);
-        if (a.type && a.type.defaultProps) var g = a.type.defaultProps;
-        for(f in b)J.call(b, f) && !L.hasOwnProperty(f) && (d[f] = void 0 === b[f] && void 0 !== g ? g[f] : b[f]);
-    }
-    var f = arguments.length - 2;
-    if (1 === f) d.children = e;
-    else if (1 < f) {
-        g = Array(f);
-        for(var m = 0; m < f; m++)g[m] = arguments[m + 2];
-        d.children = g;
-    }
-    return {
-        $$typeof: l,
-        type: a.type,
-        key: c,
-        ref: k,
-        props: d,
-        _owner: h
-    };
-};
-exports.createContext = function(a) {
-    a = {
-        $$typeof: u,
-        _currentValue: a,
-        _currentValue2: a,
-        _threadCount: 0,
-        Provider: null,
-        Consumer: null,
-        _defaultValue: null,
-        _globalName: null
-    };
-    a.Provider = {
-        $$typeof: t,
-        _context: a
-    };
-    return a.Consumer = a;
-};
-exports.createElement = M;
-exports.createFactory = function(a) {
-    var b = M.bind(null, a);
-    b.type = a;
-    return b;
-};
-exports.createRef = function() {
-    return {
-        current: null
-    };
-};
-exports.forwardRef = function(a) {
-    return {
-        $$typeof: v,
-        render: a
-    };
-};
-exports.isValidElement = O;
-exports.lazy = function(a) {
-    return {
-        $$typeof: y,
-        _payload: {
-            _status: -1,
-            _result: a
-        },
-        _init: T
-    };
-};
-exports.memo = function(a, b) {
-    return {
-        $$typeof: x,
-        type: a,
-        compare: void 0 === b ? null : b
-    };
-};
-exports.startTransition = function(a) {
-    var b = V.transition;
-    V.transition = {};
-    try {
-        a();
-    } finally{
-        V.transition = b;
-    }
-};
-exports.unstable_act = function() {
-    throw Error("act(...) is not supported in production builds of React.");
-};
-exports.useCallback = function(a, b) {
-    return U.current.useCallback(a, b);
-};
-exports.useContext = function(a) {
-    return U.current.useContext(a);
-};
-exports.useDebugValue = function() {};
-exports.useDeferredValue = function(a) {
-    return U.current.useDeferredValue(a);
-};
-exports.useEffect = function(a, b) {
-    return U.current.useEffect(a, b);
-};
-exports.useId = function() {
-    return U.current.useId();
-};
-exports.useImperativeHandle = function(a, b, e) {
-    return U.current.useImperativeHandle(a, b, e);
-};
-exports.useInsertionEffect = function(a, b) {
-    return U.current.useInsertionEffect(a, b);
-};
-exports.useLayoutEffect = function(a, b) {
-    return U.current.useLayoutEffect(a, b);
-};
-exports.useMemo = function(a, b) {
-    return U.current.useMemo(a, b);
-};
-exports.useReducer = function(a, b, e) {
-    return U.current.useReducer(a, b, e);
-};
-exports.useRef = function(a) {
-    return U.current.useRef(a);
-};
-exports.useState = function(a) {
-    return U.current.useState(a);
-};
-exports.useSyncExternalStore = function(a, b, e) {
-    return U.current.useSyncExternalStore(a, b, e);
-};
-exports.useTransition = function() {
-    return U.current.useTransition();
-};
-exports.version = "18.2.0";
-
-},{}],"4sEXX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../compunents/getUser":"7oTua","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"4sEXX":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f34c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -40224,577 +40464,6 @@ $RefreshReg$(_c, "Sidebar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./getUser.js":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k52kz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ffe9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ffe9.prelude(module);
+},{"react/jsx-dev-runtime":"iTorj","./getUser.js":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Nav", ()=>Nav);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _navTopJs = require("../subcomponent/nav-top.js");
-var _navFooterJs = require("../subcomponent/nav-footer.js");
-function Nav() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTopJs.NavTop), {}, void 0, false, {
-                fileName: "src/compunents/headers.tsx",
-                lineNumber: 6,
-                columnNumber: 16
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navFooterJs.NavFooter), {}, void 0, false, {
-                fileName: "src/compunents/headers.tsx",
-                lineNumber: 7,
-                columnNumber: 16
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/compunents/headers.tsx",
-        lineNumber: 5,
-        columnNumber: 9
-    }, this);
-}
-_c = Nav;
-var _c;
-$RefreshReg$(_c, "Nav");
-
-  $parcel$ReactRefreshHelpers$ffe9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../subcomponent/nav-top.js":"6RH4Q","../subcomponent/nav-footer.js":"azbPD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6RH4Q":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5c38 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5c38.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "NavTop", ()=>NavTop);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function NavTop() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between ml-4 mt-4  ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between items-center ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: " box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                            "aria-hidden": "true",
-                            height: "16",
-                            viewBox: "0 0 16 16",
-                            version: "1.1",
-                            width: "16",
-                            "data-view-component": "true",
-                            className: "octicon octicon-three-bars Button-visual",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                d: "M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 7,
-                                columnNumber: 29
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-top.tsx",
-                            lineNumber: 6,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 5,
-                        columnNumber: 22
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                        className: "ml-4 fa-brands fa-github fa-2xl"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 10,
-                        columnNumber: 21
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-top.tsx",
-                lineNumber: 4,
-                columnNumber: 17
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between w-[32rem] mr-6 ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        "aria-hidden": "true",
-                                        height: "16",
-                                        viewBox: "0 0 16 16",
-                                        version: "1.1",
-                                        width: "16",
-                                        "data-view-component": "true",
-                                        className: "inline-block octicon octicon-search",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            d: "M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/nav-top.tsx",
-                                            lineNumber: 18,
-                                            columnNumber: 33
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "src/subcomponent/nav-top.tsx",
-                                        lineNumber: 17,
-                                        columnNumber: 29
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: "Type / to search "
-                                    }, void 0, false, {
-                                        fileName: "src/subcomponent/nav-top.tsx",
-                                        lineNumber: 20,
-                                        columnNumber: 29
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 16,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "inline-block octicon octicon-command-palette",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/nav-top.tsx",
-                                    lineNumber: 23,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 22,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 15,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "inline-block",
-                        children: "|"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 27,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "flex  items-center p-1  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: "+"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 29,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "inline-block octicon octicon-triangle-down",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/nav-top.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 30,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 28,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-2 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                            "aria-hidden": "true",
-                            height: "16",
-                            viewBox: "0 0 16 16",
-                            version: "1.1",
-                            width: "16",
-                            "data-view-component": "true",
-                            className: "octicon octicon-issue-opened Button-visual",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/nav-top.tsx",
-                                    lineNumber: 36,
-                                    columnNumber: 29
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/nav-top.tsx",
-                                    lineNumber: 36,
-                                    columnNumber: 90
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/subcomponent/nav-top.tsx",
-                            lineNumber: 35,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 34,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                            "aria-hidden": "true",
-                            height: "16",
-                            viewBox: "0 0 16 16",
-                            version: "1.1",
-                            width: "16",
-                            "data-view-component": "true",
-                            className: "octicon octicon-git-pull-request Button-visual",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                d: "M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 41,
-                                columnNumber: 29
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-top.tsx",
-                            lineNumber: 40,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 39,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                            "aria-hidden": "true",
-                            height: "16",
-                            viewBox: "0 0 16 16",
-                            version: "1.1",
-                            width: "16",
-                            "data-view-component": "true",
-                            className: "octicon octicon-inbox Button-visual",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                d: "M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/nav-top.tsx",
-                                lineNumber: 46,
-                                columnNumber: 29
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-top.tsx",
-                            lineNumber: 45,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 44,
-                        columnNumber: 21
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "rounded-full border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: "https://avatars.githubusercontent.com/u/138288308?v=4",
-                            alt: "",
-                            size: "32",
-                            height: "32",
-                            width: "32",
-                            "data-view-component": "true",
-                            className: "avatar circle"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-top.tsx",
-                            lineNumber: 50,
-                            columnNumber: 25
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-top.tsx",
-                        lineNumber: 49,
-                        columnNumber: 21
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-top.tsx",
-                lineNumber: 14,
-                columnNumber: 17
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/subcomponent/nav-top.tsx",
-        lineNumber: 3,
-        columnNumber: 9
-    }, this);
-}
-_c = NavTop;
-var _c;
-$RefreshReg$(_c, "NavTop");
-
-  $parcel$ReactRefreshHelpers$5c38.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"azbPD":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7153 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7153.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "NavFooter", ()=>NavFooter);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function NavFooter() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "mt-10 flex",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                className: "ml-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        height: "16",
-                        viewBox: "0 0 16 16",
-                        version: "1.1",
-                        width: "16",
-                        "data-view-component": "true",
-                        className: "ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-footer.tsx",
-                            lineNumber: 7,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 6,
-                        columnNumber: 39
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Overwiew"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 8,
-                        columnNumber: 23
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-footer.tsx",
-                lineNumber: 6,
-                columnNumber: 17
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                className: "ml-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        height: "16",
-                        viewBox: "0 0 16 16",
-                        version: "1.1",
-                        width: "16",
-                        "data-view-component": "true",
-                        className: "mr-4 inline-block octicon octicon-repo UnderlineNav-octicon",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-footer.tsx",
-                            lineNumber: 10,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 9,
-                        columnNumber: 37
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Repositories"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 11,
-                        columnNumber: 23
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-footer.tsx",
-                lineNumber: 9,
-                columnNumber: 17
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                className: "ml-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        height: "16",
-                        viewBox: "0 0 16 16",
-                        version: "1.1",
-                        width: "16",
-                        "data-view-component": "true",
-                        className: "mr-4 inline-block octicon octicon-table UnderlineNav-octicon",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-footer.tsx",
-                            lineNumber: 13,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 12,
-                        columnNumber: 37
-                    }, this),
-                    "Projects"
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-footer.tsx",
-                lineNumber: 12,
-                columnNumber: 17
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                className: "ml-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        height: "16",
-                        viewBox: "0 0 16 16",
-                        version: "1.1",
-                        width: "16",
-                        "data-view-component": "true",
-                        className: "mr-4 inline-block octicon octicon-package UnderlineNav-octicon",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-footer.tsx",
-                            lineNumber: 16,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 15,
-                        columnNumber: 37
-                    }, this),
-                    "Packages"
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-footer.tsx",
-                lineNumber: 15,
-                columnNumber: 17
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                className: "ml-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        height: "16",
-                        viewBox: "0 0 16 16",
-                        version: "1.1",
-                        width: "16",
-                        "data-view-component": "true",
-                        className: "mr-4 inline-block octicon octicon-star UnderlineNav-octicon",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/nav-footer.tsx",
-                            lineNumber: 19,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/nav-footer.tsx",
-                        lineNumber: 18,
-                        columnNumber: 37
-                    }, this),
-                    "Starts"
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/nav-footer.tsx",
-                lineNumber: 18,
-                columnNumber: 17
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/subcomponent/nav-footer.tsx",
-        lineNumber: 5,
-        columnNumber: 9
-    }, this);
-}
-_c = NavFooter;
-var _c;
-$RefreshReg$(_c, "NavFooter");
-
-  $parcel$ReactRefreshHelpers$7153.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8rGQM":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8ac4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8ac4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Main", ()=>Main);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _profile = require("./profile");
-function Main() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "max-w-[1024px] m-auto  mt-8 ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
-            fileName: "src/compunents/Main.tsx",
-            lineNumber: 9,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "src/compunents/Main.tsx",
-        lineNumber: 8,
-        columnNumber: 9
-    }, this);
-}
-_c = Main;
-var _c;
-$RefreshReg$(_c, "Main");
-
-  $parcel$ReactRefreshHelpers$8ac4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequireb323")
-
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=index.2d3ace14.js.map

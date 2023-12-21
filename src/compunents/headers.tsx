@@ -1,5 +1,5 @@
-import { NavTop } from "../subcomponent/nav-top.jsx"
-import { NavFooter } from "../subcomponent/nav-footer.jsx"
+import { NavTop } from "../subcomponent/nav-top.js"
+import { NavFooter } from "../subcomponent/nav-footer.js"
 export function Nav() {
     return (
         <div>

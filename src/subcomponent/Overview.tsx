@@ -1,9 +1,9 @@
-import { apiRepos , apiRequest } from "../compunents/getUser";
+import { apiRepos , apiRequest ,User } from "../compunents/getUser.ts";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
-export function Overview(props) {
-    const [repository, setrepository] = useState([]);
-    const [ contributions , setcontributions ] = useState([]);
+export function Overview(props:User ) {
+    const [repository, setrepository] = useState>([]);
+    const [ contributions , setcontributions ] = useState<User | {}([]);
     useEffect(() => {
       apiRepos().then(function (data) {
         setrepository(data  );

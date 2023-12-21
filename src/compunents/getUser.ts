@@ -1,8 +1,32 @@
 import { Octokit } from "octokit";
-async function apiRequest() {
+
+export interface User{
+  Avatar_url : string ,
+  name : string | null,
+  company: string | null,
+  blog:string | null,
+  bio: string | null,
+  folowers :number ,
+  following :number
+
+}
+export interface Repository{
+  name : string ,
+  login: string;
+  visibility:string ,
+  fork:boolean ,
+  forks_url: string | null ,
+  description :string | null,
+  language :string | null 
+  
+
+}
 
 
-  const token = "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"
+async function apiRequest() : Promise<User>{
+
+
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -17,10 +41,10 @@ async function apiRequest() {
   return old.data
 
 }
-async function apiRepos() {
+async function apiRepos(): Promise<Repository> {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos", {
