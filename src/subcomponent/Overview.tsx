@@ -1,19 +1,24 @@
-import { apiRepos , apiRequest ,User } from "../compunents/getUser.ts";
+import { apiRepos , apiRequest ,User , Repositoryes } from "../compunents/getUser";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
-export function Overview(props:User ) {
-    const [repository, setrepository] = useState>([]);
-    const [ contributions , setcontributions ] = useState<User | {}([]);
+import { IndexType } from "typescript";
+
+
+export function Overview(props:User& Repositoryes ) {
+    const [repository, setrepository] = useState<Array<Repositoryes>>([]);
+    const [ contributions , setcontributions ] = useState<Array<User>>([]);
+    console.log("data" , contributions)
     useEffect(() => {
-      apiRepos().then(function (data) {
-        setrepository(data  );
-        console.log( "contributions is :",  repository )
+      apiRepos().then(function (data) { 
+        setrepository(data);
+       
       })
   
     }, []);
     useEffect(() => {
       apiRequest().then(function (data) {
         setcontributions(data)
+        console.log("type of" , contributions)
       })
   
     }, []);
@@ -66,8 +71,9 @@ export function Overview(props:User ) {
   
             )
         })}
-        </div>
+        </div >
        <GitHubCalendar username={contributions.login}/>
+       
         </div> 
      
     )}

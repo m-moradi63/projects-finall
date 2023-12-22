@@ -106,7 +106,7 @@ node_id: "MDEwOlJlcG9zaXRvcnkyMzc0MDkzNjU="
 ​​​
 notifications_url: "https://api.github.com/repos/shahramardalan/strong-soap/notifications{?since,all,participating}"
 ​​​
-open_issues: 0
+open_issues: 
 ​​​
 open_issues_count: 0
 ​​​

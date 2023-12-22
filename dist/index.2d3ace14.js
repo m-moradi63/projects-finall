@@ -2942,15 +2942,17 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$2a8f.prelude(module);
 
 try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
-var _react = require("react");
 var _appTsx = require("./App.tsx");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 const container = document.getElementById("app");
 const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appTsx.App), {}, void 0, false, {
     fileName: "src/index.tsx",
-    lineNumber: 8,
+    lineNumber: 9,
     columnNumber: 13
 }, undefined));
 
@@ -2959,7 +2961,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appTsx.App), {}, void 
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./App.tsx":"7F5Te","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App.tsx":"7F5Te","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27158,31 +27160,26 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _headersTsx = require("./compunents/headers.tsx");
-var _octokit = require("octokit");
 var _mainTsx = require("./compunents/Main.tsx");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function App() {
-    const token = "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";
-    const octokit = new (0, _octokit.Octokit)({
-        auth: token
-    });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headersTsx.Nav), {}, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 20,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainTsx.Main), {}, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 21,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.tsx",
-        lineNumber: 19,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -27195,7 +27192,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./compunents/headers.tsx":"k52kz","octokit":"7AEgE","./compunents/Main.tsx":"8rGQM","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k52kz":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./compunents/headers.tsx":"k52kz","./compunents/Main.tsx":"8rGQM","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"k52kz":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffe9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27899,7 +27896,129 @@ $RefreshReg$(_c, "NavFooter");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7AEgE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8rGQM":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8ac4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8ac4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Main", ()=>Main);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _profile = require("./profile");
+function Main() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "max-w-[1024px] m-auto  mt-8 ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
+            fileName: "src/compunents/Main.tsx",
+            lineNumber: 9,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/compunents/Main.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+    }, this);
+}
+_c = Main;
+var _c;
+$RefreshReg$(_c, "Main");
+
+  $parcel$ReactRefreshHelpers$8ac4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fyKdz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e9b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e9b7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Profile", ()=>Profile);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _getUserTs = require("./getUser.ts");
+var _activityTsx = require("./activity.tsx");
+var _sidebarTsx = require("./sidebar.tsx");
+var _s = $RefreshSig$();
+function Profile(props) {
+    _s();
+    const [Getuser, setGetuser] = (0, _react.useState)({});
+    (0, _react.useEffect)(()=>{
+        (0, _getUserTs.apiRequest)().then(function(data) {
+            setGetuser(data);
+        });
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex box-border w-[1024px]   ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
+                fileName: "src/compunents/profile.tsx",
+                lineNumber: 18,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {}, void 0, false, {
+                fileName: "src/compunents/profile.tsx",
+                lineNumber: 19,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/compunents/profile.tsx",
+        lineNumber: 17,
+        columnNumber: 5
+    }, this);
+}
+_s(Profile, "tey1iGpG5WSkNiJ0zDLa2ZBuEyQ=");
+_c = Profile;
+var _c;
+$RefreshReg$(_c, "Profile");
+
+  $parcel$ReactRefreshHelpers$e9b7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./getUser.ts":"7oTua","./activity.tsx":"hRRWr","./sidebar.tsx":"4sEXX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7oTua":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
+parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
+var _octokit = require("octokit");
+async function apiRequest() {
+    const token = "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";
+    const octokit = new (0, _octokit.Octokit)({
+        auth: token
+    });
+    const old = await octokit.request("GET /users/{username}/", {
+        username: "shahramardalan",
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    /* console.log("data is" , old.data) */ return old.data;
+}
+async function apiRepos() {
+    const token = "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";
+    const octokit = new (0, _octokit.Octokit)({
+        auth: token
+    });
+    const repo = await octokit.request("GET /users/{username}/repos/", {
+        username: "shahramardalan",
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    /* console.log("repo" , repo.data) */ return repo.data;
+}
+
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7AEgE":[function(require,module,exports) {
 // pkg/dist-src/octokit.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -39689,131 +39808,7 @@ async function verify(secret, eventPayload, signature) {
     return await crypto.subtle.verify("HMAC", await importKey(secret, algorithm), hexToUInt8Array(signature.replace(`${algorithm}=`, "")), enc.encode(eventPayload));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8rGQM":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8ac4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8ac4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Main", ()=>Main);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _profile = require("./profile");
-function Main() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "max-w-[1024px] m-auto  mt-8 ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
-            fileName: "src/compunents/Main.tsx",
-            lineNumber: 9,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "src/compunents/Main.tsx",
-        lineNumber: 8,
-        columnNumber: 9
-    }, this);
-}
-_c = Main;
-var _c;
-$RefreshReg$(_c, "Main");
-
-  $parcel$ReactRefreshHelpers$8ac4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fyKdz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$e9b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$e9b7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Profile", ()=>Profile);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _getUserTs = require("./getUser.ts");
-var _activityTsx = require("./activity.tsx");
-var _sidebarTsx = require("./sidebar.tsx");
-var _s = $RefreshSig$();
-function Profile(props) {
-    _s();
-    const [Getuser, setGetuser] = (0, _react.useState)({});
-    (0, _react.useEffect)(()=>{
-        (0, _getUserTs.apiRequest)().then(function(data) {
-            setGetuser(data);
-        });
-    }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex box-border w-[1024px]   ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
-                fileName: "src/compunents/profile.tsx",
-                lineNumber: 18,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {}, void 0, false, {
-                fileName: "src/compunents/profile.tsx",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/compunents/profile.tsx",
-        lineNumber: 17,
-        columnNumber: 5
-    }, this);
-}
-_s(Profile, "tey1iGpG5WSkNiJ0zDLa2ZBuEyQ=");
-_c = Profile;
-var _c;
-$RefreshReg$(_c, "Profile");
-
-  $parcel$ReactRefreshHelpers$e9b7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./getUser.ts":"7oTua","./activity.tsx":"hRRWr","./sidebar.tsx":"4sEXX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7oTua":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
-parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
-var _octokit = require("octokit");
-async function apiRequest() {
-    const token = "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";
-    const octokit = new (0, _octokit.Octokit)({
-        auth: token
-    });
-    const old = await octokit.request("GET /users/{username}/", {
-        username: "shahramardalan",
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
-        }
-    });
-    console.log("data is", old.data.login);
-    return old.data;
-}
-async function apiRepos() {
-    const token = "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";
-    const octokit = new (0, _octokit.Octokit)({
-        auth: token
-    });
-    const repo = await octokit.request("GET /users/{username}/repos", {
-        username: "shahramardalan",
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
-        }
-    });
-    console.log("repo", repo.data);
-    return repo.data;
-}
-
-},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hRRWr":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hRRWr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$62bc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39824,9 +39819,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Activity", ()=>Activity);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _repositoriesJs = require("../subcomponent/Repositories.js");
-function Activity(props) {
-    return /* <Overview/> */ /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesJs.Reposit), {}, void 0, false, {
+var _repositoriesTsx = require("../subcomponent/Repositories.tsx");
+function Activity() {
+    return /* <Overview/> */ /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Reposit), {}, void 0, false, {
         fileName: "src/compunents/activity.tsx",
         lineNumber: 10,
         columnNumber: 5
@@ -39841,7 +39836,7 @@ $RefreshReg$(_c, "Activity");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../subcomponent/Repositories.js":"53zug","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"53zug":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../subcomponent/Repositories.tsx":"53zug"}],"53zug":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$00fb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39856,14 +39851,13 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _getUser = require("../compunents/getUser");
 var _s = $RefreshSig$();
-function Reposit(props) {
+function Reposit() {
     _s();
     const [repositState, setrepositState] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         (0, _getUser.apiRepos)().then(function(data) {
             setrepositState(data);
-            console.log("contributions is :", repositState);
-        });
+        /* console.log("contributions is :", repositState) */ });
     }, []);
     /* function forks(props) {
     if (!props) {    return null;  }
@@ -40005,7 +39999,7 @@ function Reposit(props) {
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
                         lineNumber: 49,
-                        columnNumber: 9
+                        columnNumber: 10
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "flex h-[2rem] items-center p-1  w-14 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-lg",
@@ -40051,7 +40045,7 @@ function Reposit(props) {
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap  ",
-                children: repositState.map((item)=>{
+                children: repositState.map((item, i)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] ",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40098,7 +40092,7 @@ function Reposit(props) {
                                                             version: "1.1",
                                                             width: "16",
                                                             "data-view-component": "true",
-                                                            class: "octicon octicon-star d-inline-block mr-2",
+                                                            className: "octicon octicon-star d-inline-block mr-2",
                                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                                                 d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                                             }, void 0, false, {
@@ -40205,7 +40199,7 @@ function Reposit(props) {
                             lineNumber: 67,
                             columnNumber: 13
                         }, this)
-                    }, void 0, false, {
+                    }, i, false, {
                         fileName: "src/subcomponent/Repositories.tsx",
                         lineNumber: 66,
                         columnNumber: 11
@@ -40233,7 +40227,7 @@ $RefreshReg$(_c, "Reposit");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../compunents/getUser":"7oTua","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"4sEXX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../compunents/getUser":"7oTua","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4sEXX":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f34c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

@@ -7,26 +7,27 @@ export interface User{
   blog:string | null,
   bio: string | null,
   folowers :number ,
-  following :number
+  following :number,
+  lohin : string | null
 
 }
-export interface Repository{
-  name : string ,
+export interface Repositoryes{
+  name : string | null | undefined,
   login: string;
   visibility:string ,
-  fork:boolean ,
-  forks_url: string | null ,
-  description :string | null,
-  language :string | null 
+  fork:boolean,
+  forks_url: string  ,
+  description :string | null | undefined,
+  language :string  | null
   
 
 }
 
 
-async function apiRequest() : Promise<User>{
+async function apiRequest() : Promise<Array<User>>{
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -37,17 +38,17 @@ async function apiRequest() : Promise<User>{
   }))
 
   
-  console.log("data is" , old.data.login)
+  /* console.log("data is" , old.data) */
   return old.data
 
 }
-async function apiRepos(): Promise<Repository> {
+async function apiRepos(): Promise<Array<Repositoryes>> {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
-  const repo = (await octokit.request("GET /users/{username}/repos", {
+  const repo = (await octokit.request("GET /users/{username}/repos/", {
     username: "shahramardalan",
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
@@ -55,8 +56,9 @@ async function apiRepos(): Promise<Repository> {
   }))
 
   
-  console.log("repo" , repo.data)
+  /* console.log("repo" , repo.data) */
   return repo.data
+  console.log("typeof",typeof repo.data)
 
 }
 export { apiRequest , apiRepos }

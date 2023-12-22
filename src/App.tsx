@@ -10,12 +10,8 @@ import React from "react";
   
 
 export function App() {
-  const token = "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"
-  const octokit = new Octokit({auth: token })
-    
-   
-
-  return (
+ 
+ return (
     <div >
       <Nav />
       <Main/>
