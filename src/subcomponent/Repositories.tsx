@@ -1,7 +1,7 @@
 import React, {useEffect , useState} from 'react';
 import { apiRepos ,Repositoryes } from '../compunents/getUser';
 
-export function Reposit():object {
+export function Reposit() {
   const [repositState, setrepositState] = useState<Array<Repositoryes > | []>([]);
   useEffect(() => {
     apiRepos().then(function (data) {

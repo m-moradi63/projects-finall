@@ -1,9 +1,10 @@
 
-import { apiRequest } from "./getUser.js";
+import { User, apiRequest } from "./getUser.js";
 import { useEffect, useState } from "react";
 
-export function Sidebar(props) {
-    const [Getuser, setGetuser] = useState({});
+
+export function Sidebar() {
+    const [Getuser, setGetuser] = useState<Array<User>>([]);
     useEffect(() => {
       apiRequest().then(function (data) {
         setGetuser(data);

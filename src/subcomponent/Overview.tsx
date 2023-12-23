@@ -1,12 +1,10 @@
 import { apiRepos , apiRequest ,User , Repositoryes } from "../compunents/getUser";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
-import { IndexType } from "typescript";
 
-
-export function Overview(props:User& Repositoryes ) {
+export function Overview( ) {
     const [repository, setrepository] = useState<Array<Repositoryes>>([]);
-    const [ contributions , setcontributions ] = useState<Array<User>>([]);
+    const [ contributions , setcontributions ] = useState<User | null>();
     console.log("data" , contributions)
     useEffect(() => {
       apiRepos().then(function (data) { 
@@ -20,7 +18,6 @@ export function Overview(props:User& Repositoryes ) {
         setcontributions(data)
         console.log("type of" , contributions)
       })
-  
     }, []);
     /* function forks(props) {
       if (!props) {    return null;  }
@@ -72,7 +69,8 @@ export function Overview(props:User& Repositoryes ) {
             )
         })}
         </div >
-       <GitHubCalendar username={contributions.login}/>
+       if {contributions?<GitHubCalendar username={contributions.login}/>: null}
+       
        
         </div> 
      
