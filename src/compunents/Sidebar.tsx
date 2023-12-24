@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 export function Sidebar() {
-    const [Getuser, setGetuser] = useState<Array<User>>([]);
+    const [Getuser, setGetuser] = useState<User>();
     useEffect(() => {
       apiRequest().then(function (data) {
         setGetuser(data);
@@ -13,13 +13,13 @@ export function Sidebar() {
     },[]);
 
 
-    
+    if (Getuser){
     return (
     
          
           <div className="w-[274px] h-[2rem]   ">
             <div className="px-[0.5rem] m-auto">
-            <img className="rounded-full border-2 border-solid border-slate-300" src={Getuser.avatar_url} />
+            if {Getuser.Avatar_url} ? <img className="rounded-full border-2 border-solid border-slate-300" src={Getuser.Avatar_url}/> : null 
             <p>{Getuser.login}</p>
             <p>{Getuser.bio}</p>
             <svg
@@ -101,6 +101,7 @@ export function Sidebar() {
     
          
        
-      );
+      )
+    }
     }
     

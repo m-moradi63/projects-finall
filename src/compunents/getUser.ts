@@ -1,14 +1,16 @@
 import { Octokit } from "octokit";
 
 export interface User{
-  Avatar_url : string ,
+  Avatar_url : string | undefined,
   name : string | null,
   company: string | null,
   blog:string | null,
   bio: string | null,
-  folowers :number ,
+  followers :number ,
   following :number,
-  login: string
+  login: string  ,
+  location : string,
+  twitter_username : string
   
 
 
@@ -24,7 +26,7 @@ export interface Repositoryes{
 }
 
 
-async function apiRequest() : Promise<User | null >{
+async function apiRequest() : Promise<User >{
 
 
   const token = "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"

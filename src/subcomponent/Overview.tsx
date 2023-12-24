@@ -4,7 +4,7 @@ import GitHubCalendar from 'react-github-calendar';
 
 export function Overview( ) {
     const [repository, setrepository] = useState<Array<Repositoryes>>([]);
-    const [ contributions , setcontributions ] = useState<User | null>();
+    const [ contributions , setcontributions ] = useState<User>();
     console.log("data" , contributions)
     useEffect(() => {
       apiRepos().then(function (data) { 
