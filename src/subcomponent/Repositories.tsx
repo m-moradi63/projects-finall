@@ -27,19 +27,20 @@ export function Reposit() {
       <div className="flex justify-between w-[45rem] border-b mb-[1rem] h-[3rem]">
         <input className="border-2 border-solid w-[30rem] rounded-lg h-[2rem]" placeholder="Find a repository...">
         </input>
-        <select className="border-2 border-solid  rounded-lg h-[2rem] bg-[#fff]">
+        <select className="border-2 border-solid  rounded-lg h-[2rem] bg-[#fff]" id="type">
         <option className="border-b" hidden>Type</option>
           <option className="" disabled>Select Type</option>
-          <option className="border-2 border-solid">All</option>
-          <option className="border-b">Sources</option>
-          <option className="border-b">Forks</option>
-          <option className="border-b">Archived</option>
-          <option className="border-b">Can be sponsored</option>
-          <option className="border-b">Mirrors</option>
-          <option className="border-b">Templates</option>
+          <option className="border-2 border-solid" value="All">All</option>
+          <option className="border-b" value="Sources" >Sources</option>
+          <option className="border-b" value="Forks">Forks</option>
+          <option className="border-b" value="Archived">Archived</option>
+          <option className="border-b" value="Can be sponsored">Can be sponsored</option>
+          <option className="border-b" value="Mirrors">Mirrors</option>
+          <option className="border-b" value="Templates">Templates</option>
           
           
         </select>
+        if{ad}
         {/* <button className="flex h-[2rem] items-center p-1  w-14 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-lg">
           <span>Type</span>
           <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="inline-block octicon octicon-triangle-down">

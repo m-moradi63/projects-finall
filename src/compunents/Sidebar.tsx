@@ -12,14 +12,13 @@ export function Sidebar() {
   
     },[]);
 
-
     if (Getuser){
     return (
     
          
           <div className="w-[274px] h-[2rem]   ">
-            <div className="px-[0.5rem] m-auto">
-            if {Getuser.Avatar_url} ? <img className="rounded-full border-2 border-solid border-slate-300" src={Getuser.Avatar_url}/> : null 
+            <div className="px-[0.5rem] m-auto ">
+             <img className="rounded-full border-2 border-solid border-slate-300 " src={Getuser.avatar_url}/>
             <p>{Getuser.login}</p>
             <p>{Getuser.bio}</p>
             <svg

@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 
 export interface User{
-  Avatar_url : string | undefined,
+  avatar_url : string | undefined,
   name : string | null,
   company: string | null,
   blog:string | null,
@@ -26,10 +26,10 @@ export interface Repositoryes{
 }
 
 
-async function apiRequest() : Promise<User >{
+async function apiRequest() : Promise<User>{
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -47,7 +47,7 @@ async function apiRequest() : Promise<User >{
 async function apiRepos(): Promise<Array<Repositoryes>> {
 
 
-  const token = "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"
+  const token = "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"
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos/", {

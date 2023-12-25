@@ -7,6 +7,7 @@ export function Profile() {
   return (
 
     <div className="flex box-border w-[1024px]   " >
+      
       <Sidebar />
       <Activity />
     </div>
