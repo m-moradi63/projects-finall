@@ -1,22 +1,31 @@
 import { apiRepos , apiRequest ,User , Repositoryes } from "../compunents/getUser";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
+import { usertype } from '../compunents/profile.tsx';
 
-export function Overview( ) {
+
+export function Overview(props:username ) {
     const [repository, setrepository] = useState<Array<Repositoryes>>([]);
     const [ contributions , setcontributions ] = useState<User>();
+    const [loadingover, setloadingover] = useState(true)
     console.log("data" , contributions)
     useEffect(() => {
-      apiRepos().then(function (data) { 
+      apiRepos(props.username).then(function (data) { 
         setrepository(data);
        
+      })
+      .finally(()=>{
+        setloadingover(false)
       })
   
     }, []);
     useEffect(() => {
-      apiRequest().then(function (data) {
+      apiRequest(props.username).then(function (data) {
         setcontributions(data)
         console.log("type of" , contributions)
+      })
+      .finally(()=>{
+        setloadingover(false)
       })
     }, []);
     /* function forks(props) {
@@ -29,9 +38,17 @@ export function Overview( ) {
     </div>
       );
     } */
+    
+    if(loadingover){
+      return (
+        <div className="w-[750px] bg-white  text-xs ">
+              LOADING OVERVIEW
+        </div>
+      )
+    }
     return (
   
-      <div className="w-[750px] bg-slate-100  text-xs ">
+      <div className="w-[750px] bg-white  text-xs ">
   
         <p>Popular repositories</p>
         <div className="flex flex-wrap  ">{repository.map((item, index) => {

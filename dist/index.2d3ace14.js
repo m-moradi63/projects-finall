@@ -34381,27 +34381,16 @@ $parcel$ReactRefreshHelpers$8ac4.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Main", ()=>Main);
+/* const params = useParams() */ parcelHelpers.export(exports, "Main", ()=>Main);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _profile = require("./profile");
-var _reactRouterDom = require("react-router-dom");
-const params = (0, _reactRouterDom.useParams)();
 function Main() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "max-w-[1024px] m-auto  mt-8 ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                path: ":username",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, void 0, void 0)
-            }, void 0, false, {
-                fileName: "src/compunents/Main.tsx",
-                lineNumber: 15,
-                columnNumber: 17
-            }, this)
-        }, void 0, false, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profile.Profile), {}, void 0, false, {
             fileName: "src/compunents/Main.tsx",
             lineNumber: 12,
-            columnNumber: 13
+            columnNumber: 11
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/Main.tsx",
@@ -34418,7 +34407,7 @@ $RefreshReg$(_c, "Main");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"fyKdz":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./profile":"fyKdz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fyKdz":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e9b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34431,24 +34420,29 @@ parcelHelpers.export(exports, "Profile", ()=>Profile);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _activityTsx = require("./activity.tsx");
 var _sidebarTsx = require("./Sidebar.tsx");
+const username = "shahramardalan";
 function Profile() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex box-border w-[1024px]   ",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {
+                username: username
+            }, void 0, false, {
                 fileName: "src/compunents/profile.tsx",
-                lineNumber: 11,
-                columnNumber: 7
+                lineNumber: 16,
+                columnNumber: 4
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _activityTsx.Activity), {
+                username: username
+            }, void 0, false, {
                 fileName: "src/compunents/profile.tsx",
-                lineNumber: 12,
-                columnNumber: 7
+                lineNumber: 17,
+                columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/compunents/profile.tsx",
-        lineNumber: 9,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -34470,36 +34464,41 @@ $parcel$ReactRefreshHelpers$62bc.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Activity", ()=>Activity);
+/* const paramrepose = useParams()
+const paramover= useParams() */ parcelHelpers.export(exports, "Activity", ()=>Activity);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _overviewTsx = require("../subcomponent/Overview.tsx");
 var _repositoriesTsx = require("../subcomponent/Repositories.tsx");
 var _reactRouterDom = require("react-router-dom");
-const paramrepose = (0, _reactRouterDom.useParams)();
-const paramover = (0, _reactRouterDom.useParams)();
-function Activity() {
+function Activity(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     index: true,
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {}, void 0, false, void 0, void 0)
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {
+                        username: props.username
+                    }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
-                    lineNumber: 14,
+                    lineNumber: 16,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/:username/:Overview",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {}, void 0, false, void 0, void 0)
+                    path: "/Overview",
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {
+                        username: props.username
+                    }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
                     lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/:username/:Repository",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Reposit), {}, void 0, false, void 0, void 0)
+                    path: "/Repository",
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Reposit), {
+                        username: props.username
+                    }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
                     lineNumber: 18,
@@ -34508,12 +34507,12 @@ function Activity() {
             ]
         }, void 0, true, {
             fileName: "src/compunents/activity.tsx",
-            lineNumber: 13,
+            lineNumber: 15,
             columnNumber: 8
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/activity.tsx",
-        lineNumber: 12,
+        lineNumber: 14,
         columnNumber: 6
     }, this);
 }
@@ -34542,20 +34541,25 @@ var _react = require("react");
 var _reactGithubCalendar = require("react-github-calendar");
 var _reactGithubCalendarDefault = parcelHelpers.interopDefault(_reactGithubCalendar);
 var _s = $RefreshSig$();
-function Overview() {
+function Overview(props) {
     _s();
     const [repository, setrepository] = (0, _react.useState)([]);
     const [contributions, setcontributions] = (0, _react.useState)();
+    const [loadingover, setloadingover] = (0, _react.useState)(true);
     console.log("data", contributions);
     (0, _react.useEffect)(()=>{
-        (0, _getUser.apiRepos)().then(function(data) {
+        (0, _getUser.apiRepos)(props.username).then(function(data) {
             setrepository(data);
+        }).finally(()=>{
+            setloadingover(false);
         });
     }, []);
     (0, _react.useEffect)(()=>{
-        (0, _getUser.apiRequest)().then(function(data) {
+        (0, _getUser.apiRequest)(props.username).then(function(data) {
             setcontributions(data);
             console.log("type of", contributions);
+        }).finally(()=>{
+            setloadingover(false);
         });
     }, []);
     /* function forks(props) {
@@ -34567,14 +34571,22 @@ function Overview() {
         <a src= {repository.forks_url} href = "Document URL" className="color-blue" ></a>
     </div>
       );
-    } */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[750px] bg-slate-100  text-xs ",
+    } */ if (loadingover) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[750px] bg-white  text-xs ",
+        children: "LOADING OVERVIEW"
+    }, void 0, false, {
+        fileName: "src/subcomponent/Overview.tsx",
+        lineNumber: 44,
+        columnNumber: 9
+    }, this);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[750px] bg-white  text-xs ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: "Popular repositories"
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 36,
+                lineNumber: 53,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34591,7 +34603,7 @@ function Overview() {
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 60,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34599,13 +34611,13 @@ function Overview() {
                                         children: item.visibility
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 44,
+                                        lineNumber: 61,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 42,
+                                lineNumber: 59,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -34614,7 +34626,7 @@ function Overview() {
                                 children: item.fork ? "forked from" + item.forks_url : ""
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 50,
+                                lineNumber: 67,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -34625,7 +34637,7 @@ function Overview() {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 54,
+                                lineNumber: 71,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -34637,48 +34649,48 @@ function Overview() {
                                             className: " solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block"
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Overview.tsx",
-                                            lineNumber: 61,
+                                            lineNumber: 78,
                                             columnNumber: 23
                                         }, this),
                                         item.language
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Overview.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 77,
                                     columnNumber: 21
                                 }, this) : ""
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 58,
+                                lineNumber: 75,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Overview.tsx",
-                        lineNumber: 41,
+                        lineNumber: 58,
                         columnNumber: 15
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 37,
+                lineNumber: 54,
                 columnNumber: 9
             }, this),
             contributions ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactGithubCalendarDefault.default), {
                 username: contributions.login
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 73,
+                lineNumber: 90,
                 columnNumber: 21
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Overview.tsx",
-        lineNumber: 34,
+        lineNumber: 51,
         columnNumber: 7
     }, this);
 }
-_s(Overview, "9qQw7TaIPQjThdyG7LktQeOZ36w=");
+_s(Overview, "pBn8zwPUUFThaA0u1eH47UJtTy0=");
 _c = Overview;
 var _c;
 $RefreshReg$(_c, "Overview");
@@ -34694,13 +34706,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
 parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
 var _octokit = require("octokit");
-const token = "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";
-async function apiRequest() {
+const token = "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";
+async function apiRequest(username) {
     const octokit = new (0, _octokit.Octokit)({
         auth: token
     });
     const old = await octokit.request("GET /users/{username}/", {
-        username: "shahramardalan",
+        username: username,
         headers: {
             "X-GitHub-Api-Version": "2022-11-28"
         }
@@ -34708,12 +34720,12 @@ async function apiRequest() {
     console.log("contributes", old.data);
     return old.data;
 }
-async function apiRepos() {
+async function apiRepos(username) {
     const octokit = new (0, _octokit.Octokit)({
         auth: token
     });
     const repo = await octokit.request("GET /users/{username}/repos/", {
-        username: "shahramardalan",
+        username: username,
         headers: {
             "X-GitHub-Api-Version": "2022-11-28"
         }
@@ -46635,21 +46647,20 @@ function _extends() {
 const NAMESPACE = "react-activity-calendar";
 const LABEL_MARGIN = 8; // px
 const DEFAULT_MONTH_LABELS = [
-    "\u0641\u0631\u0648\u0631\u062F\u06CC\u0646",
-    "\u0627\u0631\u062F\u06CC\u0628\u0647\u0634\u062A",
-    "\u062E\u0631\u062F\u0627\u062F",
-    "\u062A\u06CC\u0631",
-    "\u0645\u0631\u062F\u0627\u062F",
-    "\u0634\u0647\u0631\u0648\u06CC\u0631",
-    "\u0645\u0647\u0631",
-    "\u0622\u0628\u0627\u0646",
-    "\u0622\u0630\u0631",
-    "\u062F\u06CC",
-    "\u0628\u0647\u0645\u0646",
-    "\u0627\u0633\u0641\u0646\u062F"
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
 ];
 const DEFAULT_LABELS = {
-    totalCount: "{{count}} activities in {{year}}",
     months: DEFAULT_MONTH_LABELS,
     weekdays: [
         "Sun",
@@ -46660,9 +46671,10 @@ const DEFAULT_LABELS = {
         "Fri",
         "Sat"
     ],
+    totalCount: "{{count}} activities in {{year}}",
     legend: {
-        less: "\u06A9\u0645",
-        more: "\u0632\u06CC\u0627\u062F"
+        less: "Less",
+        more: "More"
     }
 };
 function useColorScheme() {
@@ -62120,29 +62132,32 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _getUser = require("../compunents/getUser");
 var _renderCategTsx = require("./renderCateg.tsx");
 var _s = $RefreshSig$();
-function Reposit() {
+function Reposit(props) {
     _s();
     const [repositState, setrepositState] = (0, _react.useState)([]);
+    const [loadingREPO, setloadingREPO] = (0, _react.useState)(true);
     const [filter, setfilter] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
-        (0, _getUser.apiRepos)().then(function(data) {
+        (0, _getUser.apiRepos)(props.username).then(function(data) {
             setrepositState(data);
-        /* console.log("contributions is :", repositState) */ });
+        /* console.log("contributions is :", repositState) */ }).finally(()=>{
+            setloadingREPO(false);
+        });
     }, []);
     (0, _react.useEffect)(()=>{
-        if (filter === "All") (0, _getUser.apiRepos)().then(function(data) {
+        if (filter === "All") (0, _getUser.apiRepos)(props.username).then(function(data) {
             setrepositState(data.filter((elmn)=>{
                 return elmn;
             }));
             console.log("tmmmmmp:", repositState);
         });
-        else if (filter === "Forks") (0, _getUser.apiRepos)().then(function(data) {
+        else if (filter === "Forks") (0, _getUser.apiRepos)(props.username).then(function(data) {
             setrepositState(data.filter((elmn)=>{
                 return elmn.fork === true;
             }));
             console.log("tmmmmmp:", repositState);
         });
-        else if (filter === "Archived") (0, _getUser.apiRepos)().then(function(data) {
+        else if (filter === "Archived") (0, _getUser.apiRepos)(props.username).then(function(data) {
             setrepositState(data.filter((elmn)=>{
                 return elmn.archived === true;
             }));
@@ -62151,6 +62166,14 @@ function Reposit() {
     }, [
         filter
     ]);
+    if (loadingREPO) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[750px] bg-white  text-xs ",
+        children: "LOADING REPOSITORIES"
+    }, void 0, false, {
+        fileName: "src/subcomponent/Repositories.tsx",
+        lineNumber: 56,
+        columnNumber: 7
+    }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[750px]   text-xs  ",
         children: [
@@ -62162,7 +62185,7 @@ function Reposit() {
                         placeholder: "Find a repository..."
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 51,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
@@ -62178,7 +62201,7 @@ function Reposit() {
                                 children: "Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 57,
+                                lineNumber: 71,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62188,7 +62211,7 @@ function Reposit() {
                                 children: "Select Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 58,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62198,7 +62221,7 @@ function Reposit() {
                                 children: "All"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 59,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62207,7 +62230,7 @@ function Reposit() {
                                 children: "Sources"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 60,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62216,7 +62239,7 @@ function Reposit() {
                                 children: "Forks"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 61,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62225,7 +62248,7 @@ function Reposit() {
                                 children: "Archived"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 62,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62235,7 +62258,7 @@ function Reposit() {
                                 children: "Can be sponsored"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 63,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62245,7 +62268,7 @@ function Reposit() {
                                 children: "Mirrors"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 64,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62255,13 +62278,13 @@ function Reposit() {
                                 children: "Templates"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 65,
+                                lineNumber: 79,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 53,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62271,7 +62294,7 @@ function Reposit() {
                                 children: "Language"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 73,
+                                lineNumber: 87,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -62286,18 +62309,18 @@ function Reposit() {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 89,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 74,
+                                lineNumber: 88,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 72,
+                        lineNumber: 86,
                         columnNumber: 10
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62307,7 +62330,7 @@ function Reposit() {
                                 children: "Sort"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 79,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -62322,41 +62345,41 @@ function Reposit() {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 95,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 80,
+                                lineNumber: 94,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 78,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 50,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _renderCategTsx.RenderCateg), {
                 reposit: repositState
             }, void 0, false, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 88,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Repositories.tsx",
-        lineNumber: 49,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }
-_s(Reposit, "qSi++r0JH7Eh1lEeQU02jnKVpyE=");
+_s(Reposit, "XO/ln5tAMfPCHeL7hzmsQCycTCQ=");
 _c = Reposit;
 var _c;
 $RefreshReg$(_c, "Reposit");
@@ -62366,7 +62389,7 @@ $RefreshReg$(_c, "Reposit");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../compunents/getUser":"7oTua","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./renderCateg.tsx":"gIRoe"}],"gIRoe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../compunents/getUser":"7oTua","./renderCateg.tsx":"gIRoe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gIRoe":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$09eb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62568,17 +62591,19 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Sidebar", ()=>Sidebar);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _getUserJs = require("./getUser.js");
-var _react = require("react");
+var _useprofileTs = require("../hooks/useprofile.ts");
 var _s = $RefreshSig$();
-function Sidebar() {
+function Sidebar(props) {
     _s();
-    const [Getuser, setGetuser] = (0, _react.useState)();
-    (0, _react.useEffect)(()=>{
-        (0, _getUserJs.apiRequest)().then(function(data) {
-            setGetuser(data);
-        });
-    }, []);
+    const { Getuser, loading } = (0, _useprofileTs.useProfile)();
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[274px] h-[2rem]   ",
+        children: "Loading"
+    }, void 0, false, {
+        fileName: "src/compunents/Sidebar.tsx",
+        lineNumber: 12,
+        columnNumber: 9
+    }, this);
     if (Getuser) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[274px] h-[2rem]   ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62589,21 +62614,21 @@ function Sidebar() {
                     src: Getuser.avatar_url
                 }, void 0, false, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 21,
+                    lineNumber: 23,
                     columnNumber: 14
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     children: Getuser.login
                 }, void 0, false, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 22,
+                    lineNumber: 24,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     children: Getuser.bio
                 }, void 0, false, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 23,
+                    lineNumber: 25,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -62619,12 +62644,12 @@ function Sidebar() {
                         d: "M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"
                     }, void 0, false, {
                         fileName: "src/compunents/Sidebar.tsx",
-                        lineNumber: 35,
+                        lineNumber: 37,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 24,
+                    lineNumber: 26,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -62636,7 +62661,7 @@ function Sidebar() {
                     ]
                 }, void 0, true, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -62653,19 +62678,19 @@ function Sidebar() {
                                 d: "M1.75 16A1.75 1.75 0 0 1 0 14.25V1.75C0 .784.784 0 1.75 0h8.5C11.216 0 12 .784 12 1.75v12.5c0 .085-.006.168-.018.25h2.268a.25.25 0 0 0 .25-.25V8.285a.25.25 0 0 0-.111-.208l-1.055-.703a.749.749 0 1 1 .832-1.248l1.055.703c.487.325.779.871.779 1.456v5.965A1.75 1.75 0 0 1 14.25 16h-3.5a.766.766 0 0 1-.197-.026c-.099.017-.2.026-.303.026h-3a.75.75 0 0 1-.75-.75V14h-1v1.25a.75.75 0 0 1-.75.75Zm-.25-1.75c0 .138.112.25.25.25H4v-1.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 .75.75v1.25h2.25a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25ZM3.75 6h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 3.75A.75.75 0 0 1 3.75 3h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 3.75Zm4 3A.75.75 0 0 1 7.75 6h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 7 6.75ZM7.75 3h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5ZM3 9.75A.75.75 0 0 1 3.75 9h.5a.75.75 0 0 1 0 1.5h-.5A.75.75 0 0 1 3 9.75ZM7.75 9h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5Z"
                             }, void 0, false, {
                                 fileName: "src/compunents/Sidebar.tsx",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "src/compunents/Sidebar.tsx",
-                            lineNumber: 41,
+                            lineNumber: 43,
                             columnNumber: 15
                         }, this),
                         Getuser.company
                     ]
                 }, void 0, true, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 40,
+                    lineNumber: 42,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -62681,19 +62706,19 @@ function Sidebar() {
                                 d: "m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132v-.001a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"
                             }, void 0, false, {
                                 fileName: "src/compunents/Sidebar.tsx",
-                                lineNumber: 62,
+                                lineNumber: 64,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "src/compunents/Sidebar.tsx",
-                            lineNumber: 54,
+                            lineNumber: 56,
                             columnNumber: 15
                         }, this),
                         Getuser.location
                     ]
                 }, void 0, true, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 53,
+                    lineNumber: 55,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -62710,19 +62735,19 @@ function Sidebar() {
                                 d: "m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"
                             }, void 0, false, {
                                 fileName: "src/compunents/Sidebar.tsx",
-                                lineNumber: 76,
+                                lineNumber: 78,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "src/compunents/Sidebar.tsx",
-                            lineNumber: 67,
+                            lineNumber: 69,
                             columnNumber: 15
                         }, this),
                         Getuser.blog
                     ]
                 }, void 0, true, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 66,
+                    lineNumber: 68,
                     columnNumber: 13
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -62741,7 +62766,7 @@ function Sidebar() {
                                     children: "Twitter"
                                 }, void 0, false, {
                                     fileName: "src/compunents/Sidebar.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 92,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -62749,13 +62774,13 @@ function Sidebar() {
                                     fill: "currentColor"
                                 }, void 0, false, {
                                     fileName: "src/compunents/Sidebar.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 93,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/compunents/Sidebar.tsx",
-                            lineNumber: 81,
+                            lineNumber: 83,
                             columnNumber: 15
                         }, this),
                         "@",
@@ -62763,22 +62788,26 @@ function Sidebar() {
                     ]
                 }, void 0, true, {
                     fileName: "src/compunents/Sidebar.tsx",
-                    lineNumber: 80,
+                    lineNumber: 82,
                     columnNumber: 13
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/compunents/Sidebar.tsx",
-            lineNumber: 20,
+            lineNumber: 22,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/Sidebar.tsx",
-        lineNumber: 19,
+        lineNumber: 21,
         columnNumber: 11
     }, this);
 }
-_s(Sidebar, "0tcwfFq31AebGEyqSGJwENUOH44=");
+_s(Sidebar, "Qsj6xPUoIxbu8XbE/N9Q/p3mS90=", false, function() {
+    return [
+        (0, _useprofileTs.useProfile)
+    ];
+});
 _c = Sidebar;
 var _c;
 $RefreshReg$(_c, "Sidebar");
@@ -62788,6 +62817,39 @@ $RefreshReg$(_c, "Sidebar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./getUser.js":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../hooks/useprofile.ts":"fC2Rw"}],"fC2Rw":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$50b4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$50b4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useProfile", ()=>useProfile);
+var _getUserTs = require("../compunents/getUser.ts");
+var _react = require("react");
+function useProfile(props) {
+    const [Getuser, setGetuser] = (0, _react.useState)();
+    const [loading, setloading] = (0, _react.useState)(true);
+    (0, _react.useEffect)(()=>{
+        (0, _getUserTs.apiRequest)(props.username).then(function(data) {
+            setGetuser(data);
+        }).finally(()=>{
+            setloading(false);
+        });
+    }, []);
+    return {
+        Getuser: Getuser,
+        loading: loading
+    };
+}
+
+  $parcel$ReactRefreshHelpers$50b4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"../compunents/getUser.ts":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
 //# sourceMappingURL=index.2d3ace14.js.map

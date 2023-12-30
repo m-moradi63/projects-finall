@@ -28,17 +28,18 @@ export interface Repositoryes{
   default_branch: string ,
   archived :boolean
 }
-const token = "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"
+const token = "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"
 
 
-async function apiRequest() : Promise<User>{
+
+async function apiRequest(username:string) : Promise<User>{
 
 
   
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
-    username: "shahramardalan",
+    username: username,
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
     },
@@ -49,14 +50,14 @@ async function apiRequest() : Promise<User>{
   return old.data
 
 }
-async function apiRepos(): Promise<Array<Repositoryes>> {
+async function apiRepos(username:string): Promise<Array<Repositoryes>> {
 
 
   
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos/", {
-    username: "shahramardalan",
+    username: username,
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
     },

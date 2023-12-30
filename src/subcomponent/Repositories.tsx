@@ -2,39 +2,47 @@ import React, { useEffect, useState } from 'react';
 import { apiRepos, Repositoryes } from '../compunents/getUser';
 import { RenderCateg } from './renderCateg.tsx';
 import type { ReactElement, ReactNode } from 'react';
+import { usertype } from '../compunents/profile.tsx';
 
-export function Reposit() {
+
+export function Reposit(props:username) {
   const [repositState, setrepositState] = useState<Array<Repositoryes>>([]);
+  const [loadingREPO, setloadingREPO] = useState(true)
   const [filter, setfilter] = useState<string>("");
   useEffect(() => {
-    apiRepos().then(function (data) {
+    apiRepos(props.username).then(function (data) {
       setrepositState(data);
       /* console.log("contributions is :", repositState) */
+    })
+    .finally(()=>{
+      setloadingREPO(false)
     })
 
   }, []);
   useEffect(() => {
     
     if (filter === "All") {
-      apiRepos().then(function (data) {
+      apiRepos(props.username).then(function (data) {
         setrepositState(data.filter((elmn) => {
           return elmn
   
         }))
+        
         console.log("tmmmmmp:", repositState)
       })
     }
     else if (filter === "Forks") {
-      apiRepos().then(function (data) {
+      apiRepos(props.username).then(function (data) {
         setrepositState(data.filter((elmn) => {
           return elmn.fork===true
   
         }))
+      
         console.log("tmmmmmp:", repositState)
       })
     }
     else if (filter === "Archived") {
-      apiRepos().then(function (data) {
+      apiRepos(props.username).then(function (data) {
         setrepositState(data.filter((elmn) => {
           return elmn.archived===true
   
@@ -43,7 +51,13 @@ export function Reposit() {
       })
     }
   }, [filter]);
-
+  if(loadingREPO){
+    return (
+      <div className="w-[750px] bg-white  text-xs ">
+            LOADING REPOSITORIES
+      </div>
+    )
+  }
   return (
 
     <div className="w-[750px]   text-xs  ">

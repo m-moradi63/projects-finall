@@ -1,17 +1,19 @@
 
 import { User, apiRequest } from "./getUser.js";
 import { useEffect, useState } from "react";
+import { usertype } from '../compunents/profile.tsx';
+import { useProfile } from "../hooks/useprofile.ts";
 
-
-export function Sidebar() {
-    const [Getuser, setGetuser] = useState<User>();
-    useEffect(() => {
-      apiRequest().then(function (data) {
-        setGetuser(data);
-    })
-  
-    },[]);
-
+export function Sidebar(props:usertype) {
+    const {Getuser , loading}= useProfile()
+   
+    if(loading){
+      return(
+        <div className="w-[274px] h-[2rem]   ">
+          Loading
+        </div>
+      )
+    }
     if (Getuser){
     return (
     
