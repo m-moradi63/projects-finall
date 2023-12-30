@@ -35,7 +35,7 @@ export function Overview( ) {
   
         <p>Popular repositories</p>
         <div className="flex flex-wrap  ">{repository.map((item, index) => {
-          if (index < 6)
+          if (index < 6){
             return (
   
               <div className="border-2 solid w-[21rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5">
@@ -67,9 +67,10 @@ export function Overview( ) {
   
   
             )
+                  }
         })}
         </div >
-       if {contributions?<GitHubCalendar username={contributions.login}/>: null}
+     {contributions?<GitHubCalendar username={contributions.login}/>: null}
        
        
         </div> 

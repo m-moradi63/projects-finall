@@ -22,14 +22,19 @@ export interface Repositoryes{
   fork:boolean,
   forks_url: string  ,
   description :string | null | undefined,
-  language :string  | null
+  language :string  | null,
+  allow_forking:boolean,
+  node_id:string ,
+  default_branch: string ,
+  archived :boolean
 }
+const token = "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"
 
 
 async function apiRequest() : Promise<User>{
 
 
-  const token = "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"
+  
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {
@@ -47,7 +52,7 @@ async function apiRequest() : Promise<User>{
 async function apiRepos(): Promise<Array<Repositoryes>> {
 
 
-  const token = "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"
+  
   const octokit = new Octokit({ auth: token })
 
   const repo = (await octokit.request("GET /users/{username}/repos/", {

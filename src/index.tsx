@@ -6,6 +6,7 @@ import React from 'react';
 import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("app");
+if(container){
 const root = createRoot(container)
 root.render(
     <BrowserRouter>
@@ -13,3 +14,4 @@ root.render(
     </BrowserRouter>
 
 );
+}
