@@ -5,7 +5,7 @@ import { usertype } from '../compunents/profile.tsx';
 import { useProfile } from "../hooks/useprofile.ts";
 
 export function Sidebar(props:usertype) {
-    const {Getuser , loading}= useProfile()
+    const {Getuser , loading}= useProfile({})
    
     if(loading){
       return(

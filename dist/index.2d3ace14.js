@@ -34481,7 +34481,7 @@ function Activity(props) {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -34491,28 +34491,34 @@ function Activity(props) {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/Repository",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Reposit), {
-                        username: props.username
-                    }, void 0, false, void 0, void 0)
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Reposit), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/activity.tsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                    path: "/repoTab",
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("repoTab", {}, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "src/compunents/activity.tsx",
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/compunents/activity.tsx",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 8
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/activity.tsx",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 6
     }, this);
 }
@@ -34706,7 +34712,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "apiRequest", ()=>apiRequest);
 parcelHelpers.export(exports, "apiRepos", ()=>apiRepos);
 var _octokit = require("octokit");
-const token = "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";
+const token = "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";
 async function apiRequest(username) {
     const octokit = new (0, _octokit.Octokit)({
         auth: token
@@ -62129,49 +62135,18 @@ parcelHelpers.export(exports, "Reposit", ()=>Reposit);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _getUser = require("../compunents/getUser");
 var _renderCategTsx = require("./renderCateg.tsx");
+var _useprofileTs = require("../hooks/useprofile.ts");
 var _s = $RefreshSig$();
-function Reposit(props) {
+function Reposit() {
     _s();
-    const [repositState, setrepositState] = (0, _react.useState)([]);
-    const [loadingREPO, setloadingREPO] = (0, _react.useState)(true);
-    const [filter, setfilter] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        (0, _getUser.apiRepos)(props.username).then(function(data) {
-            setrepositState(data);
-        /* console.log("contributions is :", repositState) */ }).finally(()=>{
-            setloadingREPO(false);
-        });
-    }, []);
-    (0, _react.useEffect)(()=>{
-        if (filter === "All") (0, _getUser.apiRepos)(props.username).then(function(data) {
-            setrepositState(data.filter((elmn)=>{
-                return elmn;
-            }));
-            console.log("tmmmmmp:", repositState);
-        });
-        else if (filter === "Forks") (0, _getUser.apiRepos)(props.username).then(function(data) {
-            setrepositState(data.filter((elmn)=>{
-                return elmn.fork === true;
-            }));
-            console.log("tmmmmmp:", repositState);
-        });
-        else if (filter === "Archived") (0, _getUser.apiRepos)(props.username).then(function(data) {
-            setrepositState(data.filter((elmn)=>{
-                return elmn.archived === true;
-            }));
-            console.log("archive:", repositState);
-        });
-    }, [
-        filter
-    ]);
+    const { repositState, loadingREPO, filter, setfilter } = (0, _useprofileTs.useProfile)({});
     if (loadingREPO) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[750px] bg-white  text-xs ",
         children: "LOADING REPOSITORIES"
     }, void 0, false, {
         fileName: "src/subcomponent/Repositories.tsx",
-        lineNumber: 56,
+        lineNumber: 15,
         columnNumber: 7
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62185,7 +62160,7 @@ function Reposit(props) {
                         placeholder: "Find a repository..."
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 65,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
@@ -62201,7 +62176,7 @@ function Reposit(props) {
                                 children: "Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 71,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62211,7 +62186,7 @@ function Reposit(props) {
                                 children: "Select Type"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 72,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62221,7 +62196,7 @@ function Reposit(props) {
                                 children: "All"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 73,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62230,7 +62205,7 @@ function Reposit(props) {
                                 children: "Sources"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 74,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62239,7 +62214,7 @@ function Reposit(props) {
                                 children: "Forks"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 75,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62248,7 +62223,7 @@ function Reposit(props) {
                                 children: "Archived"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 76,
+                                lineNumber: 35,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62258,7 +62233,7 @@ function Reposit(props) {
                                 children: "Can be sponsored"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 77,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62268,7 +62243,7 @@ function Reposit(props) {
                                 children: "Mirrors"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 78,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
@@ -62278,13 +62253,13 @@ function Reposit(props) {
                                 children: "Templates"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 79,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 67,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62294,7 +62269,7 @@ function Reposit(props) {
                                 children: "Language"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 87,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -62309,18 +62284,18 @@ function Reposit(props) {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 88,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 86,
+                        lineNumber: 45,
                         columnNumber: 10
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62330,7 +62305,7 @@ function Reposit(props) {
                                 children: "Sort"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 93,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -62345,41 +62320,45 @@ function Reposit(props) {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/Repositories.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 54,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Repositories.tsx",
-                                lineNumber: 94,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Repositories.tsx",
-                        lineNumber: 92,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 64,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _renderCategTsx.RenderCateg), {
                 reposit: repositState
             }, void 0, false, {
                 fileName: "src/subcomponent/Repositories.tsx",
-                lineNumber: 102,
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Repositories.tsx",
-        lineNumber: 63,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 }
-_s(Reposit, "XO/ln5tAMfPCHeL7hzmsQCycTCQ=");
+_s(Reposit, "IwWT4xQ/L59toP8Zi9sa3ZqRPf0=", false, function() {
+    return [
+        (0, _useprofileTs.useProfile)
+    ];
+});
 _c = Reposit;
 var _c;
 $RefreshReg$(_c, "Reposit");
@@ -62389,7 +62368,7 @@ $RefreshReg$(_c, "Reposit");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../compunents/getUser":"7oTua","./renderCateg.tsx":"gIRoe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gIRoe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./renderCateg.tsx":"gIRoe","../hooks/useprofile.ts":"fC2Rw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gIRoe":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$09eb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62400,6 +62379,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RenderCateg", ()=>RenderCateg);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 function RenderCateg(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-wrap  ",
@@ -62417,12 +62397,13 @@ function RenderCateg(props) {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "flex  justify-left",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                to: "/repoTab",
                                                 className: "text-blue-600 text-xl",
                                                 children: item.name
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 18,
+                                                lineNumber: 20,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62430,13 +62411,13 @@ function RenderCateg(props) {
                                                 children: item.visibility
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 19,
+                                                lineNumber: 22,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 17,
+                                        lineNumber: 19,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62457,25 +62438,25 @@ function RenderCateg(props) {
                                                             d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                                            lineNumber: 26,
+                                                            lineNumber: 29,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 25,
+                                                        lineNumber: 28,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                         children: "start"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 28,
+                                                        lineNumber: 31,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 24,
+                                                lineNumber: 27,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -62492,29 +62473,29 @@ function RenderCateg(props) {
                                                         d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 33,
+                                                        lineNumber: 36,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                                    lineNumber: 32,
+                                                    lineNumber: 35,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 30,
+                                                lineNumber: 33,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 23,
+                                        lineNumber: 26,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 16,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, this),
                             "\xa0\xa0 \xa0\xa0",
@@ -62525,7 +62506,7 @@ function RenderCateg(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 43,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
                             "\xa0\xa0",
@@ -62537,37 +62518,37 @@ function RenderCateg(props) {
                                             className: " solid w-[1rem] h-[1rem] bg-[#94a3b8] rounded-full inline-block"
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 53,
                                             columnNumber: 17
                                         }, this),
                                         item.language
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 52,
                                     columnNumber: 15
                                 }, this) : ""
                             }, void 0, false, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 47,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/renderCateg.tsx",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this)
                 }, i, false, {
                     fileName: "src/subcomponent/renderCateg.tsx",
-                    lineNumber: 14,
+                    lineNumber: 16,
                     columnNumber: 6
                 }, this);
             })
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/renderCateg.tsx",
-        lineNumber: 12,
+        lineNumber: 14,
         columnNumber: 1
     }, this);
 }
@@ -62580,7 +62561,77 @@ $RefreshReg$(_c, "RenderCateg");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"fC2Rw":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$50b4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$50b4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useProfile", ()=>useProfile);
+var _getUserTs = require("../compunents/getUser.ts");
+var _react = require("react");
+const username = "shahramardalan";
+function useProfile({}) {
+    const [Getuser, setGetuser] = (0, _react.useState)();
+    const [loading, setloading] = (0, _react.useState)(true);
+    const [repositState, setrepositState] = (0, _react.useState)([]);
+    const [loadingREPO, setloadingREPO] = (0, _react.useState)(true);
+    const [filter, setfilter] = (0, _react.useState)("");
+    (0, _react.useEffect)(()=>{
+        (0, _getUserTs.apiRequest)(username).then(function(data) {
+            setGetuser(data);
+        }).finally(()=>{
+            setloading(false);
+        });
+    }, []);
+    (0, _react.useEffect)(()=>{
+        (0, _getUserTs.apiRepos)(username).then(function(data) {
+            setrepositState(data);
+        /* console.log("contributions is :", repositState) */ }).finally(()=>{
+            setloadingREPO(false);
+        });
+    }, []);
+    (0, _react.useEffect)(()=>{
+        if (filter === "All") (0, _getUserTs.apiRepos)(username).then(function(data) {
+            setrepositState(data.filter((elmn)=>{
+                return elmn;
+            }));
+            console.log("tmmmmmp:", repositState);
+        });
+        else if (filter === "Forks") (0, _getUserTs.apiRepos)(username).then(function(data) {
+            setrepositState(data.filter((elmn)=>{
+                return elmn.fork === true;
+            }));
+            console.log("tmmmmmp:", repositState);
+        });
+        else if (filter === "Archived") (0, _getUserTs.apiRepos)(username).then(function(data) {
+            setrepositState(data.filter((elmn)=>{
+                return elmn.archived === true;
+            }));
+            console.log("archive:", repositState);
+        });
+    }, [
+        filter
+    ]);
+    return {
+        Getuser: Getuser,
+        loading: loading,
+        repositState: repositState,
+        loadingREPO: loadingREPO,
+        filter: filter,
+        setfilter: setfilter
+    };
+}
+
+  $parcel$ReactRefreshHelpers$50b4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"../compunents/getUser.ts":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$68d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62595,7 +62646,7 @@ var _useprofileTs = require("../hooks/useprofile.ts");
 var _s = $RefreshSig$();
 function Sidebar(props) {
     _s();
-    const { Getuser, loading } = (0, _useprofileTs.useProfile)();
+    const { Getuser, loading } = (0, _useprofileTs.useProfile)({});
     if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[274px] h-[2rem]   ",
         children: "Loading"
@@ -62817,39 +62868,6 @@ $RefreshReg$(_c, "Sidebar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../hooks/useprofile.ts":"fC2Rw"}],"fC2Rw":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$50b4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$50b4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useProfile", ()=>useProfile);
-var _getUserTs = require("../compunents/getUser.ts");
-var _react = require("react");
-function useProfile(props) {
-    const [Getuser, setGetuser] = (0, _react.useState)();
-    const [loading, setloading] = (0, _react.useState)(true);
-    (0, _react.useEffect)(()=>{
-        (0, _getUserTs.apiRequest)(props.username).then(function(data) {
-            setGetuser(data);
-        }).finally(()=>{
-            setloading(false);
-        });
-    }, []);
-    return {
-        Getuser: Getuser,
-        loading: loading
-    };
-}
-
-  $parcel$ReactRefreshHelpers$50b4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"../compunents/getUser.ts":"7oTua","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","../hooks/useprofile.ts":"fC2Rw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
 //# sourceMappingURL=index.2d3ace14.js.map

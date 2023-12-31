@@ -28,14 +28,15 @@ export interface Repositoryes{
   default_branch: string ,
   archived :boolean
 }
-const token = "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"
 
 
 
+
+
+
+
+const token = "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"
 async function apiRequest(username:string) : Promise<User>{
-
-
-  
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {

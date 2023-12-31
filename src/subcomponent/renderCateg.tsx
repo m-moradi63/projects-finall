@@ -1,6 +1,8 @@
 import { useEffect, type ReactElement, type ReactNode } from 'react';
 import { apiRepos ,Repositoryes, User } from '../compunents/getUser';
+import { repoTab } from '../compunents/repoTab';
 import { ALL } from 'dns';
+import { Link } from "react-router-dom"
 interface RenderCategProps{
   reposit: Array <Repositoryes>,
  }
@@ -15,9 +17,10 @@ return (
         <div className="border-2 solid w-[45rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5">
           <div className="flex justify-between" >
             <div className="flex  justify-left">
-              <a className="text-blue-600 text-xl">{item.name}</a>
+              <Link to="/repoTab" className="text-blue-600 text-xl">{item.name}</Link>
+              
               <button className="border-2 solid w-[3.4rem] h-[1.2rem] rounded-xl ml-[1rem] ">
-                {item.visibility}
+                {item.visibility} 
               </button>
             </div>
             <button className="flex justify-between   items-center p-1  w-28 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-md">
