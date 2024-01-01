@@ -1,7 +1,7 @@
 
 import { User, apiRequest } from "./getUser.js";
 import { useEffect, useState } from "react";
-import { usertype } from '../compunents/profile.tsx';
+import { usertype } from '../App.tsx';
 import { useProfile } from "../hooks/useprofile.ts";
 
 export function Sidebar(props:usertype) {

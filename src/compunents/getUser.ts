@@ -35,7 +35,7 @@ export interface Repositoryes{
 
 
 
-const token = "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"
+const token = "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"
 async function apiRequest(username:string) : Promise<User>{
   const octokit = new Octokit({ auth: token })
 

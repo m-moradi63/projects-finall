@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { apiRepos, Repositoryes } from '../compunents/getUser';
 import { RenderCateg } from './renderCateg.tsx';
 import type { ReactElement, ReactNode } from 'react';
-import { usertype } from '../compunents/profile.tsx';
+import { usertype } from '../App.tsx';
 import { useProfile } from '../hooks/useprofile.ts';
 
 
-export function Reposit() {
+export function Reposit(username:usertype) {
   const {repositState, loadingREPO , filter , setfilter} = useProfile({});
  
  

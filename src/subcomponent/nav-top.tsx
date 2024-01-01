@@ -1,4 +1,4 @@
-export function NavTop(){
+export function Nav(){
     return (
         <div className="flex justify-between ml-4 mt-4  ">
                 <div className="flex justify-between items-center ">

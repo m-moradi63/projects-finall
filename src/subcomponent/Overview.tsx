@@ -1,7 +1,7 @@
 import { apiRepos , apiRequest ,User , Repositoryes } from "../compunents/getUser";
 import { useEffect, useState } from "react";
 import GitHubCalendar from 'react-github-calendar';
-import { usertype } from '../compunents/profile.tsx';
+import { usertype } from "../App";
 
 
 export function Overview(props:username ) {
