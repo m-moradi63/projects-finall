@@ -1,0 +1,31 @@
+import { User, getUser } from "../api/getUser.ts";
+import { getRepos, Repositoryes} from "../api/getrepository"
+import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import { getOrg , Repositspecial } from "../api/getrepoORG.ts";
+
+
+export function useRepos(name:string , owner:string ) {
+ console.log("valueeeeeee" , owner)
+  const [loadingRepos, setloadingRepos] = useState(true);
+  const [repoinfo , setrepoinfo] = useState<Array<Repositspecial>>([]);
+
+  useEffect(() => {
+    getOrg(name, owner)
+      .then(function (data) {
+        setrepoinfo(data);
+        console.log("reposssssss" , repoinfo)
+      })
+      .finally(() => {
+        console.log("repoooooooooo:" , repoinfo)
+        setloadingRepos(false);
+      });
+  }, []);
+ 
+  return {
+    loadingRepos:loadingRepos,
+    setloadingRepos:setloadingRepos,
+    setrepoinfo : setrepoinfo,
+    repoinfo:repoinfo
+  };
+}

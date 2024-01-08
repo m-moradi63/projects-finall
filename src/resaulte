@@ -1,0 +1,194 @@
+re:::::::::: 
+Object { id: 683539956, node_id: "R_kgDOKL399A", name: "aa", full_name: "m-moradi63/aa", private: false, owner: {…}, html_url: "https://github.com/m-moradi63/aa", description: null, fork: false, url: "https://api.github.com/repos/m-moradi63/aa", … }
+​
+allow_auto_merge: false
+​
+allow_forking: true
+​
+allow_merge_commit: true
+​
+allow_rebase_merge: true
+​
+allow_squash_merge: true
+​
+allow_update_branch: false
+​
+archive_url: "https://api.github.com/repos/m-moradi63/aa/{archive_format}{/ref}"
+​
+archived: false
+​
+assignees_url: "https://api.github.com/repos/m-moradi63/aa/assignees{/user}"
+​
+blobs_url: "https://api.github.com/repos/m-moradi63/aa/git/blobs{/sha}"
+​
+branches_url: "https://api.github.com/repos/m-moradi63/aa/branches{/branch}"
+​
+clone_url: "https://github.com/m-moradi63/aa.git"
+​
+collaborators_url: "https://api.github.com/repos/m-moradi63/aa/collaborators{/collaborator}"
+​
+comments_url: "https://api.github.com/repos/m-moradi63/aa/comments{/number}"
+​
+commits_url: "https://api.github.com/repos/m-moradi63/aa/commits{/sha}"
+​
+compare_url: "https://api.github.com/repos/m-moradi63/aa/compare/{base}...{head}"
+​
+contents_url: "https://api.github.com/repos/m-moradi63/aa/contents/{+path}"
+​
+contributors_url: "https://api.github.com/repos/m-moradi63/aa/contributors"
+​
+created_at: "2023-08-26T22:33:46Z"
+​
+default_branch: "main"
+​
+delete_branch_on_merge: false
+​
+deployments_url: "https://api.github.com/repos/m-moradi63/aa/deployments"
+​
+description: null
+​
+disabled: false
+​
+downloads_url: "https://api.github.com/repos/m-moradi63/aa/downloads"
+​
+events_url: "https://api.github.com/repos/m-moradi63/aa/events"
+​
+fork: false
+​
+forks: 0
+​
+forks_count: 0
+​
+forks_url: "https://api.github.com/repos/m-moradi63/aa/forks"
+​
+full_name: "m-moradi63/aa"
+​
+git_commits_url: "https://api.github.com/repos/m-moradi63/aa/git/commits{/sha}"
+​
+git_refs_url: "https://api.github.com/repos/m-moradi63/aa/git/refs{/sha}"
+​
+git_tags_url: "https://api.github.com/repos/m-moradi63/aa/git/tags{/sha}"
+​
+git_url: "git://github.com/m-moradi63/aa.git"
+​
+has_discussions: false
+​
+has_downloads: true
+​
+has_issues: true
+​
+has_pages: false
+​
+has_projects: true
+​
+has_wiki: true
+​
+homepage: null
+​
+hooks_url: "https://api.github.com/repos/m-moradi63/aa/hooks"
+​
+html_url: "https://github.com/m-moradi63/aa"
+​
+id: 683539956
+​
+is_template: false
+​
+issue_comment_url: "https://api.github.com/repos/m-moradi63/aa/issues/comments{/number}"
+​
+issue_events_url: "https://api.github.com/repos/m-moradi63/aa/issues/events{/number}"
+​
+issues_url: "https://api.github.com/repos/m-moradi63/aa/issues{/number}"
+​
+keys_url: "https://api.github.com/repos/m-moradi63/aa/keys{/key_id}"
+​
+labels_url: "https://api.github.com/repos/m-moradi63/aa/labels{/name}"
+​
+language: null
+​
+languages_url: "https://api.github.com/repos/m-moradi63/aa/languages"
+​
+license: null
+​
+merge_commit_message: "PR_TITLE"
+​
+merge_commit_title: "MERGE_MESSAGE"
+​
+merges_url: "https://api.github.com/repos/m-moradi63/aa/merges"
+​
+milestones_url: "https://api.github.com/repos/m-moradi63/aa/milestones{/number}"
+​
+mirror_url: null
+​
+name: "aa"
+​
+network_count: 0
+​
+node_id: "R_kgDOKL399A"
+​
+notifications_url: "https://api.github.com/repos/m-moradi63/aa/notifications{?since,all,participating}"
+​
+open_issues: 0
+​
+open_issues_count: 0
+​
+owner: Object { login: "m-moradi63", id: 138288308, node_id: "U_kgDOCD4ctA", … }
+​
+permissions: Object { admin: true, maintain: true, push: true, … }
+​
+private: false
+​
+pulls_url: "https://api.github.com/repos/m-moradi63/aa/pulls{/number}"
+​
+pushed_at: "2023-08-26T22:33:46Z"
+​
+releases_url: "https://api.github.com/repos/m-moradi63/aa/releases{/id}"
+​
+security_and_analysis: Object { secret_scanning: {…}, secret_scanning_push_protection: {…}, dependabot_security_updates: {…}, … }
+​
+size: 0
+​
+squash_merge_commit_message: "COMMIT_MESSAGES"
+​
+squash_merge_commit_title: "COMMIT_OR_PR_TITLE"
+​
+ssh_url: "git@github.com:m-moradi63/aa.git"
+​
+stargazers_count: 0
+​
+stargazers_url: "https://api.github.com/repos/m-moradi63/aa/stargazers"
+​
+statuses_url: "https://api.github.com/repos/m-moradi63/aa/statuses/{sha}"
+​
+subscribers_count: 1
+​
+subscribers_url: "https://api.github.com/repos/m-moradi63/aa/subscribers"
+​
+subscription_url: "https://api.github.com/repos/m-moradi63/aa/subscription"
+​
+svn_url: "https://github.com/m-moradi63/aa"
+​
+tags_url: "https://api.github.com/repos/m-moradi63/aa/tags"
+​
+teams_url: "https://api.github.com/repos/m-moradi63/aa/teams"
+​
+temp_clone_token: ""
+​
+topics: Array []
+​
+trees_url: "https://api.github.com/repos/m-moradi63/aa/git/trees{/sha}"
+​
+updated_at: "2023-08-26T22:33:46Z"
+​
+url: "https://api.github.com/repos/m-moradi63/aa"
+​
+use_squash_pr_title_as_default: false
+​
+visibility: "public"
+​
+watchers: 0
+​
+watchers_count: 0
+​
+web_commit_signoff_required: false
+​
+<prototype>: Object { … }

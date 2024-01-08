@@ -1,0 +1,163 @@
+Array(20) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+​
+0: Object { id: 740458041, node_id: "R_kgDOLCJ-OQ", name: "17-10", … }
+​​
+allow_forking: true
+​​
+archive_url: "https://api.github.com/repos/m-moradi63/17-10/{archive_format}{/ref}"
+​​
+archived: false
+​​
+assignees_url: "https://api.github.com/repos/m-moradi63/17-10/assignees{/user}"
+​​
+blobs_url: "https://api.github.com/repos/m-moradi63/17-10/git/blobs{/sha}"
+​​
+branches_url: "https://api.github.com/repos/m-moradi63/17-10/branches{/branch}"
+​​
+clone_url: "https://github.com/m-moradi63/17-10.git"
+​​
+collaborators_url: "https://api.github.com/repos/m-moradi63/17-10/collaborators{/collaborator}"
+​​
+comments_url: "https://api.github.com/repos/m-moradi63/17-10/comments{/number}"
+​​
+commits_url: "https://api.github.com/repos/m-moradi63/17-10/commits{/sha}"
+​​
+compare_url: "https://api.github.com/repos/m-moradi63/17-10/compare/{base}...{head}"
+​​
+contents_url: "https://api.github.com/repos/m-moradi63/17-10/contents/{+path}"
+​​
+contributors_url: "https://api.github.com/repos/m-moradi63/17-10/contributors"
+​​
+created_at: "2024-01-08T11:43:00Z"
+​​
+default_branch: "main"
+​​
+deployments_url: "https://api.github.com/repos/m-moradi63/17-10/deployments"
+​​
+description: null
+​​
+disabled: false
+​​
+downloads_url: "https://api.github.com/repos/m-moradi63/17-10/downloads"
+​​
+events_url: "https://api.github.com/repos/m-moradi63/17-10/events"
+​​
+fork: false
+​​
+forks: 0
+​​
+forks_count: 0
+​​
+forks_url: "https://api.github.com/repos/m-moradi63/17-10/forks"
+​​
+full_name: "m-moradi63/17-10"
+​​
+git_commits_url: "https://api.github.com/repos/m-moradi63/17-10/git/commits{/sha}"
+​​
+git_refs_url: "https://api.github.com/repos/m-moradi63/17-10/git/refs{/sha}"
+​​
+git_tags_url: "https://api.github.com/repos/m-moradi63/17-10/git/tags{/sha}"
+​​
+git_url: "git://github.com/m-moradi63/17-10.git"
+​​
+has_discussions: false
+​​
+has_downloads: true
+​​
+has_issues: true
+​​
+has_pages: false
+​​
+has_projects: true
+​​
+has_wiki: true
+​​
+homepage: null
+​​
+hooks_url: "https://api.github.com/repos/m-moradi63/17-10/hooks"
+​​
+html_url: "https://github.com/m-moradi63/17-10"
+​​
+id: 740458041
+​​
+is_template: false
+​​
+issue_comment_url: "https://api.github.com/repos/m-moradi63/17-10/issues/comments{/number}"
+​​
+issue_events_url: "https://api.github.com/repos/m-moradi63/17-10/issues/events{/number}"
+​​
+issues_url: "https://api.github.com/repos/m-moradi63/17-10/issues{/number}"
+​​
+keys_url: "https://api.github.com/repos/m-moradi63/17-10/keys{/key_id}"
+​​
+labels_url: "https://api.github.com/repos/m-moradi63/17-10/labels{/name}"
+​​
+language: "TypeScript"
+​​
+languages_url: "https://api.github.com/repos/m-moradi63/17-10/languages"
+​​
+license: null
+​​
+merges_url: "https://api.github.com/repos/m-moradi63/17-10/merges"
+​​
+milestones_url: "https://api.github.com/repos/m-moradi63/17-10/milestones{/number}"
+​​
+mirror_url: null
+​​
+name: "17-10"
+​​
+node_id: "R_kgDOLCJ-OQ"
+​​
+notifications_url: "https://api.github.com/repos/m-moradi63/17-10/notifications{?since,all,participating}"
+​​
+open_issues: 0
+​​
+open_issues_count: 0
+​​
+owner: Object { login: "m-moradi63", id: 138288308, node_id: "U_kgDOCD4ctA", … }
+​​
+permissions: Object { admin: true, maintain: true, push: true, … }
+​​
+private: false
+​​
+pulls_url: "https://api.github.com/repos/m-moradi63/17-10/pulls{/number}"
+​​
+pushed_at: "2024-01-08T11:46:01Z"
+​​
+releases_url: "https://api.github.com/repos/m-moradi63/17-10/releases{/id}"
+​​
+size: 4905
+​​
+ssh_url: "git@github.com:m-moradi63/17-10.git"
+​​
+stargazers_count: 0
+​​
+stargazers_url: "https://api.github.com/repos/m-moradi63/17-10/stargazers"
+​​
+statuses_url: "https://api.github.com/repos/m-moradi63/17-10/statuses/{sha}"
+​​
+subscribers_url: "https://api.github.com/repos/m-moradi63/17-10/subscribers"
+​​
+subscription_url: "https://api.github.com/repos/m-moradi63/17-10/subscription"
+​​
+svn_url: "https://github.com/m-moradi63/17-10"
+​​
+tags_url: "https://api.github.com/repos/m-moradi63/17-10/tags"
+​​
+teams_url: "https://api.github.com/repos/m-moradi63/17-10/teams"
+​​
+topics: Array []
+​​
+trees_url: "https://api.github.com/repos/m-moradi63/17-10/git/trees{/sha}"
+​​
+updated_at: "2024-01-08T11:46:11Z"
+​​
+url: "https://api.github.com/repos/m-moradi63/17-10"
+​​
+visibility: "public"
+​​
+watchers: 0
+​​
+watchers_count: 0
+​​
+web_commit_signoff_required: false

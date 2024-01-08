@@ -1,38 +1,35 @@
 import { Octokit } from "octokit";
 import {token} from "../constant.ts"
+import { useParams } from "react-router-dom";
 
 
 
-export interface Repositoryes{
-    name : string | undefined,
-    login: string ,
-    visibility:string ,
-    fork:boolean,
-    forks_url: string  ,
-    description :string | null | undefined,
-    language :string  | null,
-    allow_forking:boolean,
-    node_id:string ,
-    default_branch: string ,
-    archived :boolean
-  }
 
 
-  async function getOrg(reposi:Array<Repositoryes>) {
-    
+export interface Repositspecial{
+  id: number;
+  node_id: string;
+  name: string;
+  full_name: string;
   
+  
+  }
+  async function getOrg(name:string , repo:string): Promise<Array<Repositspecial>>{
+    
+console.log("apiiiiiiiiii" , repo)
 const octokit = new Octokit({
     auth: token
   })
   
-  const org= (await octokit.request('GET /orgs/{org}/repos', {
-    org: 'ORG'
+  const org= (await octokit.request('GET /repos/{owner}/{repo}', {
+    owner: name,
+    repo: repo,
     headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-      },
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
   }))
-  console.log ("repooooooo" , org)
-  return org
+  console.log ("re::::::::::" , org.data)
+  return org.data
   
 }
 export {  getOrg }

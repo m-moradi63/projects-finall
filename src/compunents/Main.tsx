@@ -1,7 +1,8 @@
 import { Profile } from "../Pages/profile.tsx";
 import { Repotab } from "../Pages/RepoTab.tsx";
-import { Route, Router, Routes, useParams } from "react-router-dom";
+import { Route,  Routes } from "react-router-dom";
 import { Repositories } from "../Pages/Repositories.tsx";
+
 
 export function Main() {
   return (

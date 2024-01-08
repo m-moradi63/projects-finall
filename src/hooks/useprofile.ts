@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
 
-export function useProfile(username:string) {
+
+export function useProfile(username:string ) {
   const [Getuser, setGetuser] = useState<User>();
   const [loading, setloading] = useState(true);
   const [repositState, setrepositState] = useState<Array<Repositoryes>>([]);
@@ -12,6 +13,9 @@ export function useProfile(username:string) {
   const [loadingOVER, setloadingOVER] = useState(true);
   const [filter, setfilter] = useState<string>("");
 
+
+
+ 
   useEffect(() => {
     getRepos(username!)
       .then(function (data) {
@@ -54,6 +58,7 @@ export function useProfile(username:string) {
     Getuser: Getuser,
     setGetuser: setGetuser,
     loading: loading,
+    setloading :setloading,
     repositState: applyFilter(repositState , filter),
     loadingREPO: loadingREPO,
     loadingOVER: loadingOVER,
@@ -61,6 +66,7 @@ export function useProfile(username:string) {
     filter: filter,
     setfilter: setfilter,
     setrepositState: setrepositState,
+    
   };
 }
 
