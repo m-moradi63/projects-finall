@@ -10,7 +10,6 @@ export function Main() {
       <Routes>
       <Route  index  element={<Profile />} />
         <Route path="/:username"  element={<Profile  />} />
-        <Route  path="/:username/Reposit" element={<Repositories />}/>
         <Route  path="/:username/:Repotab" element={<Repotab />}/>
         <Route  path="/:username/Overview"  element={<Profile  />} />
       

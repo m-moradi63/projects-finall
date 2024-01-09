@@ -1,13 +1,21 @@
+import { Repositspecial } from "../api/getrepoORG";
 import { getRepos, Repositoryes } from "../api/getrepository";
 import { Link } from "react-router-dom";
 interface RenderCategProps {
-  reposit: Array<Repositoryes>;}
+  reposit: Array<Repositspecial>;}
+
+function generateRepositoryLink(username , repository){
+  return `/${username}/${repository}`
+}
+
 
 export function RenderCateg(props: RenderCategProps) {
+  console.log("reposittttttttt:" , props.reposit)
   return (
     <div className="flex flex-wrap  ">
       {" "}
       {props.reposit.map((item) => {
+        const link = generateRepositoryLink(item.owner.login , item.name)
         return (
           <div
             className="border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] "
@@ -16,7 +24,7 @@ export function RenderCateg(props: RenderCategProps) {
             <div className="border-2 solid w-[45rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5">
               <div className="flex justify-between">
                 <div className="flex  justify-left">
-                  <Link to="/repoTab" className="text-blue-600 text-xl">
+                  <Link to={link} className="text-blue-600 text-xl">
                     {item.name}
                   </Link>
 
