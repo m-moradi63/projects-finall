@@ -45972,7 +45972,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -46140,103 +46140,7 @@ $parcel$ReactRefreshHelpers$75bb.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Menu", ()=>Menu);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-function Menu() {
-    _s();
-    const params = (0, _reactRouterDom.useParams)();
-    console.log("params", params);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            className: "flex  text-sm font-medium text-center text-gray-500 ",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2 ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: `/${params.username}/Overview`,
-                        className: "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300",
-                        children: "Overview"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 13,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 12,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: `/${params.username}/?tab=repositories`,
-                        className: "inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500",
-                        children: "Repository"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 16,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 15,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "",
-                        className: " hover:border-b-2 border-blue-600   ",
-                        children: "Project"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 19,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 18,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "",
-                        className: " hover:border-b-2 border-blue-600  active ",
-                        children: "Stars"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 22,
-                        columnNumber: 17
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 21,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/subcomponent/Menu.tsx",
-            lineNumber: 11,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
-        fileName: "src/subcomponent/Menu.tsx",
-        lineNumber: 10,
-        columnNumber: 9
-    }, this);
-}
-_s(Menu, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
-    return [
-        (0, _reactRouterDom.useParams)
-    ];
-});
-_c = Menu;
-var _c;
-$RefreshReg$(_c, "Menu");
- /*    <div className="mt-10 flex" >
+parcelHelpers.export(exports, "Menu", ()=>Menu) /*    <div className="mt-10 flex" >
                 
                <Link to={`/${params.username}/Overview`}>
                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon">
@@ -46260,13 +46164,118 @@ $RefreshReg$(_c, "Menu");
                     <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
                 </svg>Starts</a>
             </div>
-    ) */ 
+    ) */ ;
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
+function Menu() {
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    const [isActive, setIsActive] = (0, _react.useState)();
+    console.log("params", params);
+    const handleClick = (event)=>{
+        setIsActive(event.target.id);
+        console.log("isActive", isActive);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            className: " flex  text-sm font-medium text-center text-gray-500 ",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "me-2",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: `/${params.username}/Overview`,
+                        id: "A",
+                        className: isActive === "A" ? "border-b-2 solid border-orange-500 me-2" : "hover:border-b-2 solid border-slate-400 me-2",
+                        onClick: handleClick,
+                        children: "Overview"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/Menu.tsx",
+                        lineNumber: 24,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 23,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "me-2",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        id: "B",
+                        to: `/${params.username}/?tab=repositories`,
+                        onClick: handleClick,
+                        className: isActive === "B" ? "border-b-2 solid border-orange-500  me-2" : "hover:border-b-2 solid border-slate-400  me-2",
+                        children: "Repository"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/Menu.tsx",
+                        lineNumber: 27,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 26,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "",
+                        className: " hover:border-b-2 border-blue-600   ",
+                        children: "Project"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/Menu.tsx",
+                        lineNumber: 30,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 29,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "me-2",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                        href: "",
+                        className: " hover:border-b-2 border-blue-600  active ",
+                        children: "Stars"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/Menu.tsx",
+                        lineNumber: 33,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 32,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/subcomponent/Menu.tsx",
+            lineNumber: 22,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
+        fileName: "src/subcomponent/Menu.tsx",
+        lineNumber: 21,
+        columnNumber: 9
+    }, this);
+}
+_s(Menu, "q2wEfCr1iTbOmAFfo2i+vrQdX1Q=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
+_c = Menu;
+var _c;
+$RefreshReg$(_c, "Menu");
+
   $parcel$ReactRefreshHelpers$75bb.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lFT6V":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lFT6V":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3ba9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
