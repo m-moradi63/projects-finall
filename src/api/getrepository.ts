@@ -13,7 +13,8 @@ export interface Repositoryes{
   allow_forking:boolean,
   node_id:string ,
   default_branch: string ,
-  archived :boolean
+  archived :boolean,
+  forks_count:number
 }
 
 
@@ -31,7 +32,7 @@ async function getRepos(username:string): Promise<Array<Repositoryes>> {
   }))
 
   
-  /* console.log("repo" , repo.data) */
+  console.log("repo0000" , repo.data)
   return repo.data
   
 

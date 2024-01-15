@@ -27209,7 +27209,7 @@ var _repoTabTsx = require("../Pages/RepoTab.tsx");
 var _reactRouterDom = require("react-router-dom");
 function Main() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "max-w-[1024px] m-auto  mt-8 ",
+        className: "max-w-full m-auto   ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27217,7 +27217,7 @@ function Main() {
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27225,20 +27225,12 @@ function Main() {
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 12,
+                    lineNumber: 13,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/:username/:Repotab",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repoTabTsx.Repotab), {}, void 0, false, void 0, void 0)
-                }, void 0, false, {
-                    fileName: "src/compunents/Main.tsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
-                    path: "/:username/Overview",
-                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
                     lineNumber: 14,
@@ -27247,12 +27239,12 @@ function Main() {
             ]
         }, void 0, true, {
             fileName: "src/compunents/Main.tsx",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/Main.tsx",
-        lineNumber: 9,
+        lineNumber: 10,
         columnNumber: 5
     }, this);
 }
@@ -27293,35 +27285,44 @@ function Profile() {
         columnNumber: 6
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " w-[1024px]   ",
+        className: " w-[100%]   ",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "border-1 solid bg-gray-50 w-full",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
+                        fileName: "src/Pages/profile.tsx",
+                        lineNumber: 19,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
+                        fileName: "src/Pages/profile.tsx",
+                        lineNumber: 20,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/Pages/profile.tsx",
                 lineNumber: 18,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
-                fileName: "src/Pages/profile.tsx",
-                lineNumber: 19,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex box-border w-[1024px]   ",
+                className: "flex box-border w-[90%] m-auto mt-[1rem] ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
                         fileName: "src/Pages/profile.tsx",
-                        lineNumber: 21,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {}, void 0, false, {
                         fileName: "src/Pages/profile.tsx",
-                        lineNumber: 22,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/profile.tsx",
-                lineNumber: 20,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]
@@ -45972,7 +45973,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -45990,7 +45991,8 @@ async function getRepos(username) {
             "X-GitHub-Api-Version": "2022-11-28"
         }
     });
-    /* console.log("repo" , repo.data) */ return repo.data;
+    console.log("repo0000", repo.data);
+    return repo.data;
 }
 
 },{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
@@ -46171,97 +46173,241 @@ var _react = require("react");
 var _s = $RefreshSig$();
 function Menu() {
     _s();
+    const [activeTab, setActiveTab] = (0, _react.useState)("tab1");
     const params = (0, _reactRouterDom.useParams)();
-    const [isActive, setIsActive] = (0, _react.useState)();
-    console.log("params", params);
-    const handleClick = (event)=>{
-        setIsActive(event.target.id);
-        console.log("isActive", isActive);
+    const handleTab1 = ()=>{
+        // update the state to tab1
+        setActiveTab("tab1");
+        console.log("activeTab", activeTab);
+    };
+    const handleTab2 = ()=>{
+        // update the state to tab2
+        setActiveTab("tab2");
+        console.log("activeTab", activeTab);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            className: " flex  text-sm font-medium text-center text-gray-500 ",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        to: `/${params.username}/Overview`,
-                        id: "A",
-                        className: isActive === "A" ? "border-b-2 solid border-orange-500 me-2" : "hover:border-b-2 solid border-slate-400 me-2",
-                        onClick: handleClick,
-                        children: "Overview"
-                    }, void 0, false, {
+        className: "ml-4 mr-4    bg-gray-50 ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                className: "mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        onClick: ()=>{
+                            handleTab1(), console.log("activeeeee", activeTab);
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: " mr-2 inline-block octicon octicon-book UnderlineNav-octicon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/Menu.tsx",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 27,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: `/${params.username}?tab=Overview`,
+                                className: activeTab === "tab1" ? "border-b-2  solid border-[#0000FF]  me-4" : "hover:border-b-2 solid border-slate-400  me-4",
+                                children: "Overview"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 24,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 23,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        id: "B",
-                        to: `/${params.username}/?tab=repositories`,
-                        onClick: handleClick,
-                        className: isActive === "B" ? "border-b-2 solid border-orange-500  me-2" : "hover:border-b-2 solid border-slate-400  me-2",
-                        children: "Repository"
-                    }, void 0, false, {
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        onClick: ()=>{
+                            handleTab2(), console.log("activeeeee", activeTab);
+                        },
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "mr-2  inline-block octicon octicon-repo UnderlineNav-octicon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/Menu.tsx",
+                                    lineNumber: 60,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 51,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: `/${params.username}/?tab=repositories`,
+                                className: activeTab === "tab2" ? "border-b-2 solid border-[#0000FF]  me-4" : "hover:border-b-2 solid border-slate-400  me-4",
+                                children: "Repository"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 62,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 27,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 26,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "",
-                        className: " hover:border-b-2 border-blue-600   ",
-                        children: "Project"
-                    }, void 0, false, {
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4 ",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "mr-2 inline-block octicon octicon-table UnderlineNav-octicon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/Menu.tsx",
+                                    lineNumber: 83,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 74,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "",
+                                className: " hover:border-b-2 border-blue-600   ",
+                                children: "Project"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 85,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 30,
-                        columnNumber: 21
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 29,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "me-2",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "",
-                        className: " hover:border-b-2 border-blue-600  active ",
-                        children: "Stars"
-                    }, void 0, false, {
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "mr-2  inline-block octicon octicon-package UnderlineNav-octicon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/Menu.tsx",
+                                    lineNumber: 99,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 90,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "",
+                                className: " hover:border-b-2 border-blue-600  active ",
+                                children: "Packages"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 101,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 33,
-                        columnNumber: 17
+                        lineNumber: 89,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                "aria-hidden": "true",
+                                height: "16",
+                                viewBox: "0 0 16 16",
+                                version: "1.1",
+                                width: "16",
+                                "data-view-component": "true",
+                                className: "mr-2  inline-block octicon octicon-star UnderlineNav-octicon",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                                }, void 0, false, {
+                                    fileName: "src/subcomponent/Menu.tsx",
+                                    lineNumber: 115,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 106,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                href: "",
+                                className: " hover:border-b-2 border-blue-600  active ",
+                                children: "Packages"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 117,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/Menu.tsx",
+                        lineNumber: 105,
+                        columnNumber: 9
                     }, this)
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 32,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/subcomponent/Menu.tsx",
-            lineNumber: 22,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/Menu.tsx",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                className: "w-full mt-[2rem]"
+            }, void 0, false, {
+                fileName: "src/subcomponent/Menu.tsx",
+                lineNumber: 122,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "src/subcomponent/Menu.tsx",
-        lineNumber: 21,
-        columnNumber: 9
+        lineNumber: 19,
+        columnNumber: 5
     }, this);
 }
-_s(Menu, "q2wEfCr1iTbOmAFfo2i+vrQdX1Q=", false, function() {
+_s(Menu, "PKj4CASDwtvPV1UaxSmm8urqRmo=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -46302,10 +46448,10 @@ function Nav() {
         columnNumber: 12
     }, this);
     if (Getuser) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between ml-4 mt-4  ",
+        className: "flex justify-between ml-4  bg-gray-50  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between items-center ",
+                className: "flex justify-between items-center mt-[2rem] ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: " box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl",
@@ -46356,7 +46502,7 @@ function Nav() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between w-[32rem] mr-6 ",
+                className: "flex justify-between w-[32rem] mr-6 mt-[2rem]",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
@@ -46613,17 +46759,19 @@ var _reactGithubCalendar = require("react-github-calendar");
 var _reactGithubCalendarDefault = parcelHelpers.interopDefault(_reactGithubCalendar);
 var _useprofile = require("../hooks/useprofile");
 var _reactRouterDom = require("react-router-dom");
+var _usereposit = require("../hooks/usereposit");
 var _s = $RefreshSig$();
 function Overview() {
     _s();
     const params = (0, _reactRouterDom.useParams)();
     const { repositState, Getuser, setGetuser, loadingOVER, setrepositState, setloadingOVER } = (0, _useprofile.useProfile)(params.username);
+    const { loadingRepos, setloadingRepos, setrepoinfo, repoinfo } = (0, _usereposit.useRepos)(params.username, params.RepoTab);
     if (loadingOVER) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[750px] bg-white  text-xs ",
         children: "LOADING OVERVIEW"
     }, void 0, false, {
         fileName: "src/subcomponent/Overview.tsx",
-        lineNumber: 16,
+        lineNumber: 26,
         columnNumber: 12
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46633,24 +46781,24 @@ function Overview() {
                 children: "Popular repositories"
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 20,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-wrap  ",
                 children: repositState.map((item, index)=>{
                     if (index < 6) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "border-2 solid w-[21rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5",
+                        className: "text-slate-400 border-2 solid w-[21rem]  h-[8rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "flex justify-between",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        className: "text-blue-400",
+                                        className: "text-[#0000FF] text-lg",
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 27,
+                                        lineNumber: 37,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46658,22 +46806,22 @@ function Overview() {
                                         children: item.visibility
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 38,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 26,
+                                lineNumber: 36,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "text-xl",
-                                children: item.fork ? "forked from" + item.forks_url : ""
+                                children: item.fork ? "forked from" + item.forks_count : ""
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 33,
+                                lineNumber: 43,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -46684,63 +46832,152 @@ function Overview() {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 37,
+                                lineNumber: 47,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: item.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "flex  ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: " solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block"
-                                        }, void 0, false, {
+                                className: "flex mt-[1rem] ",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2 ",
+                                        children: item.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex  ",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: " solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block"
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Overview.tsx",
+                                                    lineNumber: 53,
+                                                    columnNumber: 23
+                                                }, this),
+                                                item.language
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "src/subcomponent/Overview.tsx",
-                                            lineNumber: 42,
-                                            columnNumber: 23
-                                        }, this),
-                                        item.language
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/Overview.tsx",
-                                    lineNumber: 41,
-                                    columnNumber: 21
-                                }, this) : ""
-                            }, void 0, false, {
+                                            lineNumber: 52,
+                                            columnNumber: 21
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Overview.tsx",
+                                        lineNumber: 50,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2",
+                                        children: item.watchers ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    "aria-label": "stars",
+                                                    role: "img",
+                                                    height: "16",
+                                                    viewBox: "0 0 16 16",
+                                                    version: "1.1",
+                                                    width: "16",
+                                                    "data-view-component": "true",
+                                                    fill: " #808080",
+                                                    className: "octicon octicon-star ",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Overview.tsx",
+                                                        lineNumber: 74,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Overview.tsx",
+                                                    lineNumber: 63,
+                                                    columnNumber: 23
+                                                }, this),
+                                                item.watchers_count
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/Overview.tsx",
+                                            lineNumber: 62,
+                                            columnNumber: 21
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Overview.tsx",
+                                        lineNumber: 60,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2",
+                                        children: item.forks_count ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    fill: " #808080",
+                                                    "aria-label": "fork",
+                                                    role: "img",
+                                                    height: "16",
+                                                    viewBox: "0 0 16 16",
+                                                    version: "1.1",
+                                                    width: "16",
+                                                    "data-view-component": "true",
+                                                    className: "octicon octicon-repo-forked",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Overview.tsx",
+                                                        lineNumber: 96,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Overview.tsx",
+                                                    lineNumber: 85,
+                                                    columnNumber: 23
+                                                }, this),
+                                                item.forks_count
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/Overview.tsx",
+                                            lineNumber: 84,
+                                            columnNumber: 21
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Overview.tsx",
+                                        lineNumber: 82,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 39,
+                                lineNumber: 49,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Overview.tsx",
-                        lineNumber: 25,
+                        lineNumber: 35,
                         columnNumber: 15
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 21,
+                lineNumber: 31,
                 columnNumber: 7
             }, this),
             Getuser ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactGithubCalendarDefault.default), {
                 username: Getuser.login
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 54,
+                lineNumber: 110,
                 columnNumber: 18
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Overview.tsx",
-        lineNumber: 19,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
-_s(Overview, "OmqAtCwY0+aS0FwXWSdY2+SRdXM=", false, function() {
+_s(Overview, "Bvr9T+3aTnKDvP9eZPkD4VN2ER4=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
-        (0, _useprofile.useProfile)
+        (0, _useprofile.useProfile),
+        (0, _usereposit.useRepos)
     ];
 });
 _c = Overview;
@@ -46752,7 +46989,7 @@ $RefreshReg$(_c, "Overview");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-github-calendar":"auekX","../hooks/useprofile":"fC2Rw","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"auekX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-github-calendar":"auekX","../hooks/useprofile":"fC2Rw","react-router-dom":"9xmpe","../hooks/usereposit":"gaPut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"auekX":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -62345,7 +62582,121 @@ function yearsToQuarters(years) {
     return Math.floor(years * (0, _indexJs1.quartersInYear));
 }
 
-},{"../_lib/requiredArgs/index.js":"9wUgQ","../constants/index.js":"iOhcx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lC32Y":[function(require,module,exports) {
+},{"../_lib/requiredArgs/index.js":"9wUgQ","../constants/index.js":"iOhcx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gaPut":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7f87 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7f87.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useRepos", ()=>useRepos);
+var _react = require("react");
+var _getrepoORGTs = require("../api/getrepoORG.ts");
+function useRepos(name, owner) {
+    console.log("valueeeeeee", owner);
+    const [loadingRepos, setloadingRepos] = (0, _react.useState)(true);
+    const [repoinfo, setrepoinfo] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        (0, _getrepoORGTs.getOrg)(name, owner).then(function(data) {
+            setrepoinfo(data);
+            console.log("reposssssss", repoinfo);
+        }).finally(()=>{
+            console.log("repoooooooooo:", repoinfo);
+            setloadingRepos(false);
+        });
+    }, []);
+    return {
+        loadingRepos: loadingRepos,
+        setloadingRepos: setloadingRepos,
+        setrepoinfo: setrepoinfo,
+        repoinfo: repoinfo
+    };
+}
+
+  $parcel$ReactRefreshHelpers$7f87.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","../api/getrepoORG.ts":"ehd0Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ehd0Q":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DefaultBranch", ()=>DefaultBranch);
+parcelHelpers.export(exports, "Language", ()=>Language);
+parcelHelpers.export(exports, "EventsURL", ()=>EventsURL);
+parcelHelpers.export(exports, "FollowingURL", ()=>FollowingURL);
+parcelHelpers.export(exports, "GistsURL", ()=>GistsURL);
+parcelHelpers.export(exports, "Login", ()=>Login);
+parcelHelpers.export(exports, "NodeID", ()=>NodeID);
+parcelHelpers.export(exports, "StarredURL", ()=>StarredURL);
+parcelHelpers.export(exports, "Type", ()=>Type);
+parcelHelpers.export(exports, "Visibility", ()=>Visibility);
+parcelHelpers.export(exports, "getOrg", ()=>getOrg);
+var _octokit = require("octokit");
+var _constantTs = require("../constant.ts");
+var DefaultBranch;
+(function(DefaultBranch) {
+    DefaultBranch["Main"] = "main";
+    DefaultBranch["Master"] = "master";
+})(DefaultBranch || (DefaultBranch = {}));
+var Language;
+(function(Language) {
+    Language["CSS"] = "CSS";
+    Language["HTML"] = "HTML";
+    Language["JavaScript"] = "JavaScript";
+    Language["TypeScript"] = "TypeScript";
+})(Language || (Language = {}));
+var EventsURL;
+(function(EventsURL) {
+    EventsURL["HTTPSAPIGithubCOMUsersMMoradi63EventsPrivacy"] = "https://api.github.com/users/m-moradi63/events{/privacy}";
+})(EventsURL || (EventsURL = {}));
+var FollowingURL;
+(function(FollowingURL) {
+    FollowingURL["HTTPSAPIGithubCOMUsersMMoradi63FollowingOtherUser"] = "https://api.github.com/users/m-moradi63/following{/other_user}";
+})(FollowingURL || (FollowingURL = {}));
+var GistsURL;
+(function(GistsURL) {
+    GistsURL["HTTPSAPIGithubCOMUsersMMoradi63GistsGistID"] = "https://api.github.com/users/m-moradi63/gists{/gist_id}";
+})(GistsURL || (GistsURL = {}));
+var Login;
+(function(Login) {
+    Login["MMoradi63"] = "m-moradi63";
+})(Login || (Login = {}));
+var NodeID;
+(function(NodeID) {
+    NodeID["UKgDOCD4CTA"] = "U_kgDOCD4ctA";
+})(NodeID || (NodeID = {}));
+var StarredURL;
+(function(StarredURL) {
+    StarredURL["HTTPSAPIGithubCOMUsersMMoradi63StarredOwnerRepo"] = "https://api.github.com/users/m-moradi63/starred{/owner}{/repo}";
+})(StarredURL || (StarredURL = {}));
+var Type;
+(function(Type) {
+    Type["User"] = "User";
+})(Type || (Type = {}));
+var Visibility;
+(function(Visibility) {
+    Visibility["Public"] = "public";
+})(Visibility || (Visibility = {}));
+async function getOrg(name, repo) {
+    console.log("apiiiiiiiiii", repo);
+    const octokit = new (0, _octokit.Octokit)({
+        auth: (0, _constantTs.token)
+    });
+    const org = await octokit.request("GET /repos/{owner}/{repo}", {
+        owner: name,
+        repo: repo,
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    console.log("re::::::::::", org.data);
+    return org.data;
+}
+
+},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lC32Y":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$78ce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62364,35 +62715,44 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function Repositories() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[1024px]",
+        className: " w-[100%]   ",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "border-1 solid bg-gray-50 w-full",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
+                        fileName: "src/Pages/Repositories.tsx",
+                        lineNumber: 12,
+                        columnNumber: 7
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
+                        fileName: "src/Pages/Repositories.tsx",
+                        lineNumber: 13,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
                 lineNumber: 11,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
-                fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 12,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex box-border w-[1024px]   ",
+                className: "flex box-border w-[1024px] m-auto mt-[1rem]  ",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 14,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoryTsx.Reposit), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
@@ -62682,7 +63042,7 @@ function RenderCateg(props) {
             props.reposit.map((item)=>{
                 const link = generateRepositoryLink(item.owner.login, item.name);
                 return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] ",
+                    className: "text-slate-400 border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] ",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "border-2 solid w-[45rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5",
                         children: [
@@ -62717,72 +63077,34 @@ function RenderCateg(props) {
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         className: "flex justify-between   items-center p-1  w-28 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-md",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                className: "flex",
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                                        "aria-hidden": "true",
-                                                        height: "16",
-                                                        viewBox: "0 0 16 16",
-                                                        version: "1.1",
-                                                        width: "16",
-                                                        "data-view-component": "true",
-                                                        className: "octicon octicon-star d-inline-block mr-2",
-                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                            d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
-                                                        }, void 0, false, {
-                                                            fileName: "src/subcomponent/renderCateg.tsx",
-                                                            lineNumber: 46,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 37,
-                                                        columnNumber: 21
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                        children: "start"
-                                                    }, void 0, false, {
-                                                        fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 48,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 36,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                className: "flex  items-center    w-10 border-solid border-l-2 border-slate-300 ... ",
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                                    "aria-hidden": "true",
-                                                    height: "16",
-                                                    viewBox: "0 0 16 16",
-                                                    version: "1.1",
-                                                    width: "16",
-                                                    "data-view-component": "true",
-                                                    className: "inline-block octicon octicon-triangle-down",
-                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                        d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
-                                                    }, void 0, false, {
-                                                        fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 60,
-                                                        columnNumber: 23
-                                                    }, this)
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "flex  items-center    w-10 border-solid border-l-2 border-slate-300 ... ",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                "aria-hidden": "true",
+                                                height: "16",
+                                                viewBox: "0 0 16 16",
+                                                version: "1.1",
+                                                width: "16",
+                                                "data-view-component": "true",
+                                                className: "inline-block octicon octicon-triangle-down",
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                    d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                                    lineNumber: 51,
-                                                    columnNumber: 21
+                                                    lineNumber: 47,
+                                                    columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                                lineNumber: 50,
-                                                columnNumber: 19
+                                                lineNumber: 38,
+                                                columnNumber: 21
                                             }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/renderCateg.tsx",
+                                            lineNumber: 37,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
                                         lineNumber: 35,
                                         columnNumber: 17
@@ -62801,31 +63123,135 @@ function RenderCateg(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 66,
+                                lineNumber: 53,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: item.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "flex  ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: " solid w-[1rem] h-[1rem] bg-[#94a3b8] rounded-full inline-block"
-                                        }, void 0, false, {
+                                className: "flex text-slate-400",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2",
+                                        children: item.language ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex  ",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    className: " solid w-[1rem] h-[1rem] bg-[#94a3b8] rounded-full inline-block"
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/renderCateg.tsx",
+                                                    lineNumber: 59,
+                                                    columnNumber: 21
+                                                }, this),
+                                                item.language
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 58,
+                                            columnNumber: 19
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                        lineNumber: 56,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2",
+                                        children: item.watchers ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    "aria-label": "stars",
+                                                    role: "img",
+                                                    height: "16",
+                                                    viewBox: "0 0 16 16",
+                                                    version: "1.1",
+                                                    width: "16",
+                                                    "data-view-component": "true",
+                                                    fill: " #808080",
+                                                    className: "octicon octicon-star ",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                                        lineNumber: 80,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/renderCateg.tsx",
+                                                    lineNumber: 69,
+                                                    columnNumber: 23
+                                                }, this),
+                                                item.watchers_count
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/renderCateg.tsx",
+                                            lineNumber: 68,
                                             columnNumber: 21
-                                        }, this),
-                                        item.language
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/renderCateg.tsx",
-                                    lineNumber: 70,
-                                    columnNumber: 19
-                                }, this) : ""
-                            }, void 0, false, {
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                        lineNumber: 66,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "me-2",
+                                        children: item.forks_count ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    fill: " #808080",
+                                                    "aria-label": "fork",
+                                                    role: "img",
+                                                    height: "16",
+                                                    viewBox: "0 0 16 16",
+                                                    version: "1.1",
+                                                    width: "16",
+                                                    "data-view-component": "true",
+                                                    className: "octicon octicon-repo-forked",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                                        lineNumber: 102,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/renderCateg.tsx",
+                                                    lineNumber: 91,
+                                                    columnNumber: 23
+                                                }, this),
+                                                item.forks_count
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/renderCateg.tsx",
+                                            lineNumber: 90,
+                                            columnNumber: 21
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                        lineNumber: 88,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: item.updated_at ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: [
+                                                "update at",
+                                                item.updated_at
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/renderCateg.tsx",
+                                            lineNumber: 111,
+                                            columnNumber: 36
+                                        }, this) : ""
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/renderCateg.tsx",
+                                        lineNumber: 110,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 68,
+                                lineNumber: 55,
                                 columnNumber: 15
                             }, this)
                         ]
@@ -63628,120 +64054,6 @@ $RefreshReg$(_c, "Mainrepo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gaPut":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7f87 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7f87.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useRepos", ()=>useRepos);
-var _react = require("react");
-var _getrepoORGTs = require("../api/getrepoORG.ts");
-function useRepos(name, owner) {
-    console.log("valueeeeeee", owner);
-    const [loadingRepos, setloadingRepos] = (0, _react.useState)(true);
-    const [repoinfo, setrepoinfo] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        (0, _getrepoORGTs.getOrg)(name, owner).then(function(data) {
-            setrepoinfo(data);
-            console.log("reposssssss", repoinfo);
-        }).finally(()=>{
-            console.log("repoooooooooo:", repoinfo);
-            setloadingRepos(false);
-        });
-    }, []);
-    return {
-        loadingRepos: loadingRepos,
-        setloadingRepos: setloadingRepos,
-        setrepoinfo: setrepoinfo,
-        repoinfo: repoinfo
-    };
-}
-
-  $parcel$ReactRefreshHelpers$7f87.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","../api/getrepoORG.ts":"ehd0Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ehd0Q":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DefaultBranch", ()=>DefaultBranch);
-parcelHelpers.export(exports, "Language", ()=>Language);
-parcelHelpers.export(exports, "EventsURL", ()=>EventsURL);
-parcelHelpers.export(exports, "FollowingURL", ()=>FollowingURL);
-parcelHelpers.export(exports, "GistsURL", ()=>GistsURL);
-parcelHelpers.export(exports, "Login", ()=>Login);
-parcelHelpers.export(exports, "NodeID", ()=>NodeID);
-parcelHelpers.export(exports, "StarredURL", ()=>StarredURL);
-parcelHelpers.export(exports, "Type", ()=>Type);
-parcelHelpers.export(exports, "Visibility", ()=>Visibility);
-parcelHelpers.export(exports, "getOrg", ()=>getOrg);
-var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-var DefaultBranch;
-(function(DefaultBranch) {
-    DefaultBranch["Main"] = "main";
-    DefaultBranch["Master"] = "master";
-})(DefaultBranch || (DefaultBranch = {}));
-var Language;
-(function(Language) {
-    Language["CSS"] = "CSS";
-    Language["HTML"] = "HTML";
-    Language["JavaScript"] = "JavaScript";
-    Language["TypeScript"] = "TypeScript";
-})(Language || (Language = {}));
-var EventsURL;
-(function(EventsURL) {
-    EventsURL["HTTPSAPIGithubCOMUsersMMoradi63EventsPrivacy"] = "https://api.github.com/users/m-moradi63/events{/privacy}";
-})(EventsURL || (EventsURL = {}));
-var FollowingURL;
-(function(FollowingURL) {
-    FollowingURL["HTTPSAPIGithubCOMUsersMMoradi63FollowingOtherUser"] = "https://api.github.com/users/m-moradi63/following{/other_user}";
-})(FollowingURL || (FollowingURL = {}));
-var GistsURL;
-(function(GistsURL) {
-    GistsURL["HTTPSAPIGithubCOMUsersMMoradi63GistsGistID"] = "https://api.github.com/users/m-moradi63/gists{/gist_id}";
-})(GistsURL || (GistsURL = {}));
-var Login;
-(function(Login) {
-    Login["MMoradi63"] = "m-moradi63";
-})(Login || (Login = {}));
-var NodeID;
-(function(NodeID) {
-    NodeID["UKgDOCD4CTA"] = "U_kgDOCD4ctA";
-})(NodeID || (NodeID = {}));
-var StarredURL;
-(function(StarredURL) {
-    StarredURL["HTTPSAPIGithubCOMUsersMMoradi63StarredOwnerRepo"] = "https://api.github.com/users/m-moradi63/starred{/owner}{/repo}";
-})(StarredURL || (StarredURL = {}));
-var Type;
-(function(Type) {
-    Type["User"] = "User";
-})(Type || (Type = {}));
-var Visibility;
-(function(Visibility) {
-    Visibility["Public"] = "public";
-})(Visibility || (Visibility = {}));
-async function getOrg(name, repo) {
-    console.log("apiiiiiiiiii", repo);
-    const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
-    });
-    const org = await octokit.request("GET /repos/{owner}/{repo}", {
-        owner: name,
-        repo: repo,
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
-        }
-    });
-    console.log("re::::::::::", org.data);
-    return org.data;
-}
-
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
 //# sourceMappingURL=index.2d3ace14.js.map

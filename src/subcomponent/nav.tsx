@@ -9,8 +9,8 @@ export function Nav() {
   }
   if(Getuser)
   return (
-    <div className="flex justify-between ml-4 mt-4  ">
-      <div className="flex justify-between items-center ">
+    <div className="flex justify-between ml-4  bg-gray-50  ">
+      <div className="flex justify-between items-center mt-[2rem] ">
         {
           <button className=" box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl">
             <svg
@@ -30,7 +30,7 @@ export function Nav() {
         <span className="inline ml-[1rem]">{params.username}</span>
       </div>
 
-      <div className="flex justify-between w-[32rem] mr-6 ">
+      <div className="flex justify-between w-[32rem] mr-6 mt-[2rem]">
         <button className="flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl">
           <div>
             <svg
