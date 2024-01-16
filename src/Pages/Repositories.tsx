@@ -12,7 +12,7 @@ export function Repositories() {
       <Nav />
       <Menu />
       </div>
-      <div className="flex box-border w-[1024px] m-auto mt-[1rem]  ">
+      <div className="flex box-border w-[100%] ml-[10rem] mt-[1rem]  ">
         <Sidebar  />
         <Reposit />
       </div>

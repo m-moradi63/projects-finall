@@ -1,7 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useProfile } from "../hooks/useprofile.ts";
 import { useRepos } from "../hooks/usereposit.ts";
-import { getuid } from "process";
+import 'flowbite';
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+
 
 export function Mainrepo() {
   const params = useParams();
@@ -58,17 +62,153 @@ export function Mainrepo() {
                     <span>whatch</span>
                   )}
                 </div>
-                <div className="border-2 solid bg-gray-400 w-[1rem] h-[1.2rem] text-xs rounded-full">
+                <div
+                  className="border-2 solid bg-gray-400 w-[1rem] h-[1.2rem] text-xs rounded-full"
+                  data-dropdown-toggle="dropdown"
+                >
                   {repoinfo.watchers_count}
                 </div>
-                <select className="w-[1rem] bg-white">
-                  <option disabled hidden></option>
-                  <option>Notifications</option>
-                  <option>participaring and @ mentions</option>
-                  <option>All Activity</option>
-                  <option>Ignor</option>
-                  <option>Custom</option>
-                </select>
+                <button
+                  id="dropdownDefaultButton"
+                  data-dropdown-toggle="dropdown"
+                  className=" "
+                  type="button"
+                >
+                  {" "}
+                  <svg
+                    className="w-2.5 h-2.5 ms-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  id="dropdown"
+                  data-dropdown-toggle="dropdown"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  type="button"
+                >
+                  Dropdown button{" "}
+                  <svg
+                    className="w-2.5 h-2.5 ms-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  id="dropdown"
+                  className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownDefaultButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Earnings
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Sign out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/*      <div
+                  id="dropdown"
+                 className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                   className="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownDefaultButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        Notifications
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        participaring and @ mentions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        All Activity
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                       Ignor
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                       Custom
+                      </a>
+                    </li>
+                  </ul>
+                </div> */}
               </div>
             </button>
             <button className=" w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid  ">
@@ -99,7 +239,7 @@ export function Mainrepo() {
                   version="1.1"
                   width="16"
                   data-view-component="true"
-                  class="octicon octicon-star d-inline-block mr-2"
+                  className="octicon octicon-star d-inline-block mr-2"
                 >
                   <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
                 </svg>
@@ -111,10 +251,32 @@ export function Mainrepo() {
             </button>
           </div>
         </div>
-        <div>
-        
-        {repoinfo.default_branch}
+        <div className="flex items-center w-[8rem] h-[2rem] rounded-lg mt-[2rem] border-2 border-solid ">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            className="mr-[1rem] octicon octicon-git-branch"
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+            fill="currentColor"
+          >
+            <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
+          </svg>
+          {repoinfo.default_branch}
         </div>
+
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+</svg>
+</button>
+
+
+
+
+
+
       </div>
     );
   }

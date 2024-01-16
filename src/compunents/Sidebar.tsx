@@ -13,8 +13,8 @@ export function Sidebar() {
   }
   if (Getuser) {
     return (
-      <div className="w-[274px] h-[2rem]   ">
-        <div className="px-[0.5rem] m-auto ">
+      <div className="w-[30%] h-[2rem] mr-[0rem]  mt-[1rem]  ">
+        <div className="px-[0.5rem] w-[70%] ml-[8rem] ">
           <img
             className="rounded-full border-2 border-solid border-slate-300 "
             src={Getuser.avatar_url}

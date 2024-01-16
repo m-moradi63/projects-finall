@@ -14,12 +14,12 @@ export function Profile() {
     )
   }
   return (
-    <div className=" w-[100%]   ">
-      <div className="border-1 solid bg-gray-50 w-full">
+    <div className=" w-screen  ">
+      <div className="border-1 solid bg-gray-50 w-screen ">
       <Nav />
       <Menu />
       </div>
-      <div className="flex box-border w-[90%] m-auto mt-[1rem] ">
+      <div className="flex justify-center box-border w-screen  gap-0  ">
         <Sidebar />
         <Overview />
       </div>

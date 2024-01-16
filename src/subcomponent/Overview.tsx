@@ -23,10 +23,10 @@ export function Overview() {
   );
 
   if (loadingOVER) {
-    return <div className="w-[750px] bg-white  text-xs ">LOADING OVERVIEW</div>;
+    return <div className="w-[70%] bg-white  text-xs ">LOADING OVERVIEW</div>;
   }
   return (
-    <div className="w-[750px] bg-white  text-xs ">
+    <div className="w-[750px] bg-white  text-xs  ">
       <p>Popular repositories</p>
       <div className="flex flex-wrap  ">
         {repositState.map((item, index) => {
