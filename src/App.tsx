@@ -1,6 +1,7 @@
 
 import { Main } from "./compunents/Main.tsx";
 
+
 export interface usertype {
   username: string;
 }
@@ -8,6 +9,7 @@ export interface usertype {
 export function App(username: string) {
   return (
     <div>
+   
       <Main username={username} />
       
     </div>

@@ -1,6 +1,7 @@
 import { Octokit } from "octokit";
 import {token} from "../constant.ts"
 import { useParams } from "react-router-dom";
+import { promises } from "dns";
 
 
 
@@ -164,7 +165,6 @@ export enum Visibility {
 
   async function getOrg(name:string , repo:string): Promise<Array<Repositspecial>>{
     
-console.log("apiiiiiiiiii" , repo)
 const octokit = new Octokit({
     auth: token
   })
@@ -176,8 +176,9 @@ const octokit = new Octokit({
       'X-GitHub-Api-Version': '2022-11-28'
     }
   }))
-  console.log ("re::::::::::" , org.data)
   return org.data
   
 }
+
+
 export {  getOrg }

@@ -15,9 +15,10 @@ export function Profile() {
   }
   return (
     <div className=" w-screen  ">
-      <div className="border-1 solid bg-gray-50 w-screen ">
-      <Nav />
-      <Menu />
+     <div className="border-1 solid bg-gray-50 w-screen ">
+        <Nav />
+
+        <Menu />
       </div>
       <div className="flex justify-center box-border w-screen  gap-0  ">
         <Sidebar />

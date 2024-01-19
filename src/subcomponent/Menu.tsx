@@ -4,25 +4,12 @@ import { useEffect, useState } from "react";
 export function Menu() {
   const [activeTab, setActiveTab] = useState("tab1");
   const params = useParams();
-  const handleTab1 = () => {
-    // update the state to tab1
-    setActiveTab("tab1");
-    console.log("activeTab", activeTab);
-  };
-  const handleTab2 = () => {
-    // update the state to tab2
-    setActiveTab("tab2");
-    console.log("activeTab", activeTab);
-  };
-
+ 
   return (
     <div className="ml-4 mr-4    bg-gray-50 ">
       <ul className="mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
         <li
           className="me-4"
-          onClick={() => {
-            handleTab1(), console.log("activeeeee", activeTab);
-          }}
         >
           <svg
             aria-hidden="true"
@@ -50,9 +37,7 @@ export function Menu() {
         </li>
         <li
           className="me-4"
-          onClick={() => {
-            handleTab2(), console.log("activeeeee", activeTab);
-          }}
+         
         >
           <svg
             aria-hidden="true"

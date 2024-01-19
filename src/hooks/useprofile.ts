@@ -29,7 +29,7 @@ export function useProfile(username:string ) {
     getUser(username!)
       .then(function (data) {
         setGetuser(data);
-        console.log("type of", Getuser);
+        
       })
       .finally(() => {
         setloadingOVER(false);

@@ -32,7 +32,6 @@ async function getRepos(username:string): Promise<Array<Repositoryes>> {
   }))
 
   
-  console.log("repo0000" , repo.data)
   return repo.data
   
 

@@ -8,9 +8,10 @@ import React from "react";
 export function Repositories() {
   return (
     <div className=" w-[100%]   ">
-      <div className="border-1 solid bg-gray-50 w-full">
-      <Nav />
-      <Menu />
+       <div className="border-1 solid bg-gray-50 w-screen ">
+        <Nav />
+
+        <Menu />
       </div>
       <div className="flex box-border w-[100%] ml-[10rem] mt-[1rem]  ">
         <Sidebar  />

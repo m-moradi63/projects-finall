@@ -14,10 +14,8 @@ export function useRepos(name:string , owner:string ) {
     getOrg(name, owner)
       .then(function (data) {
         setrepoinfo(data);
-        console.log("reposssssss" , repoinfo)
       })
       .finally(() => {
-        console.log("repoooooooooo:" , repoinfo)
         setloadingRepos(false);
       });
   }, []);
