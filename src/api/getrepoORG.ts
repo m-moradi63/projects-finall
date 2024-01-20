@@ -163,7 +163,7 @@ export enum Visibility {
   Public = "public",
 }
 
-  async function getOrg(name:string , repo:string): Promise<Array<Repositspecial>>{
+  async function getOrg(name:string , repo:string): Promise<Repositspecial[]>  {
     
 const octokit = new Octokit({
     auth: token

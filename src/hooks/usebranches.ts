@@ -3,13 +3,13 @@ import { getRepos, Repositoryes} from "../api/getrepository"
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { getOrg , Repositspecial } from "../api/getrepoORG.ts";
-import { getBranch } from "../api/getbranches.ts";
+import { getBranch, brancheses} from "../api/getbranches.ts";
 
 
 export function useBranches(owner:string , name:string  ) {
  
   const [loadingBranch, setloadingBranch] = useState(true);
-  const [branch , setbranch] = useState([]);
+  const [branch , setbranch] = useState<brancheses>({});
 
   useEffect(() => {
     getBranch(owner , name)

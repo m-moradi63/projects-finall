@@ -1,13 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { useProfile } from "../hooks/useprofile.ts";
 import { useRepos } from "../hooks/usereposit.ts";
-import { onMounted } from 'vue'
+import { onMounted } from "vue";
 import { DropdownMenu } from "../usablesubcomponent/dropdownmenu.tsx";
 import { useState } from "react";
 import { useBranches } from "../hooks/usebranches.ts";
-
-
-
+import { DropdownBranch } from "../usablesubcomponent/dropdownbranch.tsx";
 
 export function Mainrepo() {
   const params = useParams();
@@ -19,32 +17,30 @@ export function Mainrepo() {
     params.Repotab!
   );
   const { Getuser, loading } = useProfile(params.username!);
-  
-  const {branch } =useBranches(
-    params.username! , 
-    params.Repotab! );
-  console.log("branches1111111" , branch)
 
-  const [click , setclick] = useState(false)
-  const handleClick = ()=>setclick(!click)
-  const closeMobileview = ()=> setclick(false)
-  const [dropdown,Setdropdown] = useState(false)
-const onMouseEnter = ()=>{
-    if (window.innerWidth<960){
-      Setdropdown(false)
-      }
-      else{
-        Setdropdown(true)
-      }
-}
-const onMouseLeave = ()=>{
-    if (window.innerWidth<960){
-      Setdropdown(false)
-      }
-      else{
-        Setdropdown(false)
-      }
-}
+  const { branch } = useBranches(params.username!, params.Repotab!);
+  console.log("branches1111111", branch);
+
+  const [click, setclick] = useState(false);
+  const handleClick = () => setclick(!click);
+  const [brclick, setbrclick] = useState(false);
+  const handleClickbr = () => {setbrclick(!brclick), console.log("brclick" ,brclick)};
+  const closeMobileview = () => setclick(false);
+  /* const [dropdown, Setdropdown] = useState(false);
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      Setdropdown(false);
+    } else {
+      Setdropdown(true);
+    }
+  };
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      Setdropdown(false);
+    } else {
+      Setdropdown(false);
+    }
+  }; */
 
   if (loading) {
     return <div className="w-[274px] h-[2rem]   ">Loading</div>;
@@ -94,14 +90,13 @@ const onMouseLeave = ()=>{
                   data-dropdown-toggle="dropdown"
                 >
                   {repoinfo.watchers_count}
-                  <i className="nav-item" >
-                  <Link  className="nav-links" onClick={handleClick}>
-                  <i className=" fas fa-caret-down"></i>
-                  </Link>
-                  {click && <DropdownMenu /> }
+                  <i className="nav-item">
+                    <Link className="nav-links" onClick={handleClick}>
+                      <i className=" fas fa-caret-down"></i>
+                    </Link>
+                    {click && <DropdownMenu />}
                   </i>
                 </div>
-   
               </div>
             </button>
             <button className=" w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid  ">
@@ -157,11 +152,45 @@ const onMouseLeave = ()=>{
           >
             <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
           </svg>
-          {branch.url}
-          
+        {repoinfo.default_branch}
+        <i className="nav-item">
+                    <Link className="nav-links" onClick={handleClickbr}>
+                      <i className=" fas fa-caret-down"></i>
+                    </Link>
+                    {brclick && <DropdownBranch />}
+                  </i>
         </div>
         <div>
-        <svg
+        {branch.length}
+          <span>Branche</span>
+        </div>
+        <div>
+          <span data-component="buttonContent" className="Box-sc-g0xbh4-0 kkrdEu">
+            <span data-component="leadingVisual" className="Box-sc-g0xbh4-0 trpoQ">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="img"
+                className="octicon octicon-tag"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+                fill="currentColor"
+             >
+                <path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path>
+              </svg>
+            </span>
+            <span data-component="text">
+              <div className="Box-sc-g0xbh4-0">
+                <strong className="color-fg-default">0</strong>
+                <span className="color-fg-muted">Tags</span>
+              </div>
+            </span>
+            <div></div>
+          </span>
+        </div>
+        <div>
+        {/*   <svg
             aria-hidden="true"
             focusable="false"
             role="img"
@@ -172,18 +201,10 @@ const onMouseLeave = ()=>{
             fill="currentColor"
           >
             <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
-          </svg>
-          
+          </svg> */}
         </div>
 
-      <div>
-      {branch}
-      </div>
-
-
-
-
-
+        <div></div>
       </div>
     );
   }

@@ -8,7 +8,7 @@ export interface usertype {
 
 export function App(username: string) {
   return (
-    <div>
+    <div className=" apple-system BlinkMacSystemFont">
    
       <Main username={username} />
       
