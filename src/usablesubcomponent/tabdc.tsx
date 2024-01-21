@@ -6,8 +6,8 @@ export function Tabdc() {
  
  
   return (
-    <div className="ml-4 mr-4    bg-gray-50 ">
-      <ul className="mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
+    <div className="ml-4 mr-4   ">
+      <ul className="mt-[1rem] border-b flex  text-sm font-medium text-center text-gray-500 ">
         <li
           className="me-4"
         >

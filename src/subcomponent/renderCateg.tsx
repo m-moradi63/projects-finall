@@ -2,7 +2,7 @@ import { Repositspecial } from "../api/getrepoORG";
 import { getRepos, Repositoryes } from "../api/getrepository";
 import { Link } from "react-router-dom";
 interface RenderCategProps {
-  reposit: Array<Repositspecial>;}
+  renderReposit: Array<Repositoryes>;}
 
 function generateRepositoryLink(username , repository){
   return `/${username}/${repository}`
@@ -14,7 +14,7 @@ export function RenderCateg(props: RenderCategProps) {
   return (
     <div className="flex flex-wrap  ">
       {" "}
-      {props.reposit.map((item) => {
+      {props.renderReposit.map((item) => {
         const link = generateRepositoryLink(item.owner.login , item.name)
         return (
           <div

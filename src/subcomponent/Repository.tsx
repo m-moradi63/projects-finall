@@ -104,7 +104,7 @@ export function Reposit() {
         </button>
       </div>
 
-      <RenderCateg reposit={repositState} />
+      <RenderCateg renderReposit={repositState} />
     </div>
   );
 }

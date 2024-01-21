@@ -72,12 +72,16 @@ export function useProfile(username:string ) {
 
 
 function applyFilter(List:Array<Repositoryes> , filter:string ){
+  console.log("listtttt" , List )
+  console.log("filterrrrr"  ,filter)
   return List.filter((elm)=>{
     if (filter==="Forks") {
+      console.log("listtttted" , elm.fork===true)
+      
       return elm.fork===true
     }
-    else if (filter === "Sources"){
-      return elm.archived===true
+    else if (filter === "Archived"){
+      return elm.Archived===true
     }
     return true
     
