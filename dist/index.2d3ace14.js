@@ -45985,7 +45985,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -64350,22 +64350,30 @@ parcelHelpers.export(exports, "Menudynamic", ()=>Menudynamic);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const Menudynamic = ()=>{
+    _s();
+    const [checked, setchecked] = (0, _react.useState)("Code");
+    const selection = (items)=>{
+        setchecked(items);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "relative m-0 p-0 box-border  fonts-sans flex content-center justify-center",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "max-w-[600px] w-[100%] rounded-lg flex items-center content-center flex-col",
+            className: "peer max-w-[600px] w-[100%] rounded-lg flex items-center content-center flex-col",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                     type: "radio",
                     name: "slider",
                     value: "no",
                     id: "Code",
-                    className: "peer hidden ",
-                    checked: true
+                    className: "peer1 hidden",
+                    onChange: ()=>{
+                        selection("Code");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 11,
+                    lineNumber: 17,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -64373,11 +64381,13 @@ const Menudynamic = ()=>{
                     name: "slider",
                     value: "no",
                     id: "Pull Request",
-                    className: "peer hidden ",
-                    checked: true
+                    className: "peer hidden  ",
+                    onChange: ()=>{
+                        selection("Pull Request");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 12,
+                    lineNumber: 18,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -64385,10 +64395,13 @@ const Menudynamic = ()=>{
                     name: "slider",
                     value: "no",
                     id: "Actions",
-                    className: " hidden"
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Actions");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 13,
+                    lineNumber: 19,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -64396,10 +64409,13 @@ const Menudynamic = ()=>{
                     name: "slider",
                     value: "no",
                     id: "Projects",
-                    className: " hidden"
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Projects");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 14,
+                    lineNumber: 20,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -64407,10 +64423,13 @@ const Menudynamic = ()=>{
                     name: "slider",
                     value: "no",
                     id: "Security",
-                    className: " hidden"
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Security");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 15,
+                    lineNumber: 21,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -64418,95 +64437,106 @@ const Menudynamic = ()=>{
                     name: "slider",
                     value: "no",
                     id: "Insights",
-                    className: " hidden"
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Insights");
+                    }
                 }, void 0, false, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 16,
+                    lineNumber: 22,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
                     className: "relative flex items-center content-center  after:solid   after:bg-indigo-300 after:w-[100%] after:h-[1px] after:absolute after:bottom-[0px] ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            className: " relative text-blue-600 h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer peer-checked:text-blue-100",
                             htmlFor: "Code",
+                            className: checked === "Code" ? "text-blue-600 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer" : "relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer",
                             children: "Code"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 18,
+                            lineNumber: 24,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            className: " relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked:text-red-500 ",
                             htmlFor: "Pull Request",
+                            className: checked === "Pull Request" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 " : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ",
                             children: "Pull Request"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 19,
+                            lineNumber: 25,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             htmlFor: "Actions",
-                            className: " relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked:text-red-500 ",
+                            className: checked === "Actions" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
                             children: "Actions"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 20,
+                            lineNumber: 26,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             htmlFor: "Projects",
-                            className: " relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked:text-red-500 ",
+                            className: checked === "Projects" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
                             children: "Projects"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 21,
+                            lineNumber: 27,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             htmlFor: "Security",
-                            className: " relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked:text-red-500",
+                            className: checked === "Security" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
                             children: "Security"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 22,
+                            lineNumber: 28,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             htmlFor: "Insights",
-                            className: " relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked:text-red-500 ",
+                            className: checked === "Insights" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
                             children: "Insights"
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 23,
+                            lineNumber: 29,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            id: "slider",
-                            className: " absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"
+                            id: "slider" /* className={ 
+                    if(checked==="Code"){"left-[20%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Code"){"left-[15%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Pull Request"){"left-[30%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Actions"){"left-[45%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Projects"){"left-[60%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Security"){"left-[75%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                    else if (checked==="Insights"){"left-[90%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
+                } */ 
                         }, void 0, false, {
                             fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 24,
+                            lineNumber: 30,
                             columnNumber: 17
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 17,
+                    lineNumber: 23,
                     columnNumber: 13
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/usablesubcomponent/menudynamic.tsx",
-            lineNumber: 10,
+            lineNumber: 16,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/usablesubcomponent/menudynamic.tsx",
-        lineNumber: 9,
+        lineNumber: 15,
         columnNumber: 9
     }, undefined);
 };
+_s(Menudynamic, "nJO5kKreTHn0Aoqaa3ZuaauVhYw=");
 _c = Menudynamic;
 var _c;
 $RefreshReg$(_c, "Menudynamic");
