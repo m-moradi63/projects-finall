@@ -8,11 +8,11 @@ import { Repositories } from "./Repositories.tsx";
 export function Profile() {
   let [searchParams, setSearchParams] = useSearchParams();
   console.log("searchparams" , searchParams)
-  if(searchParams.get("tab")==="repositories"){
+ /*  if(searchParams.get("tab")==="repositories"){
     return (
      <Repositories/>
     )
-  }
+  } */
   return (
     <div className=" w-screen  ">
      <div className="border-1 solid bg-gray-50 w-screen ">

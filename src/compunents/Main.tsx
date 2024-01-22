@@ -14,6 +14,7 @@ export function Main() {
         <Route path="/:username" element={<Profile />} />
         <Route path="/:username/:Repotab" element={<Repotab />} />
         <Route path="/:username/Overview" element={<Profile />} />
+        <Route path="/:username/Repositories" element={<Repositories />} />
       </Routes>
     </div>
   );

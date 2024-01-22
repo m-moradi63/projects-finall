@@ -6,6 +6,8 @@ import { DropdownMenu } from "../usablesubcomponent/dropdownmenu.tsx";
 import { useState } from "react";
 import { useBranches } from "../hooks/usebranches.ts";
 import { DropdownBranch } from "../usablesubcomponent/dropdownbranch.tsx";
+import { Searches } from "../usablesubcomponent/search.tsx";
+import { Dropdownfile } from "../usablesubcomponent/dropdownfile.tsx";
 
 export function Mainrepo() {
   const params = useParams();
@@ -24,7 +26,14 @@ export function Mainrepo() {
   const [click, setclick] = useState(false);
   const handleClick = () => setclick(!click);
   const [brclick, setbrclick] = useState(false);
-  const handleClickbr = () => {setbrclick(!brclick), console.log("brclick" ,brclick)};
+  const handleClickbr = () => {
+    setbrclick(!brclick), console.log("brclick", brclick);
+  };
+  const [fileclick, setfileclick] = useState(false);
+  const handleClickfile = () => {
+    setfileclick(!fileclick), console.log("brclick", brclick);
+  };
+
   const closeMobileview = () => setclick(false);
   /* const [dropdown, Setdropdown] = useState(false);
   const onMouseEnter = () => {
@@ -139,73 +148,117 @@ export function Mainrepo() {
             </button>
           </div>
         </div>
-        <div className="flex items-center w-[8rem] h-[2rem] rounded-lg mt-[2rem] border-2 border-solid ">
-          <svg
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            className="mr-[1rem] octicon octicon-git-branch"
-            viewBox="0 0 16 16"
-            width="16"
-            height="16"
-            fill="currentColor"
-          >
-            <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
-          </svg>
-        {repoinfo.default_branch}
-        <i className="nav-item">
-                    <Link className="nav-links" onClick={handleClickbr}>
-                      <i className=" fas fa-caret-down"></i>
-                    </Link>
-                    {brclick && <DropdownBranch />}
-                  </i>
-        </div>
-        <div>
-        {branch.length}
-          <span>Branche</span>
-        </div>
-        <div>
-          <span data-component="buttonContent" className="Box-sc-g0xbh4-0 kkrdEu">
-            <span data-component="leadingVisual" className="Box-sc-g0xbh4-0 trpoQ">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                role="img"
-                className="octicon octicon-tag"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
-                fill="currentColor"
-             >
-                <path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path>
-              </svg>
-            </span>
-            <span data-component="text">
-              <div className="Box-sc-g0xbh4-0">
-                <strong className="color-fg-default">0</strong>
-                <span className="color-fg-muted">Tags</span>
+        <div className="flex items-start">
+        <div className="flex items-center">
+          <div className="flex items-center h-[6rem] me-20">
+            <button className="  me-2  w-[8rem] h-[2rem] rounded-lg  border-2 border-solid ">
+              <div className="text-center flex items-center ml-[1.6rem]">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
+                  className="  octicon octicon-git-branch"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                >
+                  <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
+                </svg>
+                {repoinfo.default_branch}
+                <i className="nav-item">
+                  <Link className="nav-links" onClick={handleClickbr}>
+                    <i className=" fas fa-caret-down"></i>
+                  </Link>
+                  {brclick && <DropdownBranch />}
+                </i>
               </div>
-            </span>
-            <div></div>
-          </span>
-        </div>
-        <div>
-        {/*   <svg
-            aria-hidden="true"
-            focusable="false"
-            role="img"
-            className="mr-[1rem] octicon octicon-git-branch"
-            viewBox="0 0 16 16"
-            width="16"
-            height="16"
-            fill="currentColor"
-          >
-            <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
-          </svg> */}
-        </div>
+            </button>
+            <div className=" flex">
+              <div className="me-6 flex gap-[4px] items-center">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  role="img"
+                  className=" octicon octicon-git-branch"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                >
+                  <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
+                </svg>
+                <span> {branch.length}</span>
+                <span>Branche</span>
+              </div>
+              <div>
+                <span
+                  data-component="buttonContent"
+                  className="Box-sc-g0xbh4-0 kkrdEu"
+                >
+                  <span
+                    data-component="leadingVisual"
+                    className=" flex items-center gap-[6px] Box-sc-g0xbh4-0 trpoQ"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      className="octicon octicon-tag online-block"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                    >
+                      <path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"></path>
+                    </svg>
+                    <span data-component="text">
+                      <div className=" Box-sc-g0xbh4-0 flex gap-[6px]">
+                        <strong className=" color-fg-default">0</strong>
+                        <span className="color-fg-muted">Tags</span>
+                      </div>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
 
-        <div></div>
+          <div className="me-4">{<Searches />}</div>
+          <button className="w-[6rem] h-[2rem] rounded-lg  border-2 border-solid ">
+            <i className="nav-item">
+              <Link className="nav-links" onClick={handleClickfile}>
+                Add file<i className=" fas fa-caret-down"></i>
+              </Link>
+              {fileclick && <Dropdownfile />}
+            </i>
+          </button>
+          <button className="flex items-center w-[6rem] h-[2rem] rounded-lg bg-green-600 border-2 border-solid ">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="img"
+              className="ml-[1.2rem] octicon octicon-code"
+              viewBox="0 0 16 16"
+              width="16"
+              height="16"
+              fill="currentColor"
+            >
+              <path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path>
+            </svg>
+            <i className="nav-item">
+              <Link className="nav-links" onClick={handleClickfile}>
+                Code<i className=" fas fa-caret-down"></i>
+              </Link>
+              {fileclick && <Dropdownfile />}
+            </i>
+          </button>
+          
+        
       </div>
+      <div className="ms-6 w-[14rem] border-2 solid bg-slate-400 h-[20rem]">About</div>
+        </div>
+        </div>
     );
   }
 }

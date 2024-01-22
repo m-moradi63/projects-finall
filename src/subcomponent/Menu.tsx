@@ -1,13 +1,70 @@
 import { Link, NavLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export function Menu() {
+
+
+
+export const Menu = ()=>{
+  const params = useParams();  
+  const [checked , setchecked] = useState<string>("Overview")
+    const selection = ((items:string)=>{
+        setchecked(items)
+        console.log("checkedddd" , items)
+    })
+    const slidered = ((val:string)=>{
+     if (val==="Overview") return "left-[0%]       top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
+    else if (val==="Repository") return  "left-[20%] rounded-lg   top-11    absolute h-[0.2rem] bg-[#6f55ca] w-[7rem]  "
+    else if (val==="Projectss") return  "left-[45%]    rounded-lg     top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
+    
+    else if (val==="Package") return  "left-[65%]   rounded-lg    top-11      absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
+    else if (val==="Stars") return  "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
+    })
+    return(
+        <div className="relative  fonts-sans w-full ">
+        <div className=" w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col">
+            
+            <input type="radio" name="slider"  value="no" id="Overview" className=" hidden"  onChange={()=>{selection("Overview")}} />
+            <input type="radio" name="slider"  value="no" id="Repository"  className=" hidden  " onChange={()=>{selection("Repository")}} />
+            <input type="radio" name="slider"  value="no" id="Projectss" className=" hidden" onChange={()=>{selection("Projectss")}} />
+            <input type="radio" name="slider" value="no" id="Package" className=" hidden" onChange={()=>{selection("Package")}}/>
+            <input type="radio" name="slider" value="no" id="Stars" className=" hidden" onChange={()=>{selection("Stars")}}/>
+            <nav className="relative   mr-[1rem]   ">
+               
+                <label  htmlFor="Overview" className= {checked==="Overview"?"me-8 text-blue-600 relative  h-[100%]  items-center text-xl font-semibold transition-all cursor-pointer":"me-8 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer"} >
+                <NavLink to={`/${params.username}/Overview`}>Overview</NavLink></label>
+                
+                
+                <label htmlFor="Repository" className={checked==="Repository"?"me-8 text-blue-600 relative h-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 "} >
+                <NavLink to={`/${params.username}/repositories`}>Repository</NavLink></label>
+                
+                <label htmlFor="Projectss" className={checked==="Projectss"?"me-8 text-blue-600 relative h-[100%] ] items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" } >Projectss</label>
+                <label htmlFor="Package" className={checked==="Package"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Package</label>
+                <label htmlFor="Stars" className={checked==="Stars"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Stars</label>
+                <div id="slider" 
+                className= {slidered(checked)}
+             
+                    >
+                
+                </div>
+                <div className="rounded-xl border-none h-[1px] mt-[1rem] w-full relative bg-slate-400"></div>
+            </nav>
+            
+        </div>
+        </div>
+    )
+}
+
+
+
+/* export function Menu() {
   const [activeTab, setActiveTab] = useState("tab1");
   const params = useParams();
+
+
  
   return (
-    <div className="ml-4 mr-4    bg-gray-50 ">
-      <ul className="mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
+    <div className="ml-4 mr-4  h-[3rem] items-center  bg-gray-50  after:border-none after:h-[2px] after:solid after:bg-slate-400 after:w-[100%] after:block after:mt-[1rem]">
+      <ul className=" mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
         <li
           className="me-4"
         >
@@ -26,7 +83,7 @@ export function Menu() {
             to={`/${params.username}/Overview`}
             className={(status)=>{
            return   status.isActive 
-                ? "border-b-2 solid border-[#0000FF]  me-4"
+                ? "absolut border-none h-[2px] w-[5rem] solid bg-orange-100 top-[10rem]"
                 : "hover:border-b-2 solid border-slate-400  me-4"
             }
             }
@@ -113,10 +170,10 @@ export function Menu() {
           </a>
         </li>
       </ul>
-      <hr className="w-full mt-[2rem]" />
+      
     </div>
   );
-}
+} */
 
 /*    <div className="mt-10 flex" >
                 

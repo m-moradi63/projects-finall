@@ -1,6 +1,6 @@
 export function Menurepo() {
   return (
-    <div className="mt-10 flex">
+    <div className="mt-10 flex ">
       <div className="flex items-center mr-[1.5rem]">
       <svg
         aria-hidden="true"

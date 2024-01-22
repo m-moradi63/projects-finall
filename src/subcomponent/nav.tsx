@@ -9,7 +9,7 @@ export function Nav() {
   }
   if(Getuser)
   return (
-    <div className="flex justify-between ml-4  bg-gray-50  ">
+    <div className="flex justify-between w-[100%]  bg-gray-300  ">
       <div className="flex justify-between items-center mt-[2rem] ">
         {
           <button className=" box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl">
@@ -31,7 +31,7 @@ export function Nav() {
       </div>
 
       <div className="flex justify-between w-[32rem] mr-6 mt-[2rem]">
-        <button className="flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl">
+        <button className="flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl">
           <div>
             <svg
               aria-hidden="true"
@@ -59,7 +59,7 @@ export function Nav() {
           </svg>
         </button>
         <span className="inline-block">|</span>
-        <button className="flex  items-center p-1  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl">
+        <button className="flex  items-center p-1  w-10 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl">
           <span>+</span>
           <svg
             aria-hidden="true"
@@ -73,7 +73,7 @@ export function Nav() {
             <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
           </svg>
         </button>
-        <button className="w-[2rem] p-2 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl">
+        <button className="w-[2rem] p-2 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl">
           <svg
             aria-hidden="true"
             height="16"
@@ -87,7 +87,7 @@ export function Nav() {
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
           </svg>
         </button>
-        <button className="w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl">
+        <button className="w-[2rem] p-1 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl">
           <svg
             aria-hidden="true"
             height="16"
@@ -100,7 +100,7 @@ export function Nav() {
             <path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path>
           </svg>
         </button>
-        <button className="w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl">
+        <button className="w-[2rem] p-1 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl">
           <svg
             aria-hidden="true"
             height="16"
@@ -115,7 +115,7 @@ export function Nav() {
         </button>
         <button >
           <img
-            className="rounded-full border-2 border-solid border-slate-100 w-[2.2rem] h-[2.2rem] "
+            className="rounded-full border-2 border-solid border-slate-400 w-[2.2rem] h-[2.2rem] "
             src={Getuser.avatar_url}
           />
         </button>

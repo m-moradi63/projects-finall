@@ -10,7 +10,7 @@ export function Repotab() {
   
   return (
     <div className=" w-[100%]   ">
-       <div className="border-1 solid bg-gray-50 w-full">
+       <div className="border-1 solid  w-full">
       <Nav />
       <Menudynamic />
       <div className="flex box-border w-[100%] ml-[10rem] mt-[1rem]  ">

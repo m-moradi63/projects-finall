@@ -1,6 +1,6 @@
-export const Search = () => {
+export const Searches = () => {
   return (
-    <div className="flex items-center rounded-lg mt-[0.5rem] border-2 solid w-[15rem] h-[2rem] border-slate-400">
+    <div className="flex items-center rounded-lg  border-2 solid w-[12rem] h-[2rem] border-slate-400">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"

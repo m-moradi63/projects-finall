@@ -27208,6 +27208,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _profileTsx = require("../Pages/profile.tsx");
 var _repoTabTsx = require("../Pages/RepoTab.tsx");
 var _reactRouterDom = require("react-router-dom");
+var _repositoriesTsx = require("../Pages/Repositories.tsx");
 function Main() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "max-w-full m-auto   ",
@@ -27244,6 +27245,14 @@ function Main() {
                     fileName: "src/compunents/Main.tsx",
                     lineNumber: 16,
                     columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                    path: "/:username/Repositories",
+                    element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Repositories), {}, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "src/compunents/Main.tsx",
+                    lineNumber: 17,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
@@ -27266,7 +27275,7 @@ $RefreshReg$(_c, "Main");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../Pages/profile.tsx":"kzvIq","../Pages/RepoTab.tsx":"6mKTy","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kzvIq":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../Pages/profile.tsx":"kzvIq","../Pages/RepoTab.tsx":"6mKTy","react-router-dom":"9xmpe","../Pages/Repositories.tsx":"lC32Y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kzvIq":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5624 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27282,18 +27291,16 @@ var _menuTsx = require("../subcomponent/Menu.tsx");
 var _navTsx = require("../subcomponent/nav.tsx");
 var _overviewTsx = require("../subcomponent/Overview.tsx");
 var _reactRouterDom = require("react-router-dom");
-var _repositoriesTsx = require("./Repositories.tsx");
 var _s = $RefreshSig$();
 function Profile() {
     _s();
     let [searchParams, setSearchParams] = (0, _reactRouterDom.useSearchParams)();
     console.log("searchparams", searchParams);
-    if (searchParams.get("tab") === "repositories") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Repositories), {}, void 0, false, {
-        fileName: "src/Pages/profile.tsx",
-        lineNumber: 13,
-        columnNumber: 6
-    }, this);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    /*  if(searchParams.get("tab")==="repositories"){
+    return (
+     <Repositories/>
+    )
+  } */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: " w-screen  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27355,7 +27362,7 @@ $RefreshReg$(_c, "Profile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Overview.tsx":"krule","react-router-dom":"9xmpe","./Repositories.tsx":"lC32Y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Overview.tsx":"krule","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$68d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45985,7 +45992,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -46153,7 +46160,313 @@ $parcel$ReactRefreshHelpers$75bb.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Menu", ()=>Menu) /*    <div className="mt-10 flex" >
+parcelHelpers.export(exports, "Menu", ()=>Menu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
+const Menu = ()=>{
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    const [checked, setchecked] = (0, _react.useState)("Overview");
+    const selection = (items)=>{
+        setchecked(items);
+        console.log("checkedddd", items);
+    };
+    const slidered = (val)=>{
+        if (val === "Overview") return "left-[0%]       top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+        else if (val === "Repository") return "left-[20%] rounded-lg   top-11    absolute h-[0.2rem] bg-[#6f55ca] w-[7rem]  ";
+        else if (val === "Projectss") return "left-[45%]    rounded-lg     top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+        else if (val === "Package") return "left-[65%]   rounded-lg    top-11      absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+        else if (val === "Stars") return "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "relative  fonts-sans w-full ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: " w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Overview",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Overview");
+                    }
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 26,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Repository",
+                    className: " hidden  ",
+                    onChange: ()=>{
+                        selection("Repository");
+                    }
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 27,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Projectss",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Projectss");
+                    }
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 28,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Package",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Package");
+                    }
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 29,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Stars",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Stars");
+                    }
+                }, void 0, false, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 30,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+                    className: "relative   mr-[1rem]   ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Overview",
+                            className: checked === "Overview" ? "me-8 text-blue-600 relative  h-[100%]  items-center text-xl font-semibold transition-all cursor-pointer" : "me-8 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                                to: `/${params.username}/Overview`,
+                                children: "Overview"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 34,
+                                columnNumber: 17
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 33,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Repository",
+                            className: checked === "Repository" ? "me-8 text-blue-600 relative h-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 " : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                                to: `/${params.username}/repositories`,
+                                children: "Repository"
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Menu.tsx",
+                                lineNumber: 38,
+                                columnNumber: 17
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 37,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Projectss",
+                            className: checked === "Projectss" ? "me-8 text-blue-600 relative h-[100%] ] items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Projectss"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 40,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Package",
+                            className: checked === "Package" ? "me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Package"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 41,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Stars",
+                            className: checked === "Stars" ? "me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Stars"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 42,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "slider",
+                            className: slidered(checked)
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 43,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "rounded-xl border-none h-[1px] mt-[1rem] w-full relative bg-slate-400"
+                        }, void 0, false, {
+                            fileName: "src/subcomponent/Menu.tsx",
+                            lineNumber: 49,
+                            columnNumber: 17
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/subcomponent/Menu.tsx",
+                    lineNumber: 31,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/subcomponent/Menu.tsx",
+            lineNumber: 24,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/subcomponent/Menu.tsx",
+        lineNumber: 23,
+        columnNumber: 9
+    }, undefined);
+} /* export function Menu() {
+  const [activeTab, setActiveTab] = useState("tab1");
+  const params = useParams();
+
+
+ 
+  return (
+    <div className="ml-4 mr-4  h-[3rem] items-center  bg-gray-50  after:border-none after:h-[2px] after:solid after:bg-slate-400 after:w-[100%] after:block after:mt-[1rem]">
+      <ul className=" mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
+        <li
+          className="me-4"
+        >
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            data-view-component="true"
+            className=" mr-2 inline-block octicon octicon-book UnderlineNav-octicon"
+          >
+            <path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path>
+          </svg>
+          <NavLink
+            to={`/${params.username}/Overview`}
+            className={(status)=>{
+           return   status.isActive 
+                ? "absolut border-none h-[2px] w-[5rem] solid bg-orange-100 top-[10rem]"
+                : "hover:border-b-2 solid border-slate-400  me-4"
+            }
+            }
+            end
+             >
+            Overview
+          </NavLink>
+        </li>
+        <li
+          className="me-4"
+         
+        >
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            data-view-component="true"
+            className="mr-2  inline-block octicon octicon-repo UnderlineNav-octicon"
+          >
+            <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
+          </svg>
+          <NavLink
+            to={`/${params.username}/?tab=repositories`}
+            className={(status)=>{
+           return   status.isActive 
+                ? "border-b-2 solid border-[#0000FF]  me-4"
+                : "hover:border-b-2 solid border-slate-400  me-4"
+                
+            } 
+            }
+            end
+          >
+            Repository
+          </NavLink>
+        </li>
+        <li className="me-4 ">
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            data-view-component="true"
+            className="mr-2 inline-block octicon octicon-table UnderlineNav-octicon"
+          >
+            <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path>
+          </svg>
+          <a href="" className=" hover:border-b-2 border-blue-600   ">
+            Project
+          </a>
+        </li>
+        <li className="me-4">
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            data-view-component="true"
+            className="mr-2  inline-block octicon octicon-package UnderlineNav-octicon"
+          >
+            <path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path>
+          </svg>
+          <a href="" className=" hover:border-b-2 border-blue-600  active ">
+            Packages
+          </a>
+        </li>
+        <li className="me-4">
+          <svg
+            aria-hidden="true"
+            height="16"
+            viewBox="0 0 16 16"
+            version="1.1"
+            width="16"
+            data-view-component="true"
+            className="mr-2  inline-block octicon octicon-star UnderlineNav-octicon"
+          >
+            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+          </svg>
+          <a href="" className=" hover:border-b-2 border-blue-600  active ">
+            Packages
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+  );
+} */  /*    <div className="mt-10 flex" >
                 
                <Link to={`/${params.username}/Overview`}>
                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon">
@@ -46178,237 +46491,7 @@ parcelHelpers.export(exports, "Menu", ()=>Menu) /*    <div className="mt-10 flex
                 </svg>Starts</a>
             </div>
     ) */ ;
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _react = require("react");
-var _s = $RefreshSig$();
-function Menu() {
-    _s();
-    const [activeTab, setActiveTab] = (0, _react.useState)("tab1");
-    const params = (0, _reactRouterDom.useParams)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "ml-4 mr-4    bg-gray-50 ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: "mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: " mr-2 inline-block octicon octicon-book UnderlineNav-octicon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Menu.tsx",
-                                    lineNumber: 23,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                                to: `/${params.username}/Overview`,
-                                className: (status)=>{
-                                    return status.isActive ? "border-b-2 solid border-[#0000FF]  me-4" : "hover:border-b-2 solid border-slate-400  me-4";
-                                },
-                                end: true,
-                                children: "Overview"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 25,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "mr-2  inline-block octicon octicon-repo UnderlineNav-octicon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Menu.tsx",
-                                    lineNumber: 51,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 42,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                                to: `/${params.username}/?tab=repositories`,
-                                className: (status)=>{
-                                    return status.isActive ? "border-b-2 solid border-[#0000FF]  me-4" : "hover:border-b-2 solid border-slate-400  me-4";
-                                },
-                                end: true,
-                                children: "Repository"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 53,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 38,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4 ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "mr-2 inline-block octicon octicon-table UnderlineNav-octicon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Menu.tsx",
-                                    lineNumber: 77,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 68,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: "",
-                                className: " hover:border-b-2 border-blue-600   ",
-                                children: "Project"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 79,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 67,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "mr-2  inline-block octicon octicon-package UnderlineNav-octicon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Menu.tsx",
-                                    lineNumber: 93,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 84,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: "",
-                                className: " hover:border-b-2 border-blue-600  active ",
-                                children: "Packages"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 95,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 83,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                height: "16",
-                                viewBox: "0 0 16 16",
-                                version: "1.1",
-                                width: "16",
-                                "data-view-component": "true",
-                                className: "mr-2  inline-block octicon octicon-star UnderlineNav-octicon",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Menu.tsx",
-                                    lineNumber: 109,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 100,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                href: "",
-                                className: " hover:border-b-2 border-blue-600  active ",
-                                children: "Packages"
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 111,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Menu.tsx",
-                        lineNumber: 99,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/Menu.tsx",
-                lineNumber: 10,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
-                className: "w-full mt-[2rem]"
-            }, void 0, false, {
-                fileName: "src/subcomponent/Menu.tsx",
-                lineNumber: 116,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/subcomponent/Menu.tsx",
-        lineNumber: 9,
-        columnNumber: 5
-    }, this);
-}
-_s(Menu, "PKj4CASDwtvPV1UaxSmm8urqRmo=", false, function() {
+_s(Menu, "cNojZ5y1NtAV0OOek0QHT7/DNdg=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -46449,7 +46532,7 @@ function Nav() {
         columnNumber: 12
     }, this);
     if (Getuser) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between ml-4  bg-gray-50  ",
+        className: "flex justify-between w-[100%]  bg-gray-300  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex justify-between items-center mt-[2rem] ",
@@ -46506,7 +46589,7 @@ function Nav() {
                 className: "flex justify-between w-[32rem] mr-6 mt-[2rem]",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        className: "flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 children: [
@@ -46578,7 +46661,7 @@ function Nav() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "flex  items-center p-1  w-10 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-xl",
+                        className: "flex  items-center p-1  w-10 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 children: "+"
@@ -46614,7 +46697,7 @@ function Nav() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-2 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        className: "w-[2rem] p-2 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                             "aria-hidden": "true",
                             height: "16",
@@ -46650,7 +46733,7 @@ function Nav() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                             "aria-hidden": "true",
                             height: "16",
@@ -46677,7 +46760,7 @@ function Nav() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "w-[2rem] p-1 border-solid border-2 border-slate-300 border-indigo-600... rounded-xl",
+                        className: "w-[2rem] p-1 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
                             "aria-hidden": "true",
                             height: "16",
@@ -46705,7 +46788,7 @@ function Nav() {
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "rounded-full border-2 border-solid border-slate-100 w-[2.2rem] h-[2.2rem] ",
+                            className: "rounded-full border-2 border-solid border-slate-400 w-[2.2rem] h-[2.2rem] ",
                             src: Getuser.avatar_url
                         }, void 0, false, {
                             fileName: "src/subcomponent/nav.tsx",
@@ -62693,7 +62776,1566 @@ async function getOrg(name, repo) {
     return org.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lC32Y":[function(require,module,exports) {
+},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6mKTy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8777 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8777.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Repotab", ()=>Repotab);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _mainrepoTsx = require("../subcomponent/Mainrepo.tsx");
+var _navTsx = require("../subcomponent/nav.tsx");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _menudynamicTsx = require("../usablesubcomponent/menudynamic.tsx");
+function Repotab() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " w-[100%]   ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "border-1 solid  w-full",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
+                    fileName: "src/Pages/RepoTab.tsx",
+                    lineNumber: 14,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menudynamicTsx.Menudynamic), {}, void 0, false, {
+                    fileName: "src/Pages/RepoTab.tsx",
+                    lineNumber: 15,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex box-border w-[100%] ml-[10rem] mt-[1rem]  ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainrepoTsx.Mainrepo), {}, void 0, false, {
+                        fileName: "src/Pages/RepoTab.tsx",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/Pages/RepoTab.tsx",
+                    lineNumber: 16,
+                    columnNumber: 7
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/Pages/RepoTab.tsx",
+            lineNumber: 13,
+            columnNumber: 8
+        }, this)
+    }, void 0, false, {
+        fileName: "src/Pages/RepoTab.tsx",
+        lineNumber: 12,
+        columnNumber: 5
+    }, this);
+}
+_c = Repotab;
+var _c;
+$RefreshReg$(_c, "Repotab");
+
+  $parcel$ReactRefreshHelpers$8777.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../subcomponent/Mainrepo.tsx":"7I8eV","../subcomponent/nav.tsx":"lFT6V","react":"21dqq","../usablesubcomponent/menudynamic.tsx":"84eGR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7I8eV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7eb8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7eb8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Mainrepo", ()=>Mainrepo);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _useprofileTs = require("../hooks/useprofile.ts");
+var _userepositTs = require("../hooks/usereposit.ts");
+var _dropdownmenuTsx = require("../usablesubcomponent/dropdownmenu.tsx");
+var _react = require("react");
+var _usebranchesTs = require("../hooks/usebranches.ts");
+var _dropdownbranchTsx = require("../usablesubcomponent/dropdownbranch.tsx");
+var _searchTsx = require("../usablesubcomponent/search.tsx");
+var _dropdownfileTsx = require("../usablesubcomponent/dropdownfile.tsx");
+var _s = $RefreshSig$();
+function Mainrepo() {
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    console.log("paramsparams", params.Repotab);
+    console.log("paramsparams1", params.username);
+    const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = (0, _userepositTs.useRepos)(params.username, params.Repotab);
+    const { Getuser, loading } = (0, _useprofileTs.useProfile)(params.username);
+    const { branch } = (0, _usebranchesTs.useBranches)(params.username, params.Repotab);
+    console.log("branches1111111", branch);
+    const [click, setclick] = (0, _react.useState)(false);
+    const handleClick = ()=>setclick(!click);
+    const [brclick, setbrclick] = (0, _react.useState)(false);
+    const handleClickbr = ()=>{
+        setbrclick(!brclick), console.log("brclick", brclick);
+    };
+    const [fileclick, setfileclick] = (0, _react.useState)(false);
+    const handleClickfile = ()=>{
+        setfileclick(!fileclick), console.log("brclick", brclick);
+    };
+    const closeMobileview = ()=>setclick(false);
+    /* const [dropdown, Setdropdown] = useState(false);
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      Setdropdown(false);
+    } else {
+      Setdropdown(true);
+    }
+  };
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      Setdropdown(false);
+    } else {
+      Setdropdown(false);
+    }
+  }; */ if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-[274px] h-[2rem]   ",
+        children: "Loading"
+    }, void 0, false, {
+        fileName: "src/subcomponent/Mainrepo.tsx",
+        lineNumber: 55,
+        columnNumber: 12
+    }, this);
+    if (repoinfo) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex  justify-between mt-[1rem] border-b-2 w-[1024px]",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "mr-[1rem] rounded-full border-2 border-solid border-slate-100 w-[2.2rem] h-[2.2rem] ",
+                                src: Getuser?.avatar_url
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 62,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "flex",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "mr-[2rem]",
+                                            children: repoinfo.name
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 69,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "border-2 solid w-[3.4rem] text-xs h-[1.7rem] rounded-xl ml-[1rem] text-slate-400 m-auto",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "mt-[5rem]",
+                                                children: repoinfo.visibility
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 71,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 70,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 68,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/Mainrepo.tsx",
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex ",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: " w-[9rem] h-[1.7rem] rounded-xl border-2 border-solid ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "mx-1.5 flex items-center items-center justify-center ",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            "aria-hidden": "true",
+                                            height: "16",
+                                            viewBox: "0 0 16 16",
+                                            version: "1.1",
+                                            width: "16",
+                                            "data-view-component": "true",
+                                            className: "mr-[.5rem] octicon octicon-eye ",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                d: "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 88,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 79,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: repoinfo.watchers === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "text-lg ",
+                                                children: "unwatch"
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 92,
+                                                columnNumber: 21
+                                            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                children: "whatch"
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 94,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 90,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "flex gap-[0.5rem] border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
+                                            "data-dropdown-toggle": "dropdown",
+                                            children: [
+                                                repoinfo.watchers_count,
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                    className: "nav-item",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                            className: "nav-links",
+                                                            onClick: handleClick,
+                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                                className: " fas fa-caret-down"
+                                                            }, void 0, false, {
+                                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                lineNumber: 104,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                            lineNumber: 103,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        click && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownmenuTsx.DropdownMenu), {}, void 0, false, {
+                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                            lineNumber: 106,
+                                                            columnNumber: 31
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                    lineNumber: 102,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 97,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 78,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 77,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: " w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid  ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "mx-1.5 flex items-center justify-center  ",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            "aria-hidden": "true",
+                                            height: "16",
+                                            viewBox: "0 0 16 16",
+                                            version: "1.1",
+                                            width: "16",
+                                            "data-view-component": "true",
+                                            className: "octicon octicon-repo-forked mr-2",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 122,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 113,
+                                            columnNumber: 17
+                                        }, this),
+                                        "fork",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
+                                            children: repoinfo.forks_count
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 125,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 112,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 111,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: " w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "mx-1.5 flex items-center items-center justify-center ",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                            "aria-hidden": "true",
+                                            height: "16",
+                                            viewBox: "0 0 16 16",
+                                            version: "1.1",
+                                            width: "16",
+                                            "data-view-component": "true",
+                                            className: "octicon octicon-star d-inline-block mr-2",
+                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 141,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 132,
+                                            columnNumber: 17
+                                        }, this),
+                                        "Star",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
+                                            children: repoinfo.forks_count
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 144,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 131,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 130,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/Mainrepo.tsx",
+                        lineNumber: 76,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/Mainrepo.tsx",
+                lineNumber: 60,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-start",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex items-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex items-center h-[6rem] me-20",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        className: "  me-2  w-[8rem] h-[2rem] rounded-lg  border-2 border-solid ",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "text-center flex items-center ml-[1.6rem]",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                    "aria-hidden": "true",
+                                                    focusable: "false",
+                                                    role: "img",
+                                                    className: "  octicon octicon-git-branch",
+                                                    viewBox: "0 0 16 16",
+                                                    width: "16",
+                                                    height: "16",
+                                                    fill: "currentColor",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                        d: "M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 166,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                    lineNumber: 156,
+                                                    columnNumber: 17
+                                                }, this),
+                                                repoinfo.default_branch,
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                    className: "nav-item",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                            className: "nav-links",
+                                                            onClick: handleClickbr,
+                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                                className: " fas fa-caret-down"
+                                                            }, void 0, false, {
+                                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                lineNumber: 171,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                            lineNumber: 170,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        brclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownbranchTsx.DropdownBranch), {}, void 0, false, {
+                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                            lineNumber: 173,
+                                                            columnNumber: 31
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                    lineNumber: 169,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 155,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                        lineNumber: 154,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: " flex",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                className: "me-6 flex gap-[4px] items-center",
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                        "aria-hidden": "true",
+                                                        focusable: "false",
+                                                        role: "img",
+                                                        className: " octicon octicon-git-branch",
+                                                        viewBox: "0 0 16 16",
+                                                        width: "16",
+                                                        height: "16",
+                                                        fill: "currentColor",
+                                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                            d: "M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
+                                                        }, void 0, false, {
+                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                            lineNumber: 189,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 179,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        children: [
+                                                            " ",
+                                                            branch.length
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 191,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        children: "Branche"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 192,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 178,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                    "data-component": "buttonContent",
+                                                    className: "Box-sc-g0xbh4-0 kkrdEu",
+                                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                        "data-component": "leadingVisual",
+                                                        className: " flex items-center gap-[6px] Box-sc-g0xbh4-0 trpoQ",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                                                "aria-hidden": "true",
+                                                                focusable: "false",
+                                                                role: "img",
+                                                                className: "octicon octicon-tag online-block",
+                                                                viewBox: "0 0 16 16",
+                                                                width: "16",
+                                                                height: "16",
+                                                                fill: "currentColor",
+                                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                                                    d: "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                    lineNumber: 213,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                lineNumber: 203,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                "data-component": "text",
+                                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                                    className: " Box-sc-g0xbh4-0 flex gap-[6px]",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
+                                                                            className: " color-fg-default",
+                                                                            children: "0"
+                                                                        }, void 0, false, {
+                                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                            lineNumber: 217,
+                                                                            columnNumber: 25
+                                                                        }, this),
+                                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                                            className: "color-fg-muted",
+                                                                            children: "Tags"
+                                                                        }, void 0, false, {
+                                                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                            lineNumber: 218,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                    lineNumber: 216,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            }, void 0, false, {
+                                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                                lineNumber: 215,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 199,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                    lineNumber: 195,
+                                                    columnNumber: 17
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 194,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                        lineNumber: 177,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 153,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "me-4",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchTsx.Searches), {}, void 0, false, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 227,
+                                    columnNumber: 34
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 227,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "w-[6rem] h-[2rem] rounded-lg  border-2 border-solid ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                    className: "nav-item",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                            className: "nav-links",
+                                            onClick: handleClickfile,
+                                            children: [
+                                                "Add file",
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                    className: " fas fa-caret-down"
+                                                }, void 0, false, {
+                                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                                    lineNumber: 231,
+                                                    columnNumber: 25
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 230,
+                                            columnNumber: 15
+                                        }, this),
+                                        fileclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownfileTsx.Dropdownfile), {}, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 233,
+                                            columnNumber: 29
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/subcomponent/Mainrepo.tsx",
+                                    lineNumber: 229,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 228,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "flex items-center w-[6rem] h-[2rem] rounded-lg bg-green-600 border-2 border-solid ",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                        "aria-hidden": "true",
+                                        focusable: "false",
+                                        role: "img",
+                                        className: "ml-[1.2rem] octicon octicon-code",
+                                        viewBox: "0 0 16 16",
+                                        width: "16",
+                                        height: "16",
+                                        fill: "currentColor",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                            d: "m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Mainrepo.tsx",
+                                            lineNumber: 247,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                        lineNumber: 237,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        className: "nav-item",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                                className: "nav-links",
+                                                onClick: handleClickfile,
+                                                children: [
+                                                    "Code",
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                        className: " fas fa-caret-down"
+                                                    }, void 0, false, {
+                                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                                        lineNumber: 251,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 250,
+                                                columnNumber: 15
+                                            }, this),
+                                            fileclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownfileTsx.Dropdownfile), {}, void 0, false, {
+                                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                                lineNumber: 253,
+                                                columnNumber: 29
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/subcomponent/Mainrepo.tsx",
+                                        lineNumber: 249,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/subcomponent/Mainrepo.tsx",
+                                lineNumber: 236,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/subcomponent/Mainrepo.tsx",
+                        lineNumber: 152,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "ms-6 w-[14rem] border-2 solid bg-slate-400 h-[20rem]",
+                        children: "About"
+                    }, void 0, false, {
+                        fileName: "src/subcomponent/Mainrepo.tsx",
+                        lineNumber: 259,
+                        columnNumber: 7
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/subcomponent/Mainrepo.tsx",
+                lineNumber: 151,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/subcomponent/Mainrepo.tsx",
+        lineNumber: 59,
+        columnNumber: 7
+    }, this);
+}
+_s(Mainrepo, "G6Iebvxivd9uUDSpgDH1Dl3AL6s=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _userepositTs.useRepos),
+        (0, _useprofileTs.useProfile),
+        (0, _usebranchesTs.useBranches)
+    ];
+});
+_c = Mainrepo;
+var _c;
+$RefreshReg$(_c, "Mainrepo");
+
+  $parcel$ReactRefreshHelpers$7eb8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","../usablesubcomponent/dropdownmenu.tsx":"5S05w","react":"21dqq","../hooks/usebranches.ts":"4u0KW","../usablesubcomponent/dropdownbranch.tsx":"alfRI","../usablesubcomponent/search.tsx":"jhUpJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../usablesubcomponent/dropdownfile.tsx":"1c99O"}],"5S05w":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fd61 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fd61.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DropdownMenu", ()=>DropdownMenu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const DropdownMenu = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "absolute border-2 w-[20rem] h-[18rem] bg-white text-justify px-[2rem] rounded-xl",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem]  content-end",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 9,
+                            columnNumber: 61
+                        }, undefined),
+                        "Notifications"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 9,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            className: "fa-solid fa-check mr-[1rem]"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 10,
+                            columnNumber: 49
+                        }, undefined),
+                        "Participating and @Mentions.",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 10,
+                            columnNumber: 124
+                        }, undefined),
+                        " Only receive notifications from this repository when participating or @mentioned. "
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 10,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: [
+                        "All Activity ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 11,
+                            columnNumber: 62
+                        }, undefined),
+                        "Notified of all notifications on this repository."
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 11,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: [
+                        "ignor",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 12,
+                            columnNumber: 54
+                        }, undefined),
+                        " Never be Notified"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 12,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: [
+                        "Custom ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            className: "ml-[12rem] fa-solid fa-arrow-right"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 13,
+                            columnNumber: 56
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                            lineNumber: 13,
+                            columnNumber: 110
+                        }, undefined),
+                        "   Select events you want to be notified of in addition to participating and @mentions."
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: " Get push notifications on"
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+                    lineNumber: 14,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+            lineNumber: 8,
+            columnNumber: 10
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/usablesubcomponent/dropdownmenu.tsx",
+        lineNumber: 7,
+        columnNumber: 9
+    }, undefined);
+};
+_c = DropdownMenu;
+var _c;
+$RefreshReg$(_c, "DropdownMenu");
+
+  $parcel$ReactRefreshHelpers$fd61.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4u0KW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e0dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e0dd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useBranches", ()=>useBranches);
+var _react = require("react");
+var _getbranchesTs = require("../api/getbranches.ts");
+function useBranches(owner, name) {
+    const [loadingBranch, setloadingBranch] = (0, _react.useState)(true);
+    const [branch, setbranch] = (0, _react.useState)({});
+    (0, _react.useEffect)(()=>{
+        (0, _getbranchesTs.getBranch)(owner, name).then(function(data) {
+            console.log("1111111111111", data);
+            setbranch(data);
+        }).finally(()=>{
+            setloadingBranch(false);
+        });
+    }, []);
+    return {
+        loadingBranch: loadingBranch,
+        setloadingBranch: setloadingBranch,
+        setbranch: setbranch,
+        branch: branch
+    };
+}
+
+  $parcel$ReactRefreshHelpers$e0dd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","../api/getbranches.ts":"cG5Qz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cG5Qz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getBranch", ()=>getBranch);
+var _octokit = require("octokit");
+var _constantTs = require("../constant.ts");
+async function getBranch(owner, name) {
+    const octokit = new (0, _octokit.Octokit)({
+        auth: (0, _constantTs.token)
+    });
+    const brancheApi = await octokit.request("GET /repos/{owner}/{repo}/branches", {
+        owner: owner,
+        repo: name,
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    console.log("bbbbbbbbbbbbbbbbbb", brancheApi.data.length);
+    return brancheApi.data;
+}
+
+},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"alfRI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ead0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ead0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DropdownBranch", ()=>DropdownBranch);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _search = require("./search");
+var _tabdc = require("./tabdc");
+const DropdownBranch = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "absolute border-2 w-[20rem] h-[18rem] bg-white text-justify px-[2rem] rounded-xl",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: " h-[3rem]  flex items-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "mr-[5rem]",
+                            children: "switch branches/tags "
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                            lineNumber: 11,
+                            columnNumber: 59
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            className: "fa-sharp fa-solid fa-xmark "
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                            lineNumber: 11,
+                            columnNumber: 115
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 11,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _search.Searches), {}, void 0, false, {
+                        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                        lineNumber: 12,
+                        columnNumber: 50
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 12,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tabdc.Tabdc), {}, void 0, false, {
+                        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                        lineNumber: 13,
+                        columnNumber: 50
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 13,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] "
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 14,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] "
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 15,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] "
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+                    lineNumber: 16,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+            lineNumber: 10,
+            columnNumber: 11
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
+        lineNumber: 9,
+        columnNumber: 9
+    }, undefined);
+};
+_c = DropdownBranch;
+var _c;
+$RefreshReg$(_c, "DropdownBranch");
+
+  $parcel$ReactRefreshHelpers$ead0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./tabdc":"8Tb4z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./search":"jhUpJ"}],"8Tb4z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9671 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9671.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Tabdc", ()=>Tabdc);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
+function Tabdc() {
+    _s();
+    const [activeTab, setActiveTab] = (0, _react.useState)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "ml-4 mr-4   ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                className: "mt-[1rem] border-b flex  text-sm font-medium text-center text-gray-500 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                            /* to={`/${params.username}/Overview`} */ className: (status)=>{
+                                return status.isActive ? "border-t-4 border-r-4 border-l-4" : "hover:border-b-2 solid  ";
+                            },
+                            end: true,
+                            children: "Branches"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/tabdc.tsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/usablesubcomponent/tabdc.tsx",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "me-4",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
+                            /* to={`/${params.username}/?tab=repositories`} */ className: (status)=>{
+                                return status.isActive ? "border-t-4 border-r-4 border-l-4" : "hover:border-b-2 solid border-slate-400 ";
+                            },
+                            end: true,
+                            children: "Tag"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/tabdc.tsx",
+                            lineNumber: 33,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/usablesubcomponent/tabdc.tsx",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/usablesubcomponent/tabdc.tsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
+                className: "w-full mt-[2rem]"
+            }, void 0, false, {
+                fileName: "src/usablesubcomponent/tabdc.tsx",
+                lineNumber: 49,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/usablesubcomponent/tabdc.tsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, this);
+}
+_s(Tabdc, "Cm1EyDBcYE9W+K/dlcvCQ31OjkQ=");
+_c = Tabdc;
+var _c;
+$RefreshReg$(_c, "Tabdc");
+
+  $parcel$ReactRefreshHelpers$9671.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jhUpJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8fb8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8fb8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Searches", ()=>Searches);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Searches = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex items-center rounded-lg  border-2 solid w-[12rem] h-[2rem] border-slate-400",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                x: "0px",
+                y: "0px",
+                width: "25",
+                height: "25",
+                viewBox: "0,0,256,256",
+                style: {
+                    background: "white"
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                    fill: "#ebebeb",
+                    "fill-rule": "nonzero",
+                    stroke: "none",
+                    "stroke-width": "1",
+                    "stroke-linecap": "butt",
+                    "stroke-linejoin": "miter",
+                    "stroke-miterlimit": "10",
+                    "stroke-dasharray": "",
+                    "stroke-dashoffset": "0",
+                    "font-family": "none",
+                    "font-weight": "none",
+                    "font-size": "none",
+                    "text-anchor": "none",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
+                        transform: "scale(10.66667,10.66667)",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M9,2c-3.85415,0 -7,3.14585 -7,7c0,3.85415 3.14585,7 7,7c1.748,0 3.34501,-0.65198 4.57422,-1.71875l0.42578,0.42578v1.29297l6,6l2,-2l-6,-6h-1.29297l-0.42578,-0.42578c1.06677,-1.22921 1.71875,-2.82622 1.71875,-4.57422c0,-3.85415 -3.14585,-7 -7,-7zM9,4c2.77327,0 5,2.22673 5,5c0,2.77327 -2.22673,5 -5,5c-2.77327,0 -5,-2.22673 -5,-5c0,-2.77327 2.22673,-5 5,-5z"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/search.tsx",
+                            lineNumber: 30,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/usablesubcomponent/search.tsx",
+                        lineNumber: 29,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/search.tsx",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/usablesubcomponent/search.tsx",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                placeholder: "Find a Branch"
+            }, void 0, false, {
+                fileName: "src/usablesubcomponent/search.tsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/usablesubcomponent/search.tsx",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Searches;
+var _c;
+$RefreshReg$(_c, "Searches");
+
+  $parcel$ReactRefreshHelpers$8fb8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1c99O":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b516 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b516.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Dropdownfile", ()=>Dropdownfile);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Dropdownfile = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "absolute border-2 w-[20rem] h-[6.3rem] bg-white text-justify px-[2rem] rounded-xl",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem]  content-end",
+                    children: [
+                        "+",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "ms-4",
+                            children: "Create File"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                            lineNumber: 8,
+                            columnNumber: 12
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    className: "border-b h-[3rem] flex",
+                    children: [
+                        " ",
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            "aria-hidden": "true",
+                            focusable: "false",
+                            role: "img",
+                            className: " me-4 octicon octicon-upload",
+                            viewBox: "0 0 16 16",
+                            width: "16",
+                            height: "16",
+                            fill: "currentColor",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"
+                                }, void 0, false, {
+                                    fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                                    lineNumber: 22,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M11.78 4.72a.749.749 0 1 1-1.06 1.06L8.75 3.811V9.5a.75.75 0 0 1-1.5 0V3.811L5.28 5.78a.749.749 0 1 1-1.06-1.06l3.25-3.25a.749.749 0 0 1 1.06 0l3.25 3.25Z"
+                                }, void 0, false, {
+                                    fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                                    lineNumber: 23,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, undefined),
+                        "Upload file"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/dropdownfile.tsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/usablesubcomponent/dropdownfile.tsx",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/usablesubcomponent/dropdownfile.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Dropdownfile;
+var _c;
+$RefreshReg$(_c, "Dropdownfile");
+
+  $parcel$ReactRefreshHelpers$b516.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"84eGR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$683e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$683e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Menudynamic", ()=>Menudynamic);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const Menudynamic = ()=>{
+    _s();
+    const [checked, setchecked] = (0, _react.useState)("Code");
+    const selection = (items)=>{
+        setchecked(items);
+    };
+    const slidered = (val)=>{
+        if (val === "Code") return "left-[0%]       top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[3rem]  ";
+        else if (val === "issues-tab") return "left-[12%] rounded-lg   top-11    absolute h-[0.2rem] bg-[#6f55ca] w-[7rem]  ";
+        else if (val === "Actions") return "left-[32%]    rounded-lg     top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[5rem]  ";
+        else if (val === "Projects") return "left-[48%]   rounded-lg    top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+        else if (val === "Security") return "left-[65%]   rounded-lg    top-11      absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+        else if (val === "Insights") return "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  ";
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "bg-gray-300 relative  fonts-sans w-full",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: " w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Code",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Code");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 23,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "issues-tab",
+                    className: " hidden  ",
+                    onChange: ()=>{
+                        selection("issues-tab");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 24,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Actions",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Actions");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 25,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Projects",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Projects");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 26,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Security",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Security");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 27,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "radio",
+                    name: "slider",
+                    value: "no",
+                    id: "Insights",
+                    className: " hidden",
+                    onChange: ()=>{
+                        selection("Insights");
+                    }
+                }, void 0, false, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 28,
+                    columnNumber: 13
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
+                    className: "relative   mr-[1rem]   ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Code",
+                            className: checked === "Code" ? "me-8 text-blue-600 relative  h-[100%]  items-center text-xl font-semibold transition-all cursor-pointer" : "me-8 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer",
+                            children: "Code"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 30,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "issues-tab",
+                            className: checked === "issues-tab" ? "me-8 text-blue-600 relative h-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 " : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ",
+                            children: "issues-tab"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 31,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Actions",
+                            className: checked === "Actions" ? "me-8 text-blue-600 relative h-[100%] ] items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Actions"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 32,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Projects",
+                            className: checked === "Projects" ? "me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Projects"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 33,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Security",
+                            className: checked === "Security" ? "me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Security"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 34,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "Insights",
+                            className: checked === "Insights" ? "me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer" : "me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
+                            children: "Insights"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 35,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "slider",
+                            className: slidered(checked)
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 36,
+                            columnNumber: 17
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "rounded-xl border-none h-[1px] mt-[1rem] w-full relative bg-slate-400"
+                        }, void 0, false, {
+                            fileName: "src/usablesubcomponent/menudynamic.tsx",
+                            lineNumber: 42,
+                            columnNumber: 17
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/usablesubcomponent/menudynamic.tsx",
+                    lineNumber: 29,
+                    columnNumber: 13
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/usablesubcomponent/menudynamic.tsx",
+            lineNumber: 22,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/usablesubcomponent/menudynamic.tsx",
+        lineNumber: 21,
+        columnNumber: 9
+    }, undefined);
+};
+_s(Menudynamic, "nJO5kKreTHn0Aoqaa3ZuaauVhYw=");
+_c = Menudynamic;
+var _c;
+$RefreshReg$(_c, "Menudynamic");
+
+  $parcel$ReactRefreshHelpers$683e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lC32Y":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$78ce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -63279,1273 +64921,6 @@ $RefreshReg$(_c, "RenderCateg");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6mKTy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8777 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8777.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Repotab", ()=>Repotab);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _mainrepoTsx = require("../subcomponent/Mainrepo.tsx");
-var _navTsx = require("../subcomponent/nav.tsx");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _menudynamicTsx = require("../usablesubcomponent/menudynamic.tsx");
-function Repotab() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " w-[100%]   ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "border-1 solid bg-gray-50 w-full",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
-                    fileName: "src/Pages/RepoTab.tsx",
-                    lineNumber: 14,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menudynamicTsx.Menudynamic), {}, void 0, false, {
-                    fileName: "src/Pages/RepoTab.tsx",
-                    lineNumber: 15,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex box-border w-[100%] ml-[10rem] mt-[1rem]  ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainrepoTsx.Mainrepo), {}, void 0, false, {
-                        fileName: "src/Pages/RepoTab.tsx",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this)
-                }, void 0, false, {
-                    fileName: "src/Pages/RepoTab.tsx",
-                    lineNumber: 16,
-                    columnNumber: 7
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/Pages/RepoTab.tsx",
-            lineNumber: 13,
-            columnNumber: 8
-        }, this)
-    }, void 0, false, {
-        fileName: "src/Pages/RepoTab.tsx",
-        lineNumber: 12,
-        columnNumber: 5
-    }, this);
-}
-_c = Repotab;
-var _c;
-$RefreshReg$(_c, "Repotab");
-
-  $parcel$ReactRefreshHelpers$8777.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../subcomponent/Mainrepo.tsx":"7I8eV","../subcomponent/nav.tsx":"lFT6V","react":"21dqq","../usablesubcomponent/menudynamic.tsx":"84eGR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7I8eV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7eb8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7eb8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Mainrepo", ()=>Mainrepo);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _useprofileTs = require("../hooks/useprofile.ts");
-var _userepositTs = require("../hooks/usereposit.ts");
-var _dropdownmenuTsx = require("../usablesubcomponent/dropdownmenu.tsx");
-var _react = require("react");
-var _usebranchesTs = require("../hooks/usebranches.ts");
-var _dropdownbranchTsx = require("../usablesubcomponent/dropdownbranch.tsx");
-var _s = $RefreshSig$();
-function Mainrepo() {
-    _s();
-    const params = (0, _reactRouterDom.useParams)();
-    console.log("paramsparams", params.Repotab);
-    console.log("paramsparams1", params.username);
-    const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = (0, _userepositTs.useRepos)(params.username, params.Repotab);
-    const { Getuser, loading } = (0, _useprofileTs.useProfile)(params.username);
-    const { branch } = (0, _usebranchesTs.useBranches)(params.username, params.Repotab);
-    console.log("branches1111111", branch);
-    const [click, setclick] = (0, _react.useState)(false);
-    const handleClick = ()=>setclick(!click);
-    const [brclick, setbrclick] = (0, _react.useState)(false);
-    const handleClickbr = ()=>{
-        setbrclick(!brclick), console.log("brclick", brclick);
-    };
-    const closeMobileview = ()=>setclick(false);
-    /* const [dropdown, Setdropdown] = useState(false);
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      Setdropdown(false);
-    } else {
-      Setdropdown(true);
-    }
-  };
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      Setdropdown(false);
-    } else {
-      Setdropdown(false);
-    }
-  }; */ if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-[274px] h-[2rem]   ",
-        children: "Loading"
-    }, void 0, false, {
-        fileName: "src/subcomponent/Mainrepo.tsx",
-        lineNumber: 46,
-        columnNumber: 12
-    }, this);
-    if (repoinfo) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex  justify-between mt-[1rem] border-b-2 w-[1024px]",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "mr-[1rem] rounded-full border-2 border-solid border-slate-100 w-[2.2rem] h-[2.2rem] ",
-                                src: Getuser?.avatar_url
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 53,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "flex",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: "mr-[2rem]",
-                                            children: repoinfo.name
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 60,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                            className: "border-2 solid w-[3.4rem] text-xs h-[1.7rem] rounded-xl ml-[1rem] text-slate-400 m-auto",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                className: "mt-[5rem]",
-                                                children: repoinfo.visibility
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 62,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 61,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 59,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 58,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 52,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex ",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: " w-[9rem] h-[1.7rem] rounded-xl border-2 border-solid ",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "mx-1.5 flex items-center items-center justify-center ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            "aria-hidden": "true",
-                                            height: "16",
-                                            viewBox: "0 0 16 16",
-                                            version: "1.1",
-                                            width: "16",
-                                            "data-view-component": "true",
-                                            className: "mr-[.5rem] octicon octicon-eye ",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                d: "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 79,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 70,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            children: repoinfo.watchers === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                className: "text-lg ",
-                                                children: "unwatch"
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 83,
-                                                columnNumber: 21
-                                            }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                children: "whatch"
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 85,
-                                                columnNumber: 21
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 81,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "flex gap-[0.5rem] border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
-                                            "data-dropdown-toggle": "dropdown",
-                                            children: [
-                                                repoinfo.watchers_count,
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                                    className: "nav-item",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                                            className: "nav-links",
-                                                            onClick: handleClick,
-                                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                                                className: " fas fa-caret-down"
-                                                            }, void 0, false, {
-                                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 95,
-                                                                columnNumber: 23
-                                                            }, this)
-                                                        }, void 0, false, {
-                                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 94,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        click && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownmenuTsx.DropdownMenu), {}, void 0, false, {
-                                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 97,
-                                                            columnNumber: 31
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 93,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 88,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 69,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 68,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: " w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid  ",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "mx-1.5 flex items-center justify-center  ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            "aria-hidden": "true",
-                                            height: "16",
-                                            viewBox: "0 0 16 16",
-                                            version: "1.1",
-                                            width: "16",
-                                            "data-view-component": "true",
-                                            className: "octicon octicon-repo-forked mr-2",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 113,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 104,
-                                            columnNumber: 17
-                                        }, this),
-                                        "fork",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
-                                            children: repoinfo.forks_count
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 116,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 103,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 102,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: " w-[8rem] h-[1.7rem] rounded-xl border-2 border-solid ",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "mx-1.5 flex items-center items-center justify-center ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            "aria-hidden": "true",
-                                            height: "16",
-                                            viewBox: "0 0 16 16",
-                                            version: "1.1",
-                                            width: "16",
-                                            "data-view-component": "true",
-                                            className: "octicon octicon-star d-inline-block mr-2",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
-                                            }, void 0, false, {
-                                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 132,
-                                                columnNumber: 19
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 123,
-                                            columnNumber: 17
-                                        }, this),
-                                        "Star",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            className: "border-2 solid bg-[#e5e7eb] w-[1rem] h-[1.2rem] text-xs rounded-full",
-                                            children: repoinfo.forks_count
-                                        }, void 0, false, {
-                                            fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 135,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 122,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 121,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 67,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 51,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex items-center w-[8rem] h-[2rem] rounded-lg mt-[2rem] border-2 border-solid ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        "aria-hidden": "true",
-                        focusable: "false",
-                        role: "img",
-                        className: "mr-[1rem] octicon octicon-git-branch",
-                        viewBox: "0 0 16 16",
-                        width: "16",
-                        height: "16",
-                        fill: "currentColor",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/Mainrepo.tsx",
-                            lineNumber: 153,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 143,
-                        columnNumber: 11
-                    }, this),
-                    repoinfo.default_branch,
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                        className: "nav-item",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: "nav-links",
-                                onClick: handleClickbr,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    className: " fas fa-caret-down"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 158,
-                                    columnNumber: 23
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 157,
-                                columnNumber: 21
-                            }, this),
-                            brclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownbranchTsx.DropdownBranch), {}, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 160,
-                                columnNumber: 33
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 156,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 142,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    branch.length,
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        children: "Branche"
-                    }, void 0, false, {
-                        fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 165,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 163,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    "data-component": "buttonContent",
-                    className: "Box-sc-g0xbh4-0 kkrdEu",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            "data-component": "leadingVisual",
-                            className: "Box-sc-g0xbh4-0 trpoQ",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                "aria-hidden": "true",
-                                focusable: "false",
-                                role: "img",
-                                className: "octicon octicon-tag",
-                                viewBox: "0 0 16 16",
-                                width: "16",
-                                height: "16",
-                                fill: "currentColor",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
-                                }, void 0, false, {
-                                    fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 180,
-                                    columnNumber: 17
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 170,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/Mainrepo.tsx",
-                            lineNumber: 169,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            "data-component": "text",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "Box-sc-g0xbh4-0",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                                        className: "color-fg-default",
-                                        children: "0"
-                                    }, void 0, false, {
-                                        fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 185,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "color-fg-muted",
-                                        children: "Tags"
-                                    }, void 0, false, {
-                                        fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 186,
-                                        columnNumber: 17
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 184,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/subcomponent/Mainrepo.tsx",
-                            lineNumber: 183,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                            fileName: "src/subcomponent/Mainrepo.tsx",
-                            lineNumber: 189,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/subcomponent/Mainrepo.tsx",
-                    lineNumber: 168,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 167,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 192,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 207,
-                columnNumber: 9
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/subcomponent/Mainrepo.tsx",
-        lineNumber: 50,
-        columnNumber: 7
-    }, this);
-}
-_s(Mainrepo, "5OtQmRp3oAga/3S2MQs60lTo4Es=", false, function() {
-    return [
-        (0, _reactRouterDom.useParams),
-        (0, _userepositTs.useRepos),
-        (0, _useprofileTs.useProfile),
-        (0, _usebranchesTs.useBranches)
-    ];
-});
-_c = Mainrepo;
-var _c;
-$RefreshReg$(_c, "Mainrepo");
-
-  $parcel$ReactRefreshHelpers$7eb8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","../usablesubcomponent/dropdownmenu.tsx":"5S05w","react":"21dqq","../hooks/usebranches.ts":"4u0KW","../usablesubcomponent/dropdownbranch.tsx":"alfRI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5S05w":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$fd61 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$fd61.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DropdownMenu", ()=>DropdownMenu);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const DropdownMenu = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "absolute border-2 w-[20rem] h-[18rem] bg-white text-justify px-[2rem] rounded-xl",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem]  content-end",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 9,
-                            columnNumber: 61
-                        }, undefined),
-                        "Notifications"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 9,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                            className: "fa-solid fa-check mr-[1rem]"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 10,
-                            columnNumber: 49
-                        }, undefined),
-                        "Participating and @Mentions.",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 10,
-                            columnNumber: 124
-                        }, undefined),
-                        " Only receive notifications from this repository when participating or @mentioned. "
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 10,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: [
-                        "All Activity ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 11,
-                            columnNumber: 62
-                        }, undefined),
-                        "Notified of all notifications on this repository."
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: [
-                        "ignor",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 12,
-                            columnNumber: 54
-                        }, undefined),
-                        " Never be Notified"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: [
-                        "Custom ",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                            className: "ml-[12rem] fa-solid fa-arrow-right"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 13,
-                            columnNumber: 56
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                            lineNumber: 13,
-                            columnNumber: 110
-                        }, undefined),
-                        "   Select events you want to be notified of in addition to participating and @mentions."
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: " Get push notifications on"
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-                    lineNumber: 14,
-                    columnNumber: 13
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-            lineNumber: 8,
-            columnNumber: 10
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/usablesubcomponent/dropdownmenu.tsx",
-        lineNumber: 7,
-        columnNumber: 9
-    }, undefined);
-};
-_c = DropdownMenu;
-var _c;
-$RefreshReg$(_c, "DropdownMenu");
-
-  $parcel$ReactRefreshHelpers$fd61.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4u0KW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$e0dd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$e0dd.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "useBranches", ()=>useBranches);
-var _react = require("react");
-var _getbranchesTs = require("../api/getbranches.ts");
-function useBranches(owner, name) {
-    const [loadingBranch, setloadingBranch] = (0, _react.useState)(true);
-    const [branch, setbranch] = (0, _react.useState)({});
-    (0, _react.useEffect)(()=>{
-        (0, _getbranchesTs.getBranch)(owner, name).then(function(data) {
-            console.log("1111111111111", data);
-            setbranch(data);
-        }).finally(()=>{
-            setloadingBranch(false);
-        });
-    }, []);
-    return {
-        loadingBranch: loadingBranch,
-        setloadingBranch: setloadingBranch,
-        setbranch: setbranch,
-        branch: branch
-    };
-}
-
-  $parcel$ReactRefreshHelpers$e0dd.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","../api/getbranches.ts":"cG5Qz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cG5Qz":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getBranch", ()=>getBranch);
-var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getBranch(owner, name) {
-    const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
-    });
-    const brancheApi = await octokit.request("GET /repos/{owner}/{repo}/branches", {
-        owner: owner,
-        repo: name,
-        headers: {
-            "X-GitHub-Api-Version": "2022-11-28"
-        }
-    });
-    console.log("bbbbbbbbbbbbbbbbbb", brancheApi.data.length);
-    return brancheApi.data;
-}
-
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"alfRI":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ead0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ead0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DropdownBranch", ()=>DropdownBranch);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _search = require("./search");
-var _tabdc = require("./tabdc");
-const DropdownBranch = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "absolute border-2 w-[20rem] h-[18rem] bg-white text-justify px-[2rem] rounded-xl",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: " h-[3rem]  flex items-center",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "mr-[5rem]",
-                            children: "switch branches/tags "
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                            lineNumber: 11,
-                            columnNumber: 59
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                            className: "fa-sharp fa-solid fa-xmark "
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                            lineNumber: 11,
-                            columnNumber: 115
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _search.Search), {}, void 0, false, {
-                        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                        lineNumber: 12,
-                        columnNumber: 50
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] ",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tabdc.Tabdc), {}, void 0, false, {
-                        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                        lineNumber: 13,
-                        columnNumber: 50
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] "
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 14,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] "
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 15,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    className: "border-b h-[3rem] "
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-                    lineNumber: 16,
-                    columnNumber: 13
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-            lineNumber: 10,
-            columnNumber: 11
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/usablesubcomponent/dropdownbranch.tsx",
-        lineNumber: 9,
-        columnNumber: 9
-    }, undefined);
-};
-_c = DropdownBranch;
-var _c;
-$RefreshReg$(_c, "DropdownBranch");
-
-  $parcel$ReactRefreshHelpers$ead0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./search":"jhUpJ","./tabdc":"8Tb4z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jhUpJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8fb8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8fb8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Search", ()=>Search);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Search = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex items-center rounded-lg mt-[0.5rem] border-2 solid w-[15rem] h-[2rem] border-slate-400",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                xmlns: "http://www.w3.org/2000/svg",
-                x: "0px",
-                y: "0px",
-                width: "25",
-                height: "25",
-                viewBox: "0,0,256,256",
-                style: {
-                    background: "white"
-                },
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                    fill: "#ebebeb",
-                    "fill-rule": "nonzero",
-                    stroke: "none",
-                    "stroke-width": "1",
-                    "stroke-linecap": "butt",
-                    "stroke-linejoin": "miter",
-                    "stroke-miterlimit": "10",
-                    "stroke-dasharray": "",
-                    "stroke-dashoffset": "0",
-                    "font-family": "none",
-                    "font-weight": "none",
-                    "font-size": "none",
-                    "text-anchor": "none",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
-                        transform: "scale(10.66667,10.66667)",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M9,2c-3.85415,0 -7,3.14585 -7,7c0,3.85415 3.14585,7 7,7c1.748,0 3.34501,-0.65198 4.57422,-1.71875l0.42578,0.42578v1.29297l6,6l2,-2l-6,-6h-1.29297l-0.42578,-0.42578c1.06677,-1.22921 1.71875,-2.82622 1.71875,-4.57422c0,-3.85415 -3.14585,-7 -7,-7zM9,4c2.77327,0 5,2.22673 5,5c0,2.77327 -2.22673,5 -5,5c-2.77327,0 -5,-2.22673 -5,-5c0,-2.77327 2.22673,-5 5,-5z"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/search.tsx",
-                            lineNumber: 30,
-                            columnNumber: 13
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/usablesubcomponent/search.tsx",
-                        lineNumber: 29,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/search.tsx",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/usablesubcomponent/search.tsx",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                placeholder: "Find a Branch"
-            }, void 0, false, {
-                fileName: "src/usablesubcomponent/search.tsx",
-                lineNumber: 34,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/usablesubcomponent/search.tsx",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Search;
-var _c;
-$RefreshReg$(_c, "Search");
-
-  $parcel$ReactRefreshHelpers$8fb8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8Tb4z":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9671 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9671.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Tabdc", ()=>Tabdc);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _react = require("react");
-var _s = $RefreshSig$();
-function Tabdc() {
-    _s();
-    const [activeTab, setActiveTab] = (0, _react.useState)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "ml-4 mr-4   ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: "mt-[1rem] border-b flex  text-sm font-medium text-center text-gray-500 ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                            /* to={`/${params.username}/Overview`} */ className: (status)=>{
-                                return status.isActive ? "border-t-4 border-r-4 border-l-4" : "hover:border-b-2 solid  ";
-                            },
-                            end: true,
-                            children: "Branches"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/tabdc.tsx",
-                            lineNumber: 15,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/usablesubcomponent/tabdc.tsx",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "me-4",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
-                            /* to={`/${params.username}/?tab=repositories`} */ className: (status)=>{
-                                return status.isActive ? "border-t-4 border-r-4 border-l-4" : "hover:border-b-2 solid border-slate-400 ";
-                            },
-                            end: true,
-                            children: "Tag"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/tabdc.tsx",
-                            lineNumber: 33,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/usablesubcomponent/tabdc.tsx",
-                        lineNumber: 28,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/usablesubcomponent/tabdc.tsx",
-                lineNumber: 10,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {
-                className: "w-full mt-[2rem]"
-            }, void 0, false, {
-                fileName: "src/usablesubcomponent/tabdc.tsx",
-                lineNumber: 49,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/usablesubcomponent/tabdc.tsx",
-        lineNumber: 9,
-        columnNumber: 5
-    }, this);
-}
-_s(Tabdc, "Cm1EyDBcYE9W+K/dlcvCQ31OjkQ=");
-_c = Tabdc;
-var _c;
-$RefreshReg$(_c, "Tabdc");
-
-  $parcel$ReactRefreshHelpers$9671.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"84eGR":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$683e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$683e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Menudynamic", ()=>Menudynamic);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const Menudynamic = ()=>{
-    _s();
-    const [checked, setchecked] = (0, _react.useState)("Code");
-    const selection = (items)=>{
-        setchecked(items);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "relative m-0 p-0 box-border  fonts-sans flex content-center justify-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "peer max-w-[600px] w-[100%] rounded-lg flex items-center content-center flex-col",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Code",
-                    className: "peer1 hidden",
-                    onChange: ()=>{
-                        selection("Code");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 17,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Pull Request",
-                    className: "peer hidden  ",
-                    onChange: ()=>{
-                        selection("Pull Request");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 18,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Actions",
-                    className: " hidden",
-                    onChange: ()=>{
-                        selection("Actions");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 19,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Projects",
-                    className: " hidden",
-                    onChange: ()=>{
-                        selection("Projects");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 20,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Security",
-                    className: " hidden",
-                    onChange: ()=>{
-                        selection("Security");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 21,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "radio",
-                    name: "slider",
-                    value: "no",
-                    id: "Insights",
-                    className: " hidden",
-                    onChange: ()=>{
-                        selection("Insights");
-                    }
-                }, void 0, false, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 22,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
-                    className: "relative flex items-center content-center  after:solid   after:bg-indigo-300 after:w-[100%] after:h-[1px] after:absolute after:bottom-[0px] ",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Code",
-                            className: checked === "Code" ? "text-blue-600 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer" : "relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer",
-                            children: "Code"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 24,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Pull Request",
-                            className: checked === "Pull Request" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 " : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ",
-                            children: "Pull Request"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 25,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Actions",
-                            className: checked === "Actions" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
-                            children: "Actions"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 26,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Projects",
-                            className: checked === "Projects" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
-                            children: "Projects"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 27,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Security",
-                            className: checked === "Security" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
-                            children: "Security"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 28,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            htmlFor: "Insights",
-                            className: checked === "Insights" ? "text-blue-600 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" : "relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer",
-                            children: "Insights"
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 29,
-                            columnNumber: 17
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            id: "slider" /* className={ 
-                    if(checked==="Code"){"left-[20%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Code"){"left-[15%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Pull Request"){"left-[30%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Actions"){"left-[45%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Projects"){"left-[60%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Security"){"left-[75%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                    else if (checked==="Insights"){"left-[90%] absolute h-[0.2rem] bg-[#6f55ca] w-[3rem] z-0 left-0 bottom-0"}
-                } */ 
-                        }, void 0, false, {
-                            fileName: "src/usablesubcomponent/menudynamic.tsx",
-                            lineNumber: 30,
-                            columnNumber: 17
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/usablesubcomponent/menudynamic.tsx",
-                    lineNumber: 23,
-                    columnNumber: 13
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/usablesubcomponent/menudynamic.tsx",
-            lineNumber: 16,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/usablesubcomponent/menudynamic.tsx",
-        lineNumber: 15,
-        columnNumber: 9
-    }, undefined);
-};
-_s(Menudynamic, "nJO5kKreTHn0Aoqaa3ZuaauVhYw=");
-_c = Menudynamic;
-var _c;
-$RefreshReg$(_c, "Menudynamic");
-
-  $parcel$ReactRefreshHelpers$683e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
 //# sourceMappingURL=index.2d3ace14.js.map
