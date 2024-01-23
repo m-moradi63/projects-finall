@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { getOrg , Repositspecial } from "../api/getrepoORG.ts";
 import { getBranch, brancheses} from "../api/getbranches.ts";
+import useSWR from "swr"
 
 
 export function useBranches(owner:string , name:string  ) {
@@ -11,7 +12,7 @@ export function useBranches(owner:string , name:string  ) {
   const [loadingBranch, setloadingBranch] = useState(true);
   const [branch , setbranch] = useState<brancheses>({});
 
-  useEffect(() => {
+ /*  useEffect(() => {
     getBranch(owner , name)
       .then(function (data) {
         console.log("1111111111111" , data)
@@ -21,10 +22,15 @@ export function useBranches(owner:string , name:string  ) {
       .finally(() => {
         setloadingBranch(false);
       });
-  }, []);
+  }, []); */
+
+
+
+  const { data, error, isLoading } = useSWR('/api/user', ()=>{return getBranch(owner , name)})
+
  
   return {
-    loadingBranch:loadingBranch,
+    loadingBranch:isLoading,
     setloadingBranch: setloadingBranch,
     setbranch : setbranch,
     branch:branch
