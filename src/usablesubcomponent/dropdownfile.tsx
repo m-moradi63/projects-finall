@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export const Dropdownfile = () => {
   return (
-    <div className="absolute border-2 w-[20rem] h-[6.3rem] bg-white text-justify px-[2rem] rounded-xl">
+    <div className="absolute border-2 w-[20rem] h-[6.3rem] bg-white text-justify px-[2rem] rounded-xl font-serift">
       <ul>
         <li className="border-b h-[3rem]  content-end">
           +<span className="ms-4">Create File</span>

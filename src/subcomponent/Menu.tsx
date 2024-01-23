@@ -20,7 +20,7 @@ export const Menu = ()=>{
     else if (val==="Stars") return  "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
     })
     return(
-        <div className="relative  fonts-sans w-full ">
+        <div className="relative  fonts-sans w-full bg-gray-300 ">
         <div className=" w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col">
             
             <input type="radio" name="slider"  value="no" id="Overview" className=" hidden"  onChange={()=>{selection("Overview")}} />
