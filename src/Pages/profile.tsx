@@ -2,25 +2,37 @@ import { Sidebar } from "../compunents/Sidebar.tsx";
 import { Menu } from "../subcomponent/Menu.tsx";
 import { Nav } from "../subcomponent/nav.tsx";
 import { Overview } from "../subcomponent/Overview.tsx";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { Repositories } from "./Repositories.tsx";
+import { useProfile } from "../hooks/useprofile.ts";
 
 export function Profile() {
+  const params= useParams()
   let [searchParams, setSearchParams] = useSearchParams();
+  const {Getuser , loadingOVER}=useProfile(params.username!)
   console.log("searchparams" , searchParams)
- /*  if(searchParams.get("tab")==="repositories"){
+  if(loadingOVER){
+    return(
+      <div className="absolute  top-0 left-0  right-0 border-none solid   bg-slate-300 min-w-screen-xl w-screen-xl h-[100vh] min-h-[100vh]">
+        <span className="absolute top-[18rem] text-4xl left-[40rem]">loading...</span>
+      </div>
+    )
+  }
+  else if(searchParams.get("tab")==="repositories"){
     return (
      <Repositories/>
     )
-  } */
+  }
+  else if (Getuser)
   return (
-    <div className=" w-screen  ">
-     <div className="border-1 solid bg-gray-50 w-screen ">
+    <div >
+     <div className=" border-1 solid bg-gray-300  min-h-[8.1rem]  h-[8.1rem] mx-auto">
         <Nav />
 
         <Menu />
       </div>
-      <div className="flex justify-center box-border w-screen  gap-0  ">
+      
+      <div className="flex justify-center box-border    gap-0  ">
         <Sidebar />
         <Overview />
       </div>

@@ -9,6 +9,7 @@ export function useRepos(name:string , owner:string ) {
  console.log("valueeeeeee" , owner)
   const [loadingRepos, setloadingRepos] = useState(true);
   const [repoinfo , setrepoinfo] = useState<Array<Repositspecial>>([]);
+  
 
   useEffect(() => {
     getOrg(name, owner)

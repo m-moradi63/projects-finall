@@ -14,7 +14,8 @@ export interface Repositoryes{
   node_id:string ,
   default_branch: string ,
   archived :boolean,
-  forks_count:number
+  forks_count:number,
+  
 }
 
 

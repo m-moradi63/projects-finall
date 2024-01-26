@@ -3,15 +3,24 @@ import { useProfile } from "../hooks/useprofile";
 
 export function Nav() {
   const params = useParams();
-  const { Getuser, loading } = useProfile(params.username!);
-  if (loading) {
-    return <div className="w-[274px] h-[2rem]   ">Loading</div>;
-  }
+  const { Getuser, loadingOVER} = useProfile(params.username!);
+  console.log("loading overrrr:" , loadingOVER)
+  /* if (loadingOVER) {
+    return (
+      <div className="bg-gray-500 flex justify-between items-center mx-auto w-screen-xl   min-h-[5rem]">
+      <div className="mx-auto flex justify-between items-center w-screen-xl  ">
+      
+  
+  Processing...
+
+        </div>
+        </div>
+      ) } */
   if(Getuser)
   return (
-    <div className="flex justify-between w-[100%]  bg-gray-300  ">
-      <div className="flex justify-between items-center mt-[2rem] ">
-        {
+    <div className="flex justify-between items-center mx-auto max-w-screen-xl   min-h-[5rem] ">
+      <div className="flex justify-between items-center  ">
+        
           <button className=" box-border h-8 p-2 w-9  border-2 rounded-sm rounded-xl">
             <svg
               aria-hidden="true"
@@ -25,13 +34,13 @@ export function Nav() {
               <path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path>
             </svg>
           </button>
-        }
+        
         <i className="ml-4 fa-brands fa-github fa-2xl"></i>
         <span className="inline ml-[1rem]">{params.username}</span>
       </div>
 
-      <div className="flex justify-between w-[32rem] mr-6 mt-[2rem]">
-        <button className="flex justify-between w-[18rem] inline-block   p-0.5 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl">
+      <div className="flex justify-between items-center ">
+        <button className="me-1 flex justify-between w-[14rem] inline-block    border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl">
           <div>
             <svg
               aria-hidden="true"
@@ -58,8 +67,8 @@ export function Nav() {
             <path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path>
           </svg>
         </button>
-        <span className="inline-block">|</span>
-        <button className="flex  items-center p-1  w-10 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-xl">
+        <span className="inline-block me-1">|</span>
+        <button className="flex  items-center text-center  w-10 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-lg">
           <span>+</span>
           <svg
             aria-hidden="true"
@@ -73,7 +82,7 @@ export function Nav() {
             <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
           </svg>
         </button>
-        <button className="w-[2rem] p-2 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl">
+        <button className="flex  items-center  h-[1.8rem] mx-auto  w-10 border-solid border-2 border-slate-600 border-indigo-600 ... rounded-lg">
           <svg
             aria-hidden="true"
             height="16"
@@ -81,7 +90,7 @@ export function Nav() {
             version="1.1"
             width="16"
             data-view-component="true"
-            className="octicon octicon-issue-opened Button-visual"
+            className="octicon octicon-issue-opened Button-visual mx-auto"
           >
             <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path>
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path>
@@ -115,7 +124,7 @@ export function Nav() {
         </button>
         <button >
           <img
-            className="rounded-full border-2 border-solid border-slate-400 w-[2.2rem] h-[2.2rem] "
+            className="w-[2rem] p-1 border-solid border-2 border-slate-600 border-indigo-600... rounded-xl"
             src={Getuser.avatar_url}
           />
         </button>

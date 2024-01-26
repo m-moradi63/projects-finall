@@ -12,6 +12,9 @@ export function useProfile(username:string ) {
   const [loadingREPO, setloadingREPO] = useState(true);
   const [loadingOVER, setloadingOVER] = useState(true);
   const [filter, setfilter] = useState<string>("");
+  const [searchItem, setSearchItem] = useState("");
+  const [languageItem, setlanguageItem] = useState("");
+ 
 
 
 
@@ -26,13 +29,14 @@ export function useProfile(username:string ) {
       });
   }, []);
   useEffect(() => {
+    setloadingOVER(false);
     getUser(username!)
       .then(function (data) {
         setGetuser(data);
         
       })
-      .finally(() => {
-        setloadingOVER(false);
+      .catch(() => {
+        setloadingOVER(true);
       });
   }, []);
   useEffect(() => {
@@ -59,31 +63,56 @@ export function useProfile(username:string ) {
     setGetuser: setGetuser,
     loading: loading,
     setloading :setloading,
-    repositState: applyFilter(repositState , filter),
+    repositState: applyFilter(repositState , filter, searchItem,languageItem),
     loadingREPO: loadingREPO,
     loadingOVER: loadingOVER,
     setloadingOVER: setloadingOVER,
     filter: filter,
     setfilter: setfilter,
     setrepositState: setrepositState,
+    searchItem:searchItem,
+    setSearchItem:setSearchItem,
+    languageItem:languageItem,
+    setlanguageItem:setlanguageItem
+
     
   };
 }
 
 
-function applyFilter(List:Array<Repositoryes> , filter:string ){
+function applyFilter(List:Array<Repositoryes> , filter:string, searchItem:string , languageItem:string ){
   console.log("listtttt" , List )
   console.log("filterrrrr"  ,filter)
+
   return List.filter((elm)=>{
-    if (filter==="Forks") {
-      console.log("listtttted" , elm.fork===true)
-      
-      return elm.fork===true
+    if (filter==="Forks" && languageItem!=="All" ) {
+      return elm.fork===true && elm.name.includes(searchItem) && elm.language===languageItem
     }
-    else if (filter === "Archived"){
-      return elm.Archived===true
+    else if (filter === "Archived" && languageItem!=="All"){
+      return elm.Archived===true  && elm.name.includes(searchItem) && elm.language===(languageItem)
     }
-    return true
-    
+    else if (filter === "Forks" && languageItem==="All"){
+      return elm.fork===true  && elm.name.includes(searchItem) 
+    }
+    else if (filter === "Archived" && languageItem==="All"){
+      return elm.Archived===true  && elm.name.includes(searchItem)
+    }
+    else if (languageItem!=="All" && filter==="All" ){
+      return elm.language===(languageItem) && elm.name.includes(searchItem) 
+      }
+    else if (languageItem==="All" && filter==="All" ){
+    return true && elm.name.includes(searchItem) 
+    }
+    else if (languageItem==="" && filter==="" ){
+      return true && elm.name.includes(searchItem) 
+      }
   })
+ /*  function fidrepository(applyFilter , searchItem:string){
+  if(searchItem) {
+   applyFilter.filter ((elm)=>{
+    return elm.includes(searchItem)}
+
+    
+ 
+  } */
 }

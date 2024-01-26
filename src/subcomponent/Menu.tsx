@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 
-
+/* 
 export const Menu = ()=>{
   const params = useParams();  
   const [checked , setchecked] = useState<string>("Overview")
@@ -52,19 +52,19 @@ export const Menu = ()=>{
         </div>
         </div>
     )
-}
+} */
 
 
 
-/* export function Menu() {
+export function Menu() {
   const [activeTab, setActiveTab] = useState("tab1");
   const params = useParams();
 
 
  
   return (
-    <div className="ml-4 mr-4  h-[3rem] items-center  bg-gray-50  after:border-none after:h-[2px] after:solid after:bg-slate-400 after:w-[100%] after:block after:mt-[1rem]">
-      <ul className=" mt-[2rem] flex  text-sm font-medium text-center text-gray-500 ">
+    <div className="box-border ml-4 mr-4 mt-[0rem]  h-[3.6rem] min-h-[5rem] items-center    after:border-none after:h-[2px] after:solid after:bg-slate-400 after:max-w-screen-xl after:block after:mt-[1rem] after:items-end">
+      <ul className=" items-center flex h-[2rem]  text-sm font-medium text-center text-gray-500 ">
         <li
           className="me-4"
         >
@@ -83,8 +83,8 @@ export const Menu = ()=>{
             to={`/${params.username}/Overview`}
             className={(status)=>{
            return   status.isActive 
-                ? "absolut border-none h-[2px] w-[5rem] solid bg-orange-100 top-[10rem]"
-                : "hover:border-b-2 solid border-slate-400  me-4"
+                ? "after:absolute after:border-none after:h-[2px] after:w-[6rem] after:left-[1.1rem] after:solid after:bg-orange-600 after:top-[8rem]"
+                : "hover:border-none hover:solid hover:border-gray-600  "
             }
             }
             end
@@ -111,8 +111,8 @@ export const Menu = ()=>{
             to={`/${params.username}/?tab=repositories`}
             className={(status)=>{
            return   status.isActive 
-                ? "border-b-2 solid border-[#0000FF]  me-4"
-                : "hover:border-b-2 solid border-slate-400  me-4"
+                ? "after:absolute after:border-none after:h-[2px] after:w-[6rem] after:left-[7rem] after:solid after:bg-orange-600 after:top-[8rem]"
+                : "hover:border-none hover:solid hover:border-gray-600  "
                 
             } 
             }
@@ -133,9 +133,19 @@ export const Menu = ()=>{
           >
             <path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path>
           </svg>
-          <a href="" className=" hover:border-b-2 border-blue-600   ">
+          <NavLink
+            to={`/${params.username}`}
+            className={(status)=>{
+           return   status.isActive 
+                ? "after:absolute after:border-none after:h-[2px] after:w-[6rem] after:left-[13rem] after:solid after:bg-orange-600 after:top-[8rem]"
+                : "hover:border-none hover:solid hover:border-gray-600  "
+            }
+            }
+            end
+             >
             Project
-          </a>
+          </NavLink>
+         
         </li>
         <li className="me-4">
           <svg
@@ -149,9 +159,8 @@ export const Menu = ()=>{
           >
             <path d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"></path>
           </svg>
-          <a href="" className=" hover:border-b-2 border-blue-600  active ">
-            Packages
-          </a>
+          Packages
+          
         </li>
         <li className="me-4">
           <svg
@@ -165,15 +174,15 @@ export const Menu = ()=>{
           >
             <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
           </svg>
-          <a href="" className=" hover:border-b-2 border-blue-600  active ">
-            Packages
-          </a>
+          Packages
+            
+          
         </li>
       </ul>
       
     </div>
   );
-} */
+}
 
 /*    <div className="mt-10 flex" >
                 

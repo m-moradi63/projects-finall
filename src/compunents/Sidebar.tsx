@@ -9,7 +9,7 @@ export function Sidebar() {
   const { Getuser, loading } = useProfile(params.username!);
 
   if (loading) {
-    return <div className="w-[274px] h-[2rem]   ">Loading</div>;
+    return <div className="min-w-[30%] w-[30%] h-[2rem] min-h-[2rem]  mr-[0rem]  mt-[1rem]  ">Loading</div>;
   }
   if (Getuser) {
     return (

@@ -7,7 +7,7 @@ import { Reposit } from "../subcomponent/Repository.tsx";
 
 export function Main() {
   return (
-    <div className="max-w-full m-auto   ">
+    <div className="object-cover mx-auto    ">
      
       <Routes>
         <Route index element={<Profile />} />

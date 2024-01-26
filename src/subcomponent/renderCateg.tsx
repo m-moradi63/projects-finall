@@ -18,13 +18,13 @@ export function RenderCateg(props: RenderCategProps) {
         const link = generateRepositoryLink(item.owner.login , item.name)
         return (
           <div
-            className="text-slate-400 border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] "
+            className="text-slate-400 border-b-[1px] border-neutral-300 mb-[1rem]  w-[45rem] z-0"
             key={item.node_id}
           >
-            <div className="border-2 solid w-[45rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5">
+            <div className="border-2 solid relative z-10  w-[45rem]  h-[6rem] rounded-md mr-[2rem] mb-[2rem] px-2.5 py-2.5">
               <div className="flex justify-between">
-                <div className="flex  justify-left">
-                  <Link to={link} className="text-blue-600 text-xl">
+                <div className="flex  justify-left ">
+                  <Link to={link} className="text-blue-600 text-xl ">
                     {item.name}
                   </Link>
 
@@ -32,7 +32,7 @@ export function RenderCateg(props: RenderCategProps) {
                     {item.visibility}
                   </button>
                 </div>
-                <button className="flex justify-between   items-center p-1  w-28 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-md">
+               {/*  <button className="flex justify-between   items-center p-1  w-28 border-solid border-2 border-slate-300 border-indigo-600 ... rounded-md">
             
                   <button className="flex  items-center    w-10 border-solid border-l-2 border-slate-300 ... ">
                     <svg
@@ -47,7 +47,7 @@ export function RenderCateg(props: RenderCategProps) {
                       <path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path>
                     </svg>
                   </button>
-                </button>
+                </button> */}
               </div>
               &nbsp;&nbsp; &nbsp;&nbsp;
               <span>{item.description} </span>
