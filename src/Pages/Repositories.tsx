@@ -7,16 +7,10 @@ import { useRepos } from "../hooks/usereposit.ts";
 
 export function Repositories() {
   const {loadingRepos} = useRepos()
-  if(loadingRepos){
-    return(
-      <div className="absolute  top-0 left-0  right-0 border-none solid   bg-slate-300 min-w-screen-xl w-screen-xl h-[100vh] min-h-[100vh]">
-        <span className="absolute top-[18rem] text-4xl left-[40rem]">loading...</span>
-      </div>
-    )
-  }
+  
   return (
-    <div className=" w-fit   ">
-     <div className="border-1 solid bg-gray-300   min-h-[8.1rem]  h-[8.1rem]">
+    <div >
+     <div className=" border-1 solid bg-gray-300  min-h-[8.1rem]  h-[8.1rem] mx-auto">
         
         <Nav />
 

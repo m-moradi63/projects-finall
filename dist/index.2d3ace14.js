@@ -46029,7 +46029,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -62781,41 +62781,25 @@ var _s = $RefreshSig$();
 function Repositories() {
     _s();
     const { loadingRepos } = (0, _userepositTs.useRepos)();
-    if (loadingRepos) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "absolute  top-0 left-0  right-0 border-none solid   bg-slate-300 min-w-screen-xl w-screen-xl h-[100vh] min-h-[100vh]",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-            className: "absolute top-[18rem] text-4xl left-[40rem]",
-            children: "loading..."
-        }, void 0, false, {
-            fileName: "src/Pages/Repositories.tsx",
-            lineNumber: 13,
-            columnNumber: 9
-        }, this)
-    }, void 0, false, {
-        fileName: "src/Pages/Repositories.tsx",
-        lineNumber: 12,
-        columnNumber: 7
-    }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " w-fit   ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border-1 solid bg-gray-300   min-h-[8.1rem]  h-[8.1rem]",
+                className: " border-1 solid bg-gray-300  min-h-[8.1rem]  h-[8.1rem] mx-auto",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 21,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 23,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 19,
+                lineNumber: 13,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62823,24 +62807,24 @@ function Repositories() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 26,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoryTsx.Reposit), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 27,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 25,
+                lineNumber: 19,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Pages/Repositories.tsx",
-        lineNumber: 18,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
@@ -62882,9 +62866,6 @@ function Reposit() {
     const listmenu = [
         "Select Type",
         "All",
-        "Public",
-        "Private",
-        "Sources",
         "Forks",
         "Archived",
         "Can be sponsored",
@@ -62902,20 +62883,7 @@ function Reposit() {
         "Java",
         "c"
     ];
-    /* if (loadingREPO) {
-    return (
-      
-       
-          <div className="bg-gray-500 flex justify-between items-center mx-auto w-screen-xl   min-h-[5rem]">
-          <div className="mx-auto flex justify-between items-center w-screen-xl  ">
-          
-      
-      Processing...
-    
-            </div>
-            </div>
-          ) 
-  } */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[750px]   text-xs  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62932,7 +62900,7 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 32,
+                        lineNumber: 19,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownButtonmenuTsx.DropdownButton), {
@@ -62943,7 +62911,7 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 44,
+                        lineNumber: 31,
                         columnNumber: 10
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownlanguageTsx.DropdownLanguage), {
@@ -62955,26 +62923,26 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 45,
+                        lineNumber: 32,
                         columnNumber: 10
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Repository.tsx",
-                lineNumber: 31,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _renderCategTsx.RenderCateg), {
                 renderReposit: repositState
             }, void 0, false, {
                 fileName: "src/subcomponent/Repository.tsx",
-                lineNumber: 63,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Repository.tsx",
-        lineNumber: 30,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }

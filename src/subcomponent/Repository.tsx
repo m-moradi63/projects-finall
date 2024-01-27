@@ -9,23 +9,10 @@ import { DropdownLanguage } from "../usablesubcomponent/dropdownlanguage.tsx";
 export function Reposit() {
   const repo_params = useParams()
   const { languageItem,setlanguageItem, repositState,setrepositState , loadingREPO, filter, setfilter,searchItem,setSearchItem } = useProfile(repo_params.username!);
- const listmenu=[ 'Select Type','All','Public','Private','Sources' , 'Forks' ,'Archived', 'Can be sponsored' , 'Mirrors' , 'Template']
+ const listmenu=[ 'Select Type','All', 'Forks' ,'Archived', 'Can be sponsored' , 'Mirrors' , 'Template']
  const listlanguage=[ 'Select Language','All','TypeScript','JavaScript','HTML' , 'CSS' ,'Objective-C', 'Java' , 'c' ]
 
-  /* if (loadingREPO) {
-    return (
-      
-       
-          <div className="bg-gray-500 flex justify-between items-center mx-auto w-screen-xl   min-h-[5rem]">
-          <div className="mx-auto flex justify-between items-center w-screen-xl  ">
-          
-      
-      Processing...
-    
-            </div>
-            </div>
-          ) 
-  } */
+
   return (
     <div className="w-[750px]   text-xs  ">
       <div className="flex z-50 justify-between w-[45rem] border-b mb-[1rem] h-[3rem]">

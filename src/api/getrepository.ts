@@ -15,7 +15,6 @@ export interface Repositoryes{
   default_branch: string ,
   archived :boolean,
   forks_count:number,
-  
 }
 
 
